@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+*.log
+*.bak
+*.old
+*.orig
+*.swp
+*~
+node_modules/
