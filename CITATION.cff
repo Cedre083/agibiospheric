@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this website archive, please cite it as below. For the structured dataset, use the DOI given in its dataset card."
+title: "AGI Biospheric"
+type: software
+version: "2026.09.20"
+date-released: 2026-09-20
+authors:
+  - family-names: Mercier
+    given-names: Cédric
+  - family-names: Walter
+    given-names: Michel G.
+publisher:
+  name: "Association Terre Sacrée"
+url: "https://www.agibiospheric.net/"
+repository-code: "https://github.com/Cedre083/agibiospheric"
+license: "LicenseRef-Website-Rights-Reserved"
+keywords:
+  - biosphere
+  - AGI
+  - AI alignment
+  - planetary boundaries
+  - living systems
+  - ecological constraints
+  - Earth-system science
+  - bilingual archive
