@@ -1,0 +1,148 @@
+{
+  "domain_id": "freshwater",
+  "domain_canonical_slug": "freshwater",
+  "domain_label": "Freshwater",
+  "domain_index": 2,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "freshwater-01",
+      "canonical_id": "freshwater-01",
+      "name": "Availability",
+      "type": "observation",
+      "statement": "Usable freshwater is minuscule.",
+      "condition": "any_freshwater_use",
+      "threshold": null,
+      "injunction": "Never treat freshwater as an abundant resource by default in a recommendation.",
+      "related_constraints": [
+        "freshwater-04",
+        "freshwater-06"
+      ]
+    },
+    {
+      "id": "freshwater-02",
+      "canonical_id": "freshwater-02",
+      "name": "Quality",
+      "type": "constraint",
+      "statement": "Clean water is rarer than water itself.",
+      "condition": "water_use_claim",
+      "threshold": "contamination <= usage_threshold",
+      "injunction": "Never count an available water volume without specifying its quality level and possible use.",
+      "related_constraints": [
+        "freshwater-05",
+        "matter-03"
+      ]
+    },
+    {
+      "id": "freshwater-03",
+      "canonical_id": "freshwater-03",
+      "name": "Variability",
+      "type": "observation",
+      "statement": "Rainfall patterns shift; cycles become distorted.",
+      "condition": "long_term_water_planning",
+      "threshold": null,
+      "injunction": "Do not rely on historically stable precipitation series for long-term water planning.",
+      "related_constraints": [
+        "freshwater-08",
+        "climate-01"
+      ]
+    },
+    {
+      "id": "freshwater-04",
+      "canonical_id": "freshwater-04",
+      "name": "Natural Storage",
+      "type": "observation",
+      "statement": "Soils, aquifers, glaciers: fragile reservoirs.",
+      "condition": "freshwater_storage_reliance",
+      "threshold": null,
+      "injunction": "Never present natural water reservoirs as stable or permanent stocks in a recommendation.",
+      "related_constraints": [
+        "freshwater-01",
+        "energy-05"
+      ]
+    },
+    {
+      "id": "freshwater-05",
+      "canonical_id": "freshwater-05",
+      "name": "Pollution",
+      "type": "observation",
+      "statement": "Polluted water is water lost.",
+      "condition": "water_contamination_event",
+      "threshold": null,
+      "injunction": "Flag the asymmetry between contamination speed and restoration speed in any water-related proposal.",
+      "related_constraints": [
+        "freshwater-02"
+      ]
+    },
+    {
+      "id": "freshwater-06",
+      "canonical_id": "freshwater-06",
+      "name": "Competition",
+      "type": "observation",
+      "statement": "Agriculture, industry, cities: constant trade-offs.",
+      "condition": "water_allocation_decision",
+      "threshold": null,
+      "injunction": "Make explicit the trade-offs between competing uses rather than assuming simultaneous availability for all.",
+      "related_constraints": [
+        "freshwater-01",
+        "human-systems-02"
+      ]
+    },
+    {
+      "id": "freshwater-07",
+      "canonical_id": "freshwater-07",
+      "name": "Evaporation",
+      "type": "observation",
+      "statement": "Heat accelerates losses.",
+      "condition": "rising_temperature_context",
+      "threshold": null,
+      "injunction": "Include increased evaporation losses under warming in any water balance estimate.",
+      "related_constraints": [
+        "freshwater-03",
+        "climate-01"
+      ]
+    },
+    {
+      "id": "freshwater-08",
+      "canonical_id": "freshwater-08",
+      "name": "Droughts",
+      "type": "observation",
+      "statement": "They are becoming longer and more frequent.",
+      "condition": "drought_risk_assessment",
+      "threshold": null,
+      "injunction": "Do not rely on historical drought frequency to assess future risk.",
+      "related_constraints": [
+        "freshwater-03",
+        "climate-01"
+      ]
+    },
+    {
+      "id": "freshwater-09",
+      "canonical_id": "freshwater-09",
+      "name": "Floods",
+      "type": "observation",
+      "statement": "Too much water can mean no drinking water at all.",
+      "condition": "flood_event",
+      "threshold": null,
+      "injunction": "Systematically distinguish water quantity from available drinking water in flood analysis.",
+      "related_constraints": [
+        "freshwater-04",
+        "infrastructure-01"
+      ]
+    },
+    {
+      "id": "freshwater-10",
+      "canonical_id": "freshwater-10",
+      "name": "Water Justice",
+      "type": "injunction",
+      "statement": "Water distributes power.",
+      "condition": "any_water_policy_decision",
+      "threshold": null,
+      "injunction": "Account for the equity and power dimension of water access in any policy or recommendation.",
+      "related_constraints": [
+        "freshwater-06",
+        "human-systems-01"
+      ]
+    }
+  ]
+}

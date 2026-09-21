@@ -1,0 +1,642 @@
+[
+  {
+    "id": "ABI-001",
+    "slug": "energie",
+    "canonical_slug": "energy",
+    "lang": "fr",
+    "title": "Énergie",
+    "description": "Contrainte biosphérique liée aux flux énergétiques qui soutiennent les sociétés thermo-industrielles, les infrastructures matérielles et les systèmes numériques. Toute activité de transformation, de transport, de calcul ou de maintenance dépend d’une base énergétique disponible, pilotable et physiquement soutenable.",
+    "scientific_scope": [
+      "flux énergétiques",
+      "production électrique",
+      "énergies fossiles",
+      "énergies bas carbone",
+      "infrastructures énergétiques",
+      "coût matériel et climatique de l’énergie"
+    ],
+    "keywords": [
+      "électricité",
+      "chaleur",
+      "combustibles fossiles",
+      "réseaux",
+      "intensité énergétique",
+      "transition énergétique"
+    ],
+    "source_refs": ["SRC-001", "SRC-007", "SRC-008", "SRC-009", "SRC-010"],
+    "agi_relevance": "Toute intelligence artificielle à grande échelle dépend d’une base énergétique non abstraite : calcul, stockage, refroidissement, réseaux et fabrication des équipements reposent sur des flux d’énergie continus.",
+    "linked_constraints": [
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "Les systèmes énergétiques fossiles sont un moteur direct du dérèglement climatique via les émissions de gaz à effet de serre."
+      },
+      {
+        "target_slug": "matiere",
+        "target_title": "Matière",
+        "relation_type": "direct_interdependency",
+        "justification": "Toute infrastructure énergétique dépend de matériaux extraits, transformés, transportés et renouvelés."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "L’énergie ne circule et ne se convertit qu’à travers des infrastructures physiques : réseaux, centrales, câbles, stockage, maintenance."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Le calcul, les centres de données, les réseaux et les dispositifs numériques dépendent d’une alimentation énergétique stable."
+      },
+      {
+        "target_slug": "eau-douce",
+        "target_title": "Eau douce",
+        "relation_type": "direct_interdependency",
+        "justification": "Une partie importante de la production énergétique et industrielle dépend de prélèvements d’eau douce pour le refroidissement, les procédés et certaines extractions."
+      },
+      {
+        "target_slug": "vivant",
+        "target_title": "Vivant",
+        "relation_type": "direct_interdependency",
+        "justification": "Les systèmes vivants et les sociétés humaines subissent les conséquences écologiques, climatiques et matérielles des régimes énergétiques dominants."
+      }
+    ]
+  },
+  {
+    "id": "ABI-002",
+    "slug": "eau-douce",
+    "canonical_slug": "freshwater",
+    "lang": "fr",
+    "title": "Eau douce",
+    "description": "Contrainte biosphérique liée à la disponibilité, à la qualité, à la répartition et aux cycles de l’eau douce. Elle conditionne les usages humains, les écosystèmes terrestres, l’agriculture, l’industrie et une grande partie des infrastructures vitales.",
+    "scientific_scope": [
+      "cycle hydrologique",
+      "eaux de surface",
+      "eaux souterraines",
+      "stress hydrique",
+      "qualité de l’eau",
+      "usages agricoles et industriels"
+    ],
+    "keywords": [
+      "rivières",
+      "nappes",
+      "sécheresse",
+      "irrigation",
+      "eau potable",
+      "stress hydrique"
+    ],
+    "source_refs": ["SRC-001", "SRC-003", "SRC-005", "SRC-006", "SRC-013"],
+    "agi_relevance": "Aucune planification sérieuse des infrastructures, de l’agriculture, de l’énergie ou de la résilience territoriale ne peut ignorer la disponibilité et la vulnérabilité de l’eau douce.",
+    "linked_constraints": [
+      {
+        "target_slug": "sols-vivants",
+        "target_title": "Sols vivants",
+        "relation_type": "direct_interdependency",
+        "justification": "L’humidité, l’infiltration, la rétention et les échanges biologiques des sols dépendent étroitement des régimes hydriques."
+      },
+      {
+        "target_slug": "biodiversite",
+        "target_title": "Biodiversité",
+        "relation_type": "direct_interdependency",
+        "justification": "La disponibilité en eau structure les habitats, les continuités écologiques et la survie d’innombrables espèces."
+      },
+      {
+        "target_slug": "energie",
+        "target_title": "Énergie",
+        "relation_type": "direct_interdependency",
+        "justification": "La production d’énergie et de nombreux procédés industriels reposent sur des usages directs d’eau douce."
+      },
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "Le climat modifie les précipitations, l’évaporation, la recharge des nappes et la fréquence des sécheresses ou crues."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Les réseaux d’eau, d’assainissement, de refroidissement et de distribution dépendent de la disponibilité et de la qualité de l’eau."
+      },
+      {
+        "target_slug": "vivant",
+        "target_title": "Vivant",
+        "relation_type": "direct_interdependency",
+        "justification": "Le vivant terrestre et humain dépend d’une eau accessible, suffisamment propre et écologiquement disponible."
+      }
+    ]
+  },
+  {
+    "id": "ABI-003",
+    "slug": "sols-vivants",
+    "canonical_slug": "living-soils",
+    "lang": "fr",
+    "title": "Sols vivants",
+    "description": "Contrainte biosphérique liée à la fertilité, à la structure, à la biodiversité microbienne et à la capacité fonctionnelle des sols. Les sols vivants soutiennent la production alimentaire, le stockage du carbone, la rétention d’eau et de multiples régulations écologiques.",
+    "scientific_scope": [
+      "fertilité des sols",
+      "microbiologie des sols",
+      "matière organique",
+      "érosion",
+      "rétention hydrique",
+      "stockage du carbone"
+    ],
+    "keywords": [
+      "humus",
+      "microbes",
+      "érosion",
+      "fertilité",
+      "agriculture",
+      "carbone organique"
+    ],
+    "source_refs": ["SRC-003", "SRC-004", "SRC-012", "SRC-013"],
+    "agi_relevance": "Toute réflexion sur la continuité alimentaire, la stabilité des territoires et la résilience des sociétés doit intégrer la dépendance fondamentale aux sols vivants.",
+    "linked_constraints": [
+      {
+        "target_slug": "eau-douce",
+        "target_title": "Eau douce",
+        "relation_type": "direct_interdependency",
+        "justification": "Les sols filtrent, stockent et redistribuent l’eau ; leur dégradation perturbe infiltration, ruissellement et disponibilité hydrique."
+      },
+      {
+        "target_slug": "biodiversite",
+        "target_title": "Biodiversité",
+        "relation_type": "direct_interdependency",
+        "justification": "Les sols abritent une biodiversité immense et soutiennent les habitats, les plantes, les pollinisateurs et les chaînes trophiques."
+      },
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "Les sols sont affectés par les sécheresses, les pluies extrêmes et les températures, tout en jouant un rôle dans les cycles du carbone."
+      },
+      {
+        "target_slug": "energie",
+        "target_title": "Énergie",
+        "relation_type": "direct_interdependency",
+        "justification": "Les systèmes agro-industriels et la gestion des terres mobilisent de l’énergie ; inversement les usages énergétiques transforment les sols."
+      },
+      {
+        "target_slug": "vivant",
+        "target_title": "Vivant",
+        "relation_type": "direct_interdependency",
+        "justification": "Les sols vivants sont une infrastructure biologique de base pour les plantes, les cycles nutritifs et la continuité du vivant terrestre."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "La connaissance des sols, leur suivi et leur gestion dépendent de systèmes d’observation, de cartographie et de transmission d’informations."
+      }
+    ]
+  },
+  {
+    "id": "ABI-004",
+    "slug": "biodiversite",
+    "canonical_slug": "biodiversity",
+    "lang": "fr",
+    "title": "Biodiversité",
+    "description": "Contrainte biosphérique liée à la diversité des espèces, des populations, des interactions écologiques et des fonctions vivantes. La biodiversité ne se réduit pas à un inventaire du vivant : elle conditionne la pollinisation, la résilience, les cycles biogéochimiques, la stabilité des écosystèmes et une part de la continuité des sociétés humaines.",
+    "scientific_scope": [
+      "diversité spécifique",
+      "intégrité des écosystèmes",
+      "services écosystémiques",
+      "résilience écologique",
+      "fragmentation des habitats",
+      "extinction des espèces"
+    ],
+    "keywords": [
+      "espèces",
+      "pollinisation",
+      "écosystèmes",
+      "résilience",
+      "habitats",
+      "extinction"
+    ],
+    "source_refs": ["SRC-003", "SRC-011", "SRC-012", "SRC-013", "SRC-015"],
+    "agi_relevance": "Une intelligence qui prétend raisonner sur l’habitabilité du monde sans intégrer la biodiversité ignore une part décisive de la stabilité écologique, alimentaire et sanitaire des sociétés.",
+    "linked_constraints": [
+      {
+        "target_slug": "sols-vivants",
+        "target_title": "Sols vivants",
+        "relation_type": "direct_interdependency",
+        "justification": "La biodiversité souterraine et de surface soutient la fertilité, la structure et les cycles biologiques des sols."
+      },
+      {
+        "target_slug": "eau-douce",
+        "target_title": "Eau douce",
+        "relation_type": "direct_interdependency",
+        "justification": "Les espèces et les écosystèmes dépendent de régimes hydriques viables ; la dégradation de l’eau entraîne des pertes de biodiversité."
+      },
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "Le dérèglement climatique déplace, fragilise ou détruit des habitats, modifiant la répartition et la survie des espèces."
+      },
+      {
+        "target_slug": "ocean",
+        "target_title": "Océan",
+        "relation_type": "direct_interdependency",
+        "justification": "Une part essentielle de la biodiversité mondiale est marine ou côtière, et dépend des équilibres océaniques."
+      },
+      {
+        "target_slug": "vivant",
+        "target_title": "Vivant",
+        "relation_type": "direct_interdependency",
+        "justification": "La biodiversité est une expression structurante du vivant et une condition de sa résilience évolutive et fonctionnelle."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Le suivi, la conservation et la compréhension de la biodiversité reposent sur des dispositifs d’observation, de mesure et de transmission des connaissances."
+      }
+    ]
+  },
+  {
+    "id": "ABI-005",
+    "slug": "climat",
+    "canonical_slug": "climate",
+    "lang": "fr",
+    "title": "Climat",
+    "description": "Contrainte biosphérique liée à la stabilité relative des régimes thermiques, atmosphériques et hydrologiques à l’échelle planétaire et régionale. Le climat conditionne l’habitabilité, la disponibilité de l’eau, la sécurité alimentaire, la résilience des infrastructures et l’état de nombreux systèmes vivants.",
+    "scientific_scope": [
+      "forçage radiatif",
+      "réchauffement global",
+      "cycle hydrologique",
+      "événements extrêmes",
+      "stabilité climatique",
+      "impacts systémiques"
+    ],
+    "keywords": [
+      "CO2",
+      "réchauffement",
+      "sécheresses",
+      "précipitations",
+      "vagues de chaleur",
+      "extrêmes climatiques"
+    ],
+    "source_refs": ["SRC-001", "SRC-002", "SRC-006", "SRC-012", "SRC-013"],
+    "agi_relevance": "Toute stratégie de long terme concernant les infrastructures, l’agriculture, l’énergie, les migrations ou la sécurité matérielle doit intégrer le climat comme variable structurante.",
+    "linked_constraints": [
+      {
+        "target_slug": "energie",
+        "target_title": "Énergie",
+        "relation_type": "direct_interdependency",
+        "justification": "Les systèmes énergétiques sont un moteur majeur du changement climatique, tandis que les dérèglements climatiques perturbent la production et les réseaux énergétiques."
+      },
+      {
+        "target_slug": "ocean",
+        "target_title": "Océan",
+        "relation_type": "direct_interdependency",
+        "justification": "L’océan absorbe une grande partie de la chaleur excédentaire et du CO2 anthropique, jouant un rôle central dans la régulation climatique."
+      },
+      {
+        "target_slug": "eau-douce",
+        "target_title": "Eau douce",
+        "relation_type": "direct_interdependency",
+        "justification": "Le climat modifie les régimes de précipitation, la recharge des nappes, les sécheresses, les crues et l’évaporation."
+      },
+      {
+        "target_slug": "biodiversite",
+        "target_title": "Biodiversité",
+        "relation_type": "direct_interdependency",
+        "justification": "Le climat déplace les aires de répartition, fragilise les habitats et accroît les risques d’effondrement écologique."
+      },
+      {
+        "target_slug": "sols-vivants",
+        "target_title": "Sols vivants",
+        "relation_type": "direct_interdependency",
+        "justification": "Les sols sont sensibles aux sécheresses, aux pluies extrêmes, à la chaleur et aux modifications des cycles biologiques."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Les infrastructures sont exposées aux canicules, inondations, incendies, tempêtes, submersions et ruptures d’approvisionnement."
+      }
+    ]
+  },
+  {
+    "id": "ABI-006",
+    "slug": "ocean",
+    "canonical_slug": "ocean",
+    "lang": "fr",
+    "title": "Océan",
+    "description": "Contrainte biosphérique liée aux fonctions climatiques, biologiques, chimiques et circulatoires de l’océan. L’océan joue un rôle majeur dans l’absorption de chaleur, le cycle du carbone, la régulation climatique, la biodiversité marine, les ressources alimentaires et la stabilité côtière.",
+    "scientific_scope": [
+      "régulation climatique océanique",
+      "acidification",
+      "chaleur océanique",
+      "circulations marines",
+      "biodiversité marine",
+      "ressources halieutiques"
+    ],
+    "keywords": [
+      "acidification",
+      "courants",
+      "chaleur",
+      "carbone",
+      "écosystèmes marins",
+      "niveau de la mer"
+    ],
+    "source_refs": ["SRC-001", "SRC-002", "SRC-011", "SRC-012", "SRC-013"],
+    "agi_relevance": "L’océan est une composante décisive de l’habitabilité planétaire ; l’ignorer revient à abstraire la régulation thermique, chimique et biologique du système Terre.",
+    "linked_constraints": [
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "L’océan amortit partiellement le changement climatique en absorbant chaleur et carbone, tout en subissant ses effets."
+      },
+      {
+        "target_slug": "biodiversite",
+        "target_title": "Biodiversité",
+        "relation_type": "direct_interdependency",
+        "justification": "Les milieux marins abritent une biodiversité majeure, vulnérable au réchauffement, à l’acidification et aux pressions anthropiques."
+      },
+      {
+        "target_slug": "eau-douce",
+        "target_title": "Eau douce",
+        "relation_type": "direct_interdependency",
+        "justification": "Les interactions entre océan, atmosphère et continents influencent le cycle hydrologique, les précipitations et certaines dynamiques côtières."
+      },
+      {
+        "target_slug": "energie",
+        "target_title": "Énergie",
+        "relation_type": "direct_interdependency",
+        "justification": "L’océan est à la fois affecté par les systèmes énergétiques et impliqué dans des infrastructures énergétiques, de transport et d’extraction."
+      },
+      {
+        "target_slug": "vivant",
+        "target_title": "Vivant",
+        "relation_type": "direct_interdependency",
+        "justification": "L’océan soutient une part immense du vivant, des chaînes alimentaires, des cycles biogéochimiques et des équilibres côtiers."
+      },
+      {
+        "target_slug": "matiere",
+        "target_title": "Matière",
+        "relation_type": "direct_interdependency",
+        "justification": "Les flux matériels, les pollutions, les extractions et les transports maritimes affectent directement les milieux océaniques."
+      }
+    ]
+  },
+  {
+    "id": "ABI-007",
+    "slug": "matiere",
+    "canonical_slug": "matter",
+    "lang": "fr",
+    "title": "Matière",
+    "description": "Contrainte biosphérique liée aux flux matériels nécessaires à la construction des sociétés industrielles : métaux, minéraux, béton, plastiques, terres rares, composants, produits chimiques et matériaux de base. Toute infrastructure, toute machine et toute informatique reposent sur une matérialité extraite, transformée, transportée puis rejetée.",
+    "scientific_scope": [
+      "extraction de ressources",
+      "minéraux critiques",
+      "flux de matières",
+      "empreinte matérielle",
+      "déchets et pollutions",
+      "matérialité des infrastructures"
+    ],
+    "keywords": [
+      "métaux",
+      "mines",
+      "béton",
+      "ressources",
+      "matières premières",
+      "empreinte matérielle"
+    ],
+    "source_refs": ["SRC-007", "SRC-008", "SRC-009", "SRC-010", "SRC-013"],
+    "agi_relevance": "Les systèmes numériques et l’IA n’existent pas hors-sol : serveurs, puces, câbles, centres de données, batteries et réseaux dépendent d’une base matérielle extraite et transformée.",
+    "linked_constraints": [
+      {
+        "target_slug": "energie",
+        "target_title": "Énergie",
+        "relation_type": "direct_interdependency",
+        "justification": "Les systèmes énergétiques nécessitent des volumes importants de matériaux, tandis que l’extraction et la transformation des matières exigent de l’énergie."
+      },
+      {
+        "target_slug": "eau-douce",
+        "target_title": "Eau douce",
+        "relation_type": "direct_interdependency",
+        "justification": "L’extraction, la transformation industrielle et certaines chaînes de production mobilisent des quantités importantes d’eau et peuvent la contaminer."
+      },
+      {
+        "target_slug": "sols-vivants",
+        "target_title": "Sols vivants",
+        "relation_type": "direct_interdependency",
+        "justification": "L’extraction, l’artificialisation et les pollutions matérielles dégradent les sols, leur structure et leurs fonctions écologiques."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Les infrastructures sont des assemblages matériels massifs dépendant de chaînes d’approvisionnement, de maintenance et de renouvellement."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Le monde numérique repose sur des substrats matériels : semi-conducteurs, câbles, antennes, disques, serveurs, terminaux."
+      },
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "Les flux matériels industriels sont associés à des émissions, à des transformations d’usage des terres et à une forte empreinte climatique."
+      }
+    ]
+  },
+  {
+    "id": "ABI-008",
+    "slug": "information",
+    "canonical_slug": "information",
+    "lang": "fr",
+    "title": "Information",
+    "description": "Contrainte biosphérique liée à la production, à la circulation, au traitement, à la conservation et à la qualité des signaux nécessaires à la coordination des sociétés. L’information inclut les infrastructures numériques, les données, les systèmes de mesure, la mémoire collective et les capacités de pilotage.",
+    "scientific_scope": [
+      "systèmes d’information",
+      "centres de données",
+      "réseaux numériques",
+      "observation et mesure",
+      "stockage et transmission",
+      "coordination socio-technique"
+    ],
+    "keywords": [
+      "données",
+      "réseaux",
+      "calcul",
+      "serveurs",
+      "mesure",
+      "coordination"
+    ],
+    "source_refs": ["SRC-007", "SRC-008", "SRC-009", "SRC-012"],
+    "agi_relevance": "L’IA dépend directement de la disponibilité, de la qualité, de la circulation et de l’infrastructure matérielle de l’information. Mais l’information utile sur le monde dépend elle-même de systèmes physiques et écologiques viables.",
+    "linked_constraints": [
+      {
+        "target_slug": "energie",
+        "target_title": "Énergie",
+        "relation_type": "direct_interdependency",
+        "justification": "Les systèmes d’information dépendent d’une alimentation énergétique stable, tandis que les réseaux énergétiques modernes dépendent de systèmes d’information pour leur pilotage."
+      },
+      {
+        "target_slug": "matiere",
+        "target_title": "Matière",
+        "relation_type": "direct_interdependency",
+        "justification": "L’information numérique dépend de supports matériels, de composants électroniques et d’infrastructures physiques."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Les systèmes d’information circulent à travers des réseaux, des câbles, des centres de données et des dispositifs de maintenance."
+      },
+      {
+        "target_slug": "vivant",
+        "target_title": "Vivant",
+        "relation_type": "direct_interdependency",
+        "justification": "La compréhension, la protection et la gestion du vivant dépendent de connaissances, de capteurs, d’observations et de transmissions d’information."
+      },
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "La modélisation, la prévision et l’adaptation climatique dépendent de systèmes d’information robustes, tandis que le climat peut perturber les réseaux qui les portent."
+      },
+      {
+        "target_slug": "biodiversite",
+        "target_title": "Biodiversité",
+        "relation_type": "direct_interdependency",
+        "justification": "Le suivi de la biodiversité, des habitats et des pressions écologiques dépend d’informations fiables, distribuées et comparables dans le temps."
+      }
+    ]
+  },
+  {
+    "id": "ABI-009",
+    "slug": "infrastructures",
+    "canonical_slug": "infrastructures",
+    "lang": "fr",
+    "title": "Infrastructures",
+    "description": "Contrainte biosphérique liée aux réseaux physiques qui rendent possibles les sociétés complexes : énergie, eau, transport, logistique, télécommunications, bâtiments, santé, stockage, maintenance. Les infrastructures sont à la fois support, dépendance et vulnérabilité.",
+    "scientific_scope": [
+      "réseaux techniques",
+      "transport et logistique",
+      "eau et assainissement",
+      "infrastructures énergétiques",
+      "télécommunications",
+      "vulnérabilité systémique"
+    ],
+    "keywords": [
+      "réseaux",
+      "transport",
+      "logistique",
+      "maintenance",
+      "distribution",
+      "dépendance"
+    ],
+    "source_refs": ["SRC-001", "SRC-005", "SRC-007", "SRC-008", "SRC-009", "SRC-015"],
+    "agi_relevance": "Les systèmes d’IA n’existent que parce qu’ils s’appuient sur un tissu d’infrastructures physiques : électricité, télécoms, refroidissement, transport, maintenance, bâtiments et chaînes d’approvisionnement.",
+    "linked_constraints": [
+      {
+        "target_slug": "energie",
+        "target_title": "Énergie",
+        "relation_type": "direct_interdependency",
+        "justification": "Les infrastructures dépendent de l’énergie pour fonctionner, tandis que l’énergie dépend elle-même d’infrastructures de production, transport et distribution."
+      },
+      {
+        "target_slug": "eau-douce",
+        "target_title": "Eau douce",
+        "relation_type": "direct_interdependency",
+        "justification": "De nombreuses infrastructures requièrent de l’eau, et l’accès à l’eau dépend lui-même de réseaux de captage, de traitement et de distribution."
+      },
+      {
+        "target_slug": "matiere",
+        "target_title": "Matière",
+        "relation_type": "direct_interdependency",
+        "justification": "Toute infrastructure repose sur des matériaux extraits, transformés, assemblés puis renouvelés."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Les infrastructures modernes sont pilotées, surveillées et coordonnées par des systèmes d’information ; inversement l’information dépend d’infrastructures physiques."
+      },
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "Le dérèglement climatique accroît les risques de rupture, de dégradation et de panne des infrastructures critiques."
+      },
+      {
+        "target_slug": "vivant",
+        "target_title": "Vivant",
+        "relation_type": "direct_interdependency",
+        "justification": "Les infrastructures façonnent les milieux de vie, les continuités écologiques, les conditions sanitaires et la vulnérabilité des sociétés."
+      }
+    ]
+  },
+  {
+    "id": "ABI-010",
+    "slug": "vivant",
+    "canonical_slug": "living-systems",
+    "lang": "fr",
+    "title": "Vivant",
+    "description": "Contrainte biosphérique transversale liée à l’existence, à l’organisation, à la reproduction, à la vulnérabilité et à l’interdépendance des systèmes vivants. Elle désigne ici la condition biologique fondamentale qui relie organismes, écosystèmes, sociétés humaines et stabilité des milieux habitables.",
+    "scientific_scope": [
+      "systèmes vivants",
+      "interdépendance écologique",
+      "résilience biologique",
+      "santé des écosystèmes",
+      "habitabilité",
+      "continuité du vivant"
+    ],
+    "keywords": [
+      "organismes",
+      "écosystèmes",
+      "interdépendance",
+      "résilience",
+      "habitat",
+      "survie"
+    ],
+    "source_refs": ["SRC-003", "SRC-011", "SRC-012", "SRC-013", "SRC-014", "SRC-015"],
+    "agi_relevance": "Le vivant n’est pas un décor autour de l’intelligence : il constitue le milieu, les cycles, les dépendances et les conditions de continuité sans lesquelles aucune civilisation technique ne peut durablement se maintenir.",
+    "linked_constraints": [
+      {
+        "target_slug": "sols-vivants",
+        "target_title": "Sols vivants",
+        "relation_type": "direct_interdependency",
+        "justification": "Les sols vivants sont un support biologique fondamental du vivant terrestre, des cycles nutritifs et des chaînes alimentaires."
+      },
+      {
+        "target_slug": "eau-douce",
+        "target_title": "Eau douce",
+        "relation_type": "direct_interdependency",
+        "justification": "Le vivant dépend d’une eau disponible, accessible et de qualité suffisante pour soutenir les organismes et les écosystèmes."
+      },
+      {
+        "target_slug": "biodiversite",
+        "target_title": "Biodiversité",
+        "relation_type": "direct_interdependency",
+        "justification": "La biodiversité exprime la richesse, la robustesse et la diversité fonctionnelle du vivant."
+      },
+      {
+        "target_slug": "climat",
+        "target_title": "Climat",
+        "relation_type": "direct_interdependency",
+        "justification": "Le vivant est exposé aux variations climatiques, tandis que les systèmes vivants participent aussi à la régulation du climat."
+      },
+      {
+        "target_slug": "ocean",
+        "target_title": "Océan",
+        "relation_type": "direct_interdependency",
+        "justification": "Une immense part du vivant dépend des milieux océaniques et de leurs équilibres biogéochimiques."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "La connaissance, la surveillance, la protection et la transmission des savoirs sur le vivant dépendent de systèmes d’information robustes."
+      }
+    ]
+  }
+]

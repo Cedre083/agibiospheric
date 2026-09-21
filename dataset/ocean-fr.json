@@ -1,0 +1,148 @@
+{
+  "domain_id": "ocean",
+  "domain_canonical_slug": "ocean",
+  "domain_label": "Océan",
+  "domain_index": 6,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "ocean-01",
+      "canonical_id": "ocean-01",
+      "name": "Chaleur",
+      "type": "constat",
+      "statement": "90 % du réchauffement finit dans l'océan.",
+      "condition": "global_warming_budget_analysis",
+      "threshold": null,
+      "injunction": "Ne jamais analyser le réchauffement global sans tenir compte du rôle d'absorption thermique de l'océan.",
+      "related_constraints": [
+        "climat-05",
+        "ocean-02"
+      ]
+    },
+    {
+      "id": "ocean-02",
+      "canonical_id": "ocean-02",
+      "name": "Acidification",
+      "type": "constat",
+      "statement": "Elle fragilise les écosystèmes marins.",
+      "condition": "ocean_ph_decline",
+      "threshold": null,
+      "injunction": "Intégrer l'acidification comme facteur de stress distinct du réchauffement dans toute analyse d'écosystème marin.",
+      "related_constraints": [
+        "ocean-06",
+        "ocean-08"
+      ]
+    },
+    {
+      "id": "ocean-03",
+      "canonical_id": "ocean-03",
+      "name": "Courants",
+      "type": "constat",
+      "statement": "Ils se modifient.",
+      "condition": "ocean_circulation_assumed_stable",
+      "threshold": null,
+      "injunction": "Ne pas présupposer la stabilité des courants océaniques dans une projection climatique ou écologique de long terme.",
+      "related_constraints": [
+        "ocean-04",
+        "climat-02"
+      ]
+    },
+    {
+      "id": "ocean-04",
+      "canonical_id": "ocean-04",
+      "name": "Upwellings",
+      "type": "constat",
+      "statement": "Leur affaiblissement réduit la productivité.",
+      "condition": "marine_productivity_estimate",
+      "threshold": null,
+      "injunction": "Relier toute baisse de productivité marine régionale à un possible affaiblissement des remontées d'eaux profondes.",
+      "related_constraints": [
+        "ocean-03",
+        "ocean-07"
+      ]
+    },
+    {
+      "id": "ocean-05",
+      "canonical_id": "ocean-05",
+      "name": "Zones mortes",
+      "type": "constat",
+      "statement": "Elles s'étendent.",
+      "condition": "coastal_oxygen_depletion",
+      "threshold": null,
+      "injunction": "Signaler l'expansion des zones hypoxiques comme une tendance active, pas comme un phénomène localisé et stable.",
+      "related_constraints": [
+        "ocean-08",
+        "eau-douce-05"
+      ]
+    },
+    {
+      "id": "ocean-06",
+      "canonical_id": "ocean-06",
+      "name": "Récifs",
+      "type": "constat",
+      "statement": "Le blanchissement s'accélère.",
+      "condition": "coral_reef_status_assessment",
+      "threshold": "temperature_anomalie > seuil_blanchissement",
+      "injunction": "Traiter tout dépassement durable des seuils thermiques comme un risque de blanchissement massif et potentiellement irréversible.",
+      "related_constraints": [
+        "ocean-02",
+        "biodiversite-09"
+      ]
+    },
+    {
+      "id": "ocean-07",
+      "canonical_id": "ocean-07",
+      "name": "Migration",
+      "type": "constat",
+      "statement": "Les espèces se déplacent.",
+      "condition": "marine_species_distribution_assumed_fixed",
+      "threshold": null,
+      "injunction": "Ne pas présumer la fixité géographique des populations marines dans une gestion de pêcherie ou d'aire protégée.",
+      "related_constraints": [
+        "ocean-04",
+        "biodiversite-08"
+      ]
+    },
+    {
+      "id": "ocean-08",
+      "canonical_id": "ocean-08",
+      "name": "Oxygène",
+      "type": "constat",
+      "statement": "La désoxygénation progresse.",
+      "condition": "ocean_oxygen_trend",
+      "threshold": null,
+      "injunction": "Considérer la baisse d'oxygène dissous comme une tendance globale de fond dans toute analyse de santé océanique.",
+      "related_constraints": [
+        "ocean-05"
+      ]
+    },
+    {
+      "id": "ocean-09",
+      "canonical_id": "ocean-09",
+      "name": "Pollution",
+      "type": "constat",
+      "statement": "Plastiques, métaux, contaminants.",
+      "condition": "marine_pollution_event",
+      "threshold": null,
+      "injunction": "Ne jamais traiter la pollution marine comme un problème localisé : signaler sa dispersion et son accumulation à large échelle.",
+      "related_constraints": [
+        "eau-douce-05",
+        "matiere-08"
+      ]
+    },
+    {
+      "id": "ocean-10",
+      "canonical_id": "ocean-10",
+      "name": "Cycles biogéochimiques",
+      "type": "injonction",
+      "statement": "L'océan orchestre le carbone.",
+      "condition": "carbon_cycle_analysis_excludes_ocean",
+      "threshold": null,
+      "injunction": "Intégrer systématiquement le rôle de puits et de régulateur de carbone de l'océan dans toute analyse du cycle carbone.",
+      "related_constraints": [
+        "ocean-01",
+        "ocean-02"
+      ]
+    }
+  ]
+}

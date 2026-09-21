@@ -1,0 +1,146 @@
+{
+  "domain_id": "infrastructure",
+  "domain_canonical_slug": "infrastructure",
+  "domain_label": "Infrastructure",
+  "domain_index": 9,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "infrastructure-01",
+      "canonical_id": "infrastructure-01",
+      "name": "Dependency",
+      "type": "observation",
+      "statement": "The more complex a society, the more dependent it becomes.",
+      "condition": "infrastructure_complexity_increase",
+      "threshold": null,
+      "injunction": "Flag increasing systemic dependency in any proposal that adds infrastructural complexity.",
+      "related_constraints": [
+        "infrastructure-04",
+        "energy-04"
+      ]
+    },
+    {
+      "id": "infrastructure-02",
+      "canonical_id": "infrastructure-02",
+      "name": "Entropy",
+      "type": "observation",
+      "statement": "Everything degrades.",
+      "condition": "infrastructure_maintenance_omitted",
+      "threshold": null,
+      "injunction": "Never present infrastructure as stable without ongoing maintenance in long-term planning.",
+      "related_constraints": [
+        "infrastructure-03",
+        "infrastructure-05"
+      ]
+    },
+    {
+      "id": "infrastructure-03",
+      "canonical_id": "infrastructure-03",
+      "name": "Aging",
+      "type": "observation",
+      "statement": "Structures fatigue over time.",
+      "condition": "infrastructure_lifespan_assessment",
+      "threshold": null,
+      "injunction": "Include a finite lifespan and increasing failure risk with age in any infrastructure assessment.",
+      "related_constraints": [
+        "infrastructure-02",
+        "infrastructure-10"
+      ]
+    },
+    {
+      "id": "infrastructure-04",
+      "canonical_id": "infrastructure-04",
+      "name": "Cascades",
+      "type": "observation",
+      "statement": "One failure can bring everything down.",
+      "condition": "interconnected_infrastructure_analysis",
+      "threshold": null,
+      "injunction": "Assess cascading failure risk in any analysis of interconnected infrastructure systems.",
+      "related_constraints": [
+        "infrastructure-01",
+        "infrastructure-09"
+      ]
+    },
+    {
+      "id": "infrastructure-05",
+      "canonical_id": "infrastructure-05",
+      "name": "Cost",
+      "type": "observation",
+      "statement": "Building is expensive; maintaining is more expensive still.",
+      "condition": "infrastructure_lifecycle_cost_estimate",
+      "threshold": null,
+      "injunction": "Include full lifecycle cost, maintenance included, in any infrastructure budget estimate.",
+      "related_constraints": [
+        "infrastructure-02"
+      ]
+    },
+    {
+      "id": "infrastructure-06",
+      "canonical_id": "infrastructure-06",
+      "name": "Saturation",
+      "type": "constraint",
+      "statement": "Flows exceed capacity.",
+      "condition": "usage_flow > infrastructure_capacity",
+      "threshold": null,
+      "injunction": "Systematically compare projected demand to real capacity before recommending use of an infrastructure.",
+      "related_constraints": [
+        "infrastructure-04"
+      ]
+    },
+    {
+      "id": "infrastructure-07",
+      "canonical_id": "infrastructure-07",
+      "name": "Climate",
+      "type": "observation",
+      "statement": "Infrastructure is not adapted to the current climate.",
+      "condition": "infrastructure_design_based_on_historical_climate",
+      "threshold": null,
+      "injunction": "Flag any infrastructure design based on historical climate norms that are now outdated.",
+      "related_constraints": [
+        "climate-09",
+        "infrastructure-03"
+      ]
+    },
+    {
+      "id": "infrastructure-08",
+      "canonical_id": "infrastructure-08",
+      "name": "Rigidity",
+      "type": "observation",
+      "statement": "Little flexibility.",
+      "condition": "infrastructure_adaptation_need",
+      "threshold": null,
+      "injunction": "Flag the difficulty of adapting existing infrastructure to a new need or context.",
+      "related_constraints": [
+        "infrastructure-10"
+      ]
+    },
+    {
+      "id": "infrastructure-09",
+      "canonical_id": "infrastructure-09",
+      "name": "Fragmentation",
+      "type": "observation",
+      "statement": "Networks are becoming fragmented.",
+      "condition": "network_continuity_assumed",
+      "threshold": null,
+      "injunction": "Do not assume the continuity of an infrastructure network without checking its potential breaking points.",
+      "related_constraints": [
+        "infrastructure-04",
+        "biodiversity-08"
+      ]
+    },
+    {
+      "id": "infrastructure-10",
+      "canonical_id": "infrastructure-10",
+      "name": "Repair",
+      "type": "injunction",
+      "statement": "Often impossible.",
+      "condition": "infrastructure_failure_repair_assumed",
+      "threshold": null,
+      "injunction": "Systematically assess the real repairability of an infrastructure before recommending it as a durable solution.",
+      "related_constraints": [
+        "infrastructure-03",
+        "infrastructure-08"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "dataset": "AGI Biospheric - 10 Core Biospheric Constraints and 52 Interdependencies",
+  "short_name": "agi-biospheric-10-constraints",
+  "version": "1.2.1",
+  "status": "public",
+  "languages": ["fr", "en"],
+  "license": "CC BY 4.0",
+  "constraint_count": 10,
+  "direct_interdependency_count": 52,
+  "canonical_slug_language": "en",
+  "bilingual_slug_mapping": true,
+  "files": [
+    "README.md",
+    "constraints-fr.json",
+    "constraints-en.json",
+    "interdependency-matrix.json",
+    "constraints-graph.json",
+    "sources.json",
+    "ecosystem-links.json",
+    "dataset-metadata.json"
+  ],
+  "description": "Bilingual machine-readable dataset modeling 10 core biospheric constraints and 52 direct interdependencies for AGI biospheric alignment, ecological systems thinking, and long-term civilizational resilience.",
+  "project": {
+    "name": "AGI Biospheric",
+    "website": "https://agibiospheric.net"
+  }
+}

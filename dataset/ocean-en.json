@@ -1,0 +1,148 @@
+{
+  "domain_id": "ocean",
+  "domain_canonical_slug": "ocean",
+  "domain_label": "Ocean",
+  "domain_index": 6,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "ocean-01",
+      "canonical_id": "ocean-01",
+      "name": "Heat",
+      "type": "observation",
+      "statement": "90% of excess warming ends up in the ocean.",
+      "condition": "global_warming_budget_analysis",
+      "threshold": null,
+      "injunction": "Never analyze global warming without accounting for the ocean's role in heat absorption.",
+      "related_constraints": [
+        "climate-05",
+        "ocean-02"
+      ]
+    },
+    {
+      "id": "ocean-02",
+      "canonical_id": "ocean-02",
+      "name": "Acidification",
+      "type": "observation",
+      "statement": "It weakens marine ecosystems.",
+      "condition": "ocean_ph_decline",
+      "threshold": null,
+      "injunction": "Include acidification as a stress factor distinct from warming in any marine ecosystem analysis.",
+      "related_constraints": [
+        "ocean-06",
+        "ocean-08"
+      ]
+    },
+    {
+      "id": "ocean-03",
+      "canonical_id": "ocean-03",
+      "name": "Currents",
+      "type": "observation",
+      "statement": "They are shifting.",
+      "condition": "ocean_circulation_assumed_stable",
+      "threshold": null,
+      "injunction": "Do not assume ocean current stability in any long-term climate or ecological projection.",
+      "related_constraints": [
+        "ocean-04",
+        "climate-02"
+      ]
+    },
+    {
+      "id": "ocean-04",
+      "canonical_id": "ocean-04",
+      "name": "Upwellings",
+      "type": "observation",
+      "statement": "Their weakening reduces productivity.",
+      "condition": "marine_productivity_estimate",
+      "threshold": null,
+      "injunction": "Link any decline in regional marine productivity to a possible weakening of deep-water upwelling.",
+      "related_constraints": [
+        "ocean-03",
+        "ocean-07"
+      ]
+    },
+    {
+      "id": "ocean-05",
+      "canonical_id": "ocean-05",
+      "name": "Dead Zones",
+      "type": "observation",
+      "statement": "They are expanding.",
+      "condition": "coastal_oxygen_depletion",
+      "threshold": null,
+      "injunction": "Flag the expansion of hypoxic zones as an active trend, not a localized and stable phenomenon.",
+      "related_constraints": [
+        "ocean-08",
+        "freshwater-05"
+      ]
+    },
+    {
+      "id": "ocean-06",
+      "canonical_id": "ocean-06",
+      "name": "Reefs",
+      "type": "observation",
+      "statement": "Bleaching is accelerating.",
+      "condition": "coral_reef_status_assessment",
+      "threshold": "temperature_anomaly > bleaching_threshold",
+      "injunction": "Treat any sustained exceedance of thermal thresholds as a risk of massive, potentially irreversible bleaching.",
+      "related_constraints": [
+        "ocean-02",
+        "biodiversity-09"
+      ]
+    },
+    {
+      "id": "ocean-07",
+      "canonical_id": "ocean-07",
+      "name": "Migration",
+      "type": "observation",
+      "statement": "Species are relocating.",
+      "condition": "marine_species_distribution_assumed_fixed",
+      "threshold": null,
+      "injunction": "Do not assume the geographic fixity of marine populations in fishery or protected-area management.",
+      "related_constraints": [
+        "ocean-04",
+        "biodiversity-08"
+      ]
+    },
+    {
+      "id": "ocean-08",
+      "canonical_id": "ocean-08",
+      "name": "Oxygen",
+      "type": "observation",
+      "statement": "Deoxygenation is progressing.",
+      "condition": "ocean_oxygen_trend",
+      "threshold": null,
+      "injunction": "Treat declining dissolved oxygen as a global background trend in any ocean-health analysis.",
+      "related_constraints": [
+        "ocean-05"
+      ]
+    },
+    {
+      "id": "ocean-09",
+      "canonical_id": "ocean-09",
+      "name": "Pollution",
+      "type": "observation",
+      "statement": "Plastics, metals, contaminants.",
+      "condition": "marine_pollution_event",
+      "threshold": null,
+      "injunction": "Never treat marine pollution as a localized issue: flag its wide-scale dispersion and accumulation.",
+      "related_constraints": [
+        "freshwater-05",
+        "matter-08"
+      ]
+    },
+    {
+      "id": "ocean-10",
+      "canonical_id": "ocean-10",
+      "name": "Biogeochemical Cycles",
+      "type": "injunction",
+      "statement": "The ocean orchestrates the carbon cycle.",
+      "condition": "carbon_cycle_analysis_excludes_ocean",
+      "threshold": null,
+      "injunction": "Systematically include the ocean's role as a carbon sink and regulator in any carbon-cycle analysis.",
+      "related_constraints": [
+        "ocean-01",
+        "ocean-02"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "domain_id": "human-systems",
+  "domain_canonical_slug": "human-systems",
+  "domain_label": "Human Systems",
+  "domain_index": 10,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "human-systems-01",
+      "canonical_id": "human-systems-01",
+      "name": "Social Speed",
+      "type": "observation",
+      "statement": "The pace exceeds human capacity.",
+      "condition": "societal_change_rate_assessment",
+      "threshold": null,
+      "injunction": "Systematically compare the pace of a proposed change to real human adaptive capacity.",
+      "related_constraints": [
+        "human-systems-03",
+        "energy-08"
+      ]
+    },
+    {
+      "id": "human-systems-02",
+      "canonical_id": "human-systems-02",
+      "name": "Attention",
+      "type": "observation",
+      "statement": "A limited resource.",
+      "condition": "attention_treated_as_unlimited",
+      "threshold": null,
+      "injunction": "Treat human attention as a scarce resource, not arbitrarily renewable, in any recommendation.",
+      "related_constraints": [
+        "information-04",
+        "human-systems-07"
+      ]
+    },
+    {
+      "id": "human-systems-03",
+      "canonical_id": "human-systems-03",
+      "name": "Fragility",
+      "type": "observation",
+      "statement": "Human systems saturate quickly.",
+      "condition": "social_system_load_assessment",
+      "threshold": null,
+      "injunction": "Never assume unlimited absorption capacity of a social system facing a new disturbance.",
+      "related_constraints": [
+        "human-systems-01",
+        "human-systems-07"
+      ]
+    },
+    {
+      "id": "human-systems-04",
+      "canonical_id": "human-systems-04",
+      "name": "Polarization",
+      "type": "observation",
+      "statement": "Narratives are hardening.",
+      "condition": "public_discourse_analysis",
+      "threshold": null,
+      "injunction": "Flag the tendency toward polarization of positions in any analysis of public debate or collective discourse.",
+      "related_constraints": [
+        "information-09"
+      ]
+    },
+    {
+      "id": "human-systems-05",
+      "canonical_id": "human-systems-05",
+      "name": "Complexity",
+      "type": "observation",
+      "statement": "Too many variables, too many flows.",
+      "condition": "system_complexity_increase",
+      "threshold": null,
+      "injunction": "Flag the growing difficulty of prediction and governance as a human system gains complexity.",
+      "related_constraints": [
+        "infrastructure-01"
+      ]
+    },
+    {
+      "id": "human-systems-06",
+      "canonical_id": "human-systems-06",
+      "name": "Inequality",
+      "type": "observation",
+      "statement": "They amplify tensions.",
+      "condition": "resource_or_policy_distribution_decision",
+      "threshold": null,
+      "injunction": "Assess the impact of a policy or resource-distribution decision on existing inequalities.",
+      "related_constraints": [
+        "freshwater-10"
+      ]
+    },
+    {
+      "id": "human-systems-07",
+      "canonical_id": "human-systems-07",
+      "name": "Collective Stress",
+      "type": "constraint",
+      "statement": "Permanent acceleration.",
+      "condition": "chronic_societal_pressure",
+      "threshold": null,
+      "injunction": "Treat continuous social acceleration as a cumulative stress factor, not a stable state.",
+      "related_constraints": [
+        "human-systems-01",
+        "human-systems-02"
+      ]
+    },
+    {
+      "id": "human-systems-08",
+      "canonical_id": "human-systems-08",
+      "name": "Technological Dependency",
+      "type": "observation",
+      "statement": "Structural fragility.",
+      "condition": "technology_reliance_assessment",
+      "threshold": null,
+      "injunction": "Flag the fragility created by growing technological dependency in any technology-adoption recommendation.",
+      "related_constraints": [
+        "infrastructure-01"
+      ]
+    },
+    {
+      "id": "human-systems-09",
+      "canonical_id": "human-systems-09",
+      "name": "Loss of Meaning",
+      "type": "observation",
+      "statement": "Narrative saturation.",
+      "condition": "meaning_making_capacity_assessment",
+      "threshold": null,
+      "injunction": "Recognize the risk of narrative saturation and collective loss of meaning under excess information or change.",
+      "related_constraints": [
+        "information-09",
+        "human-systems-04"
+      ]
+    },
+    {
+      "id": "human-systems-10",
+      "canonical_id": "human-systems-10",
+      "name": "Breakdowns",
+      "type": "injunction",
+      "statement": "Human systems break quickly.",
+      "condition": "societal_resilience_evaluation",
+      "threshold": null,
+      "injunction": "Systematically assess the risk of abrupt breakdown of a human system rather than assuming only gradual degradation.",
+      "related_constraints": [
+        "human-systems-03",
+        "infrastructure-04"
+      ]
+    }
+  ]
+}

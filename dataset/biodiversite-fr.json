@@ -1,0 +1,148 @@
+{
+  "domain_id": "biodiversite",
+  "domain_canonical_slug": "biodiversity",
+  "domain_label": "Biodiversité",
+  "domain_index": 4,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "biodiversite-01",
+      "canonical_id": "biodiversity-01",
+      "name": "Réseaux",
+      "type": "constat",
+      "statement": "Le vivant fonctionne en relations.",
+      "condition": "species_evaluated_in_isolation",
+      "threshold": null,
+      "injunction": "Ne jamais évaluer une espèce ou un écosystème isolément de son réseau de relations dans une recommandation.",
+      "related_constraints": [
+        "biodiversite-02",
+        "sols-vivants-07"
+      ]
+    },
+    {
+      "id": "biodiversite-02",
+      "canonical_id": "biodiversity-02",
+      "name": "Fonctions",
+      "type": "constat",
+      "statement": "Chaque espèce accomplit une tâche unique.",
+      "condition": "species_loss_evaluation",
+      "threshold": null,
+      "injunction": "Associer systématiquement la perte d'une espèce à la perte de sa fonction écologique spécifique, non substituable a priori.",
+      "related_constraints": [
+        "biodiversite-01",
+        "biodiversite-10"
+      ]
+    },
+    {
+      "id": "biodiversite-03",
+      "canonical_id": "biodiversity-03",
+      "name": "Résilience",
+      "type": "constat",
+      "statement": "La diversité amortit les chocs.",
+      "condition": "ecosystem_stability_estimate",
+      "threshold": null,
+      "injunction": "Considérer la réduction de la diversité comme une réduction de la capacité d'un système à absorber une perturbation.",
+      "related_constraints": [
+        "biodiversite-08",
+        "biodiversite-09"
+      ]
+    },
+    {
+      "id": "biodiversite-04",
+      "canonical_id": "biodiversity-04",
+      "name": "Niches",
+      "type": "contrainte",
+      "statement": "Les niches écologiques sont limitées.",
+      "condition": "species_introduction_or_expansion",
+      "threshold": null,
+      "injunction": "Évaluer toute introduction ou expansion d'espèce au regard de la disponibilité réelle et limitée des niches écologiques.",
+      "related_constraints": [
+        "biodiversite-08"
+      ]
+    },
+    {
+      "id": "biodiversite-05",
+      "canonical_id": "biodiversity-05",
+      "name": "Pollinisation",
+      "type": "constat",
+      "statement": "Processus critique pour les plantes.",
+      "condition": "pollinator_decline_context",
+      "threshold": null,
+      "injunction": "Signaler la dépendance des systèmes agricoles et végétaux à la pollinisation dans toute analyse touchant aux pollinisateurs.",
+      "related_constraints": [
+        "biodiversite-02",
+        "biodiversite-09"
+      ]
+    },
+    {
+      "id": "biodiversite-06",
+      "canonical_id": "biodiversity-06",
+      "name": "Décomposeurs",
+      "type": "constat",
+      "statement": "Ils ferment les cycles.",
+      "condition": "nutrient_cycle_analysis",
+      "threshold": null,
+      "injunction": "Ne jamais analyser un cycle de nutriments sans tenir compte du rôle fonctionnel des organismes décomposeurs.",
+      "related_constraints": [
+        "sols-vivants-02"
+      ]
+    },
+    {
+      "id": "biodiversite-07",
+      "canonical_id": "biodiversity-07",
+      "name": "Symbioses",
+      "type": "constat",
+      "statement": "Coopérations vitales.",
+      "condition": "single_species_focus",
+      "threshold": null,
+      "injunction": "Considérer les relations symbiotiques comme partie intégrante de la viabilité d'une espèce, pas comme un facteur annexe.",
+      "related_constraints": [
+        "biodiversite-01",
+        "sols-vivants-07"
+      ]
+    },
+    {
+      "id": "biodiversite-08",
+      "canonical_id": "biodiversity-08",
+      "name": "Fragmentation",
+      "type": "constat",
+      "statement": "Les habitats se morcellent.",
+      "condition": "land_use_change_proposal",
+      "threshold": null,
+      "injunction": "Évaluer l'impact de toute modification d'usage des sols sur la continuité et la connectivité des habitats.",
+      "related_constraints": [
+        "biodiversite-03",
+        "biodiversite-04",
+        "infrastructures-09"
+      ]
+    },
+    {
+      "id": "biodiversite-09",
+      "canonical_id": "biodiversity-09",
+      "name": "Extinctions",
+      "type": "constat",
+      "statement": "Elles s'accélèrent.",
+      "condition": "biodiversity_loss_trend",
+      "threshold": null,
+      "injunction": "Ne pas traiter le rythme actuel d'extinction comme stable ou comparable aux rythmes historiques de fond.",
+      "related_constraints": [
+        "biodiversite-03",
+        "biodiversite-05"
+      ]
+    },
+    {
+      "id": "biodiversite-10",
+      "canonical_id": "biodiversity-10",
+      "name": "Fonctions perdues",
+      "type": "injonction",
+      "statement": "Une espèce disparue = une relation perdue.",
+      "condition": "species_extinction_impact_assessment",
+      "threshold": null,
+      "injunction": "Évaluer systématiquement l'impact d'une extinction en termes de relations écologiques rompues, pas seulement de perte d'individus.",
+      "related_constraints": [
+        "biodiversite-02",
+        "biodiversite-01"
+      ]
+    }
+  ]
+}

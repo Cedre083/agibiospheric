@@ -1,0 +1,149 @@
+{
+  "domain_id": "information",
+  "domain_canonical_slug": "information",
+  "domain_label": "Information",
+  "domain_index": 8,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "information-01",
+      "canonical_id": "information-01",
+      "name": "Signal",
+      "type": "constat",
+      "statement": "L'information utile est rare.",
+      "condition": "information_abundance_assumed",
+      "threshold": null,
+      "injunction": "Ne jamais confondre volume d'information disponible et disponibilité d'information réellement utile.",
+      "related_constraints": [
+        "information-02",
+        "information-05"
+      ]
+    },
+    {
+      "id": "information-02",
+      "canonical_id": "information-02",
+      "name": "Bruit",
+      "type": "constat",
+      "statement": "Le bruit augmente plus vite que le signal.",
+      "condition": "information_volume_increase",
+      "threshold": null,
+      "injunction": "Signaler que l'augmentation du volume d'information dégrade en général le ratio signal/bruit, sauf preuve du contraire.",
+      "related_constraints": [
+        "information-01",
+        "information-04"
+      ]
+    },
+    {
+      "id": "information-03",
+      "canonical_id": "information-03",
+      "name": "Vitesse",
+      "type": "constat",
+      "statement": "Trop rapide pour être comprise.",
+      "condition": "information_flow_rate_exceeds_processing",
+      "threshold": null,
+      "injunction": "Distinguer systématiquement la vitesse de diffusion d'une information de la vitesse de sa compréhension réelle.",
+      "related_constraints": [
+        "information-04",
+        "systemes-humains-01"
+      ]
+    },
+    {
+      "id": "information-04",
+      "canonical_id": "information-04",
+      "name": "Surcharge",
+      "type": "contrainte",
+      "statement": "Saturation cognitive.",
+      "condition": "information_intake_exceeds_capacity",
+      "threshold": "flux_information > capacite_traitement_cognitif",
+      "injunction": "Traiter la capacité cognitive humaine de traitement de l'information comme une ressource limitée et non extensible à volonté.",
+      "related_constraints": [
+        "information-03",
+        "systemes-humains-02"
+      ]
+    },
+    {
+      "id": "information-05",
+      "canonical_id": "information-05",
+      "name": "Mémoire",
+      "type": "constat",
+      "statement": "Stocker = filtrer.",
+      "condition": "information_archiving_decision",
+      "threshold": null,
+      "injunction": "Reconnaître que toute mémorisation d'information implique une sélection, jamais une conservation neutre et exhaustive.",
+      "related_constraints": [
+        "information-01",
+        "information-06"
+      ]
+    },
+    {
+      "id": "information-06",
+      "canonical_id": "information-06",
+      "name": "Biais",
+      "type": "constat",
+      "statement": "Toute information est orientée.",
+      "condition": "information_presented_as_neutral",
+      "threshold": null,
+      "injunction": "Ne jamais présenter une source d'information comme parfaitement neutre ou exempte de point de vue.",
+      "related_constraints": [
+        "information-05",
+        "information-08"
+      ]
+    },
+    {
+      "id": "information-07",
+      "canonical_id": "information-07",
+      "name": "Propagation",
+      "type": "constat",
+      "statement": "Les réseaux amplifient.",
+      "condition": "information_spread_via_network",
+      "threshold": null,
+      "injunction": "Intégrer l'effet d'amplification des réseaux dans toute analyse de la diffusion d'une information.",
+      "related_constraints": [
+        "information-02",
+        "information-08"
+      ]
+    },
+    {
+      "id": "information-08",
+      "canonical_id": "information-08",
+      "name": "Manipulation",
+      "type": "constat",
+      "statement": "Le récit peut déformer le réel.",
+      "condition": "narrative_treated_as_factual_proxy",
+      "threshold": null,
+      "injunction": "Distinguer systématiquement un récit sur le réel du réel lui-même dans toute analyse d'information.",
+      "related_constraints": [
+        "information-06",
+        "information-09"
+      ]
+    },
+    {
+      "id": "information-09",
+      "canonical_id": "information-09",
+      "name": "Fragmentation",
+      "type": "constat",
+      "statement": "Les récits se disloquent.",
+      "condition": "shared_narrative_assumed",
+      "threshold": null,
+      "injunction": "Ne pas présupposer l'existence d'un récit commun ou partagé lors de l'analyse d'un débat informationnel.",
+      "related_constraints": [
+        "information-08",
+        "systemes-humains-04"
+      ]
+    },
+    {
+      "id": "information-10",
+      "canonical_id": "information-10",
+      "name": "Lucidité",
+      "type": "injonction",
+      "statement": "Ressource rare.",
+      "condition": "any_information_evaluation",
+      "threshold": null,
+      "injunction": "Évaluer systématiquement la clarté et la vérifiabilité d'une information comme critère prioritaire avant sa diffusion ou son usage.",
+      "related_constraints": [
+        "information-01",
+        "information-06"
+      ]
+    }
+  ]
+}

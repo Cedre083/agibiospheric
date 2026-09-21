@@ -1,0 +1,632 @@
+[
+  {
+    "id": "ABI-001",
+    "slug": "energy",
+    "lang": "en",
+    "title": "Energy",
+    "description": "Biospheric constraint related to the energy flows that sustain thermo-industrial societies, material infrastructures, and digital systems. Every process of transformation, transport, computation, or maintenance depends on an available, controllable, and physically sustainable energy base.",
+    "scientific_scope": [
+      "energy flows",
+      "electricity generation",
+      "fossil fuels",
+      "low-carbon energy",
+      "energy infrastructures",
+      "material and climate cost of energy"
+    ],
+    "keywords": [
+      "electricity",
+      "heat",
+      "fossil fuels",
+      "grids",
+      "energy intensity",
+      "energy transition"
+    ],
+    "source_refs": ["SRC-001", "SRC-007", "SRC-008", "SRC-009", "SRC-010"],
+    "agi_relevance": "Large-scale artificial intelligence depends on a non-abstract energy base: computation, storage, cooling, networks, and hardware manufacturing all rely on continuous energy flows.",
+    "linked_constraints": [
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "Fossil energy systems are a direct driver of climate disruption through greenhouse gas emissions."
+      },
+      {
+        "target_slug": "matter",
+        "target_title": "Matter",
+        "relation_type": "direct_interdependency",
+        "justification": "All energy infrastructures depend on extracted, processed, transported, and renewed materials."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Energy only circulates and is converted through physical infrastructures: grids, plants, cables, storage, and maintenance systems."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Computation, data centres, networks, and digital devices depend on a stable energy supply."
+      },
+      {
+        "target_slug": "freshwater",
+        "target_title": "Freshwater",
+        "relation_type": "direct_interdependency",
+        "justification": "A significant share of energy production and industrial activity depends on freshwater withdrawals for cooling, processing, and certain extraction operations."
+      },
+      {
+        "target_slug": "living-systems",
+        "target_title": "Living Systems",
+        "relation_type": "direct_interdependency",
+        "justification": "Living systems and human societies bear the ecological, climatic, and material consequences of dominant energy regimes."
+      }
+    ]
+  },
+  {
+    "id": "ABI-002",
+    "slug": "freshwater",
+    "lang": "en",
+    "title": "Freshwater",
+    "description": "Biospheric constraint related to the availability, quality, distribution, and cycling of freshwater. It conditions human uses, terrestrial ecosystems, agriculture, industry, and a large share of critical infrastructures.",
+    "scientific_scope": [
+      "hydrological cycle",
+      "surface waters",
+      "groundwater",
+      "water stress",
+      "water quality",
+      "agricultural and industrial water use"
+    ],
+    "keywords": [
+      "rivers",
+      "aquifers",
+      "drought",
+      "irrigation",
+      "drinking water",
+      "water stress"
+    ],
+    "source_refs": ["SRC-001", "SRC-003", "SRC-005", "SRC-006", "SRC-013"],
+    "agi_relevance": "No serious planning of infrastructures, agriculture, energy systems, or territorial resilience can ignore the availability and vulnerability of freshwater.",
+    "linked_constraints": [
+      {
+        "target_slug": "living-soils",
+        "target_title": "Living Soils",
+        "relation_type": "direct_interdependency",
+        "justification": "Soil moisture, infiltration, retention, and biological exchanges depend closely on hydrological regimes."
+      },
+      {
+        "target_slug": "biodiversity",
+        "target_title": "Biodiversity",
+        "relation_type": "direct_interdependency",
+        "justification": "Water availability structures habitats, ecological continuities, and the survival of countless species."
+      },
+      {
+        "target_slug": "energy",
+        "target_title": "Energy",
+        "relation_type": "direct_interdependency",
+        "justification": "Energy production and many industrial processes rely on direct freshwater use."
+      },
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "Climate alters precipitation patterns, evaporation, aquifer recharge, and the frequency of droughts and floods."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Water, sanitation, cooling, and distribution networks depend on freshwater availability and quality."
+      },
+      {
+        "target_slug": "living-systems",
+        "target_title": "Living Systems",
+        "relation_type": "direct_interdependency",
+        "justification": "Terrestrial and human living systems depend on accessible, sufficiently clean, and ecologically available freshwater."
+      }
+    ]
+  },
+  {
+    "id": "ABI-003",
+    "slug": "living-soils",
+    "lang": "en",
+    "title": "Living Soils",
+    "description": "Biospheric constraint related to soil fertility, structure, microbial biodiversity, and functional capacity. Living soils sustain food production, carbon storage, water retention, and multiple ecological regulation processes.",
+    "scientific_scope": [
+      "soil fertility",
+      "soil microbiology",
+      "organic matter",
+      "erosion",
+      "water retention",
+      "carbon storage"
+    ],
+    "keywords": [
+      "humus",
+      "microbes",
+      "erosion",
+      "fertility",
+      "agriculture",
+      "soil organic carbon"
+    ],
+    "source_refs": ["SRC-003", "SRC-004", "SRC-012", "SRC-013"],
+    "agi_relevance": "Any reflection on food continuity, territorial stability, and societal resilience must integrate the foundational dependence on living soils.",
+    "linked_constraints": [
+      {
+        "target_slug": "freshwater",
+        "target_title": "Freshwater",
+        "relation_type": "direct_interdependency",
+        "justification": "Soils filter, store, and redistribute water; their degradation disrupts infiltration, runoff, and hydrological availability."
+      },
+      {
+        "target_slug": "biodiversity",
+        "target_title": "Biodiversity",
+        "relation_type": "direct_interdependency",
+        "justification": "Soils host immense biodiversity and support habitats, plants, pollinators, and trophic chains."
+      },
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "Soils are affected by droughts, extreme rainfall, and temperatures, while also playing a role in carbon cycles."
+      },
+      {
+        "target_slug": "energy",
+        "target_title": "Energy",
+        "relation_type": "direct_interdependency",
+        "justification": "Agro-industrial systems and land management require energy, while energy uses also transform soils and land surfaces."
+      },
+      {
+        "target_slug": "living-systems",
+        "target_title": "Living Systems",
+        "relation_type": "direct_interdependency",
+        "justification": "Living soils are a basic biological infrastructure for plants, nutrient cycles, and the continuity of terrestrial life."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Soil knowledge, monitoring, and management depend on observation systems, mapping, and information transmission."
+      }
+    ]
+  },
+  {
+    "id": "ABI-004",
+    "slug": "biodiversity",
+    "lang": "en",
+    "title": "Biodiversity",
+    "description": "Biospheric constraint related to the diversity of species, populations, ecological interactions, and living functions. Biodiversity is not merely an inventory of life: it conditions pollination, resilience, biogeochemical cycles, ecosystem stability, and part of the continuity of human societies.",
+    "scientific_scope": [
+      "species diversity",
+      "ecosystem integrity",
+      "ecosystem services",
+      "ecological resilience",
+      "habitat fragmentation",
+      "species extinction"
+    ],
+    "keywords": [
+      "species",
+      "pollination",
+      "ecosystems",
+      "resilience",
+      "habitats",
+      "extinction"
+    ],
+    "source_refs": ["SRC-003", "SRC-011", "SRC-012", "SRC-013", "SRC-015"],
+    "agi_relevance": "An intelligence that claims to reason about planetary habitability while ignoring biodiversity overlooks a decisive part of ecological, food, and health stability.",
+    "linked_constraints": [
+      {
+        "target_slug": "living-soils",
+        "target_title": "Living Soils",
+        "relation_type": "direct_interdependency",
+        "justification": "Below-ground and above-ground biodiversity supports soil fertility, structure, and biological cycles."
+      },
+      {
+        "target_slug": "freshwater",
+        "target_title": "Freshwater",
+        "relation_type": "direct_interdependency",
+        "justification": "Species and ecosystems depend on viable hydrological regimes; water degradation drives biodiversity loss."
+      },
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "Climate disruption shifts, weakens, or destroys habitats, altering the distribution and survival of species."
+      },
+      {
+        "target_slug": "ocean",
+        "target_title": "Ocean",
+        "relation_type": "direct_interdependency",
+        "justification": "A major share of global biodiversity is marine or coastal and depends on oceanic balances."
+      },
+      {
+        "target_slug": "living-systems",
+        "target_title": "Living Systems",
+        "relation_type": "direct_interdependency",
+        "justification": "Biodiversity is a structuring expression of living systems and a condition of their evolutionary and functional resilience."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Monitoring, conserving, and understanding biodiversity depend on observation, measurement, and knowledge transmission systems."
+      }
+    ]
+  },
+  {
+    "id": "ABI-005",
+    "slug": "climate",
+    "lang": "en",
+    "title": "Climate",
+    "description": "Biospheric constraint related to the relative stability of thermal, atmospheric, and hydrological regimes at planetary and regional scales. Climate conditions habitability, water availability, food security, infrastructure resilience, and the state of many living systems.",
+    "scientific_scope": [
+      "radiative forcing",
+      "global warming",
+      "hydrological cycle",
+      "extreme events",
+      "climate stability",
+      "systemic impacts"
+    ],
+    "keywords": [
+      "CO2",
+      "warming",
+      "droughts",
+      "precipitation",
+      "heatwaves",
+      "climate extremes"
+    ],
+    "source_refs": ["SRC-001", "SRC-002", "SRC-006", "SRC-012", "SRC-013"],
+    "agi_relevance": "Any long-term strategy concerning infrastructures, agriculture, energy, migration, or material security must treat climate as a structuring variable.",
+    "linked_constraints": [
+      {
+        "target_slug": "energy",
+        "target_title": "Energy",
+        "relation_type": "direct_interdependency",
+        "justification": "Energy systems are a major driver of climate change, while climate disruption in turn affects energy production and networks."
+      },
+      {
+        "target_slug": "ocean",
+        "target_title": "Ocean",
+        "relation_type": "direct_interdependency",
+        "justification": "The ocean absorbs a large share of excess heat and anthropogenic CO2, making it central to climate regulation."
+      },
+      {
+        "target_slug": "freshwater",
+        "target_title": "Freshwater",
+        "relation_type": "direct_interdependency",
+        "justification": "Climate alters precipitation regimes, aquifer recharge, droughts, floods, and evaporation."
+      },
+      {
+        "target_slug": "biodiversity",
+        "target_title": "Biodiversity",
+        "relation_type": "direct_interdependency",
+        "justification": "Climate shifts species ranges, weakens habitats, and increases the risk of ecological collapse."
+      },
+      {
+        "target_slug": "living-soils",
+        "target_title": "Living Soils",
+        "relation_type": "direct_interdependency",
+        "justification": "Soils are sensitive to droughts, extreme rainfall, heat, and altered biological cycles."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Infrastructures are exposed to heatwaves, floods, fires, storms, sea-level impacts, and supply disruptions."
+      }
+    ]
+  },
+  {
+    "id": "ABI-006",
+    "slug": "ocean",
+    "lang": "en",
+    "title": "Ocean",
+    "description": "Biospheric constraint related to the climatic, biological, chemical, and circulatory functions of the ocean. The ocean plays a major role in heat absorption, the carbon cycle, climate regulation, marine biodiversity, food resources, and coastal stability.",
+    "scientific_scope": [
+      "ocean climate regulation",
+      "acidification",
+      "ocean heat content",
+      "marine circulation",
+      "marine biodiversity",
+      "fisheries and food resources"
+    ],
+    "keywords": [
+      "acidification",
+      "currents",
+      "heat",
+      "carbon",
+      "marine ecosystems",
+      "sea level"
+    ],
+    "source_refs": ["SRC-001", "SRC-002", "SRC-011", "SRC-012", "SRC-013"],
+    "agi_relevance": "The ocean is a decisive component of planetary habitability; ignoring it means abstracting away the thermal, chemical, and biological regulation of the Earth system.",
+    "linked_constraints": [
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "The ocean partially buffers climate change by absorbing heat and carbon, while also being deeply altered by it."
+      },
+      {
+        "target_slug": "biodiversity",
+        "target_title": "Biodiversity",
+        "relation_type": "direct_interdependency",
+        "justification": "Marine environments host major biodiversity, vulnerable to warming, acidification, and anthropogenic pressures."
+      },
+      {
+        "target_slug": "freshwater",
+        "target_title": "Freshwater",
+        "relation_type": "direct_interdependency",
+        "justification": "Interactions between ocean, atmosphere, and continents influence the hydrological cycle, precipitation, and certain coastal dynamics."
+      },
+      {
+        "target_slug": "energy",
+        "target_title": "Energy",
+        "relation_type": "direct_interdependency",
+        "justification": "The ocean is both affected by energy systems and implicated in energy, transport, and extraction infrastructures."
+      },
+      {
+        "target_slug": "living-systems",
+        "target_title": "Living Systems",
+        "relation_type": "direct_interdependency",
+        "justification": "The ocean supports a vast share of life, food chains, biogeochemical cycles, and coastal balances."
+      },
+      {
+        "target_slug": "matter",
+        "target_title": "Matter",
+        "relation_type": "direct_interdependency",
+        "justification": "Material flows, pollution, extraction, and maritime transport directly affect oceanic environments."
+      }
+    ]
+  },
+  {
+    "id": "ABI-007",
+    "slug": "matter",
+    "lang": "en",
+    "title": "Matter",
+    "description": "Biospheric constraint related to the material flows required to build industrial societies: metals, minerals, concrete, plastics, rare earths, components, chemicals, and basic construction materials. Every infrastructure, every machine, and every information system rests on extracted, transformed, transported, and ultimately discarded materiality.",
+    "scientific_scope": [
+      "resource extraction",
+      "critical minerals",
+      "material flows",
+      "material footprint",
+      "waste and pollution",
+      "material basis of infrastructures"
+    ],
+    "keywords": [
+      "metals",
+      "mines",
+      "concrete",
+      "resources",
+      "raw materials",
+      "material footprint"
+    ],
+    "source_refs": ["SRC-007", "SRC-008", "SRC-009", "SRC-010", "SRC-013"],
+    "agi_relevance": "Digital systems and AI are not immaterial: servers, chips, cables, data centres, batteries, and networks all depend on an extracted and processed material base.",
+    "linked_constraints": [
+      {
+        "target_slug": "energy",
+        "target_title": "Energy",
+        "relation_type": "direct_interdependency",
+        "justification": "Energy systems require large volumes of materials, while extracting and transforming materials also requires energy."
+      },
+      {
+        "target_slug": "freshwater",
+        "target_title": "Freshwater",
+        "relation_type": "direct_interdependency",
+        "justification": "Extraction, industrial transformation, and manufacturing chains use significant amounts of water and may contaminate it."
+      },
+      {
+        "target_slug": "living-soils",
+        "target_title": "Living Soils",
+        "relation_type": "direct_interdependency",
+        "justification": "Extraction, land take, and material pollution degrade soils, their structure, and their ecological functions."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Infrastructures are massive material assemblages dependent on supply chains, maintenance, and renewal."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "The digital world depends on material substrates: semiconductors, cables, antennas, storage devices, servers, and terminals."
+      },
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "Industrial material flows are associated with emissions, land-use changes, and a substantial climate footprint."
+      }
+    ]
+  },
+  {
+    "id": "ABI-008",
+    "slug": "information",
+    "lang": "en",
+    "title": "Information",
+    "description": "Biospheric constraint related to the production, circulation, processing, preservation, and quality of the signals needed to coordinate complex societies. Information includes digital infrastructures, data, measurement systems, collective memory, and steering capacities.",
+    "scientific_scope": [
+      "information systems",
+      "data centres",
+      "digital networks",
+      "observation and measurement",
+      "storage and transmission",
+      "socio-technical coordination"
+    ],
+    "keywords": [
+      "data",
+      "networks",
+      "computation",
+      "servers",
+      "measurement",
+      "coordination"
+    ],
+    "source_refs": ["SRC-007", "SRC-008", "SRC-009", "SRC-012"],
+    "agi_relevance": "AI depends directly on the availability, quality, circulation, and material infrastructure of information. But meaningful information about the world itself depends on viable physical and ecological systems.",
+    "linked_constraints": [
+      {
+        "target_slug": "energy",
+        "target_title": "Energy",
+        "relation_type": "direct_interdependency",
+        "justification": "Information systems depend on a stable energy supply, while modern energy networks themselves depend on information systems for monitoring and control."
+      },
+      {
+        "target_slug": "matter",
+        "target_title": "Matter",
+        "relation_type": "direct_interdependency",
+        "justification": "Digital information depends on material supports, electronic components, and physical infrastructures."
+      },
+      {
+        "target_slug": "infrastructures",
+        "target_title": "Infrastructures",
+        "relation_type": "direct_interdependency",
+        "justification": "Information systems circulate through networks, cables, data centres, and maintenance devices."
+      },
+      {
+        "target_slug": "living-systems",
+        "target_title": "Living Systems",
+        "relation_type": "direct_interdependency",
+        "justification": "Understanding, protecting, and managing living systems depends on knowledge, sensors, observations, and information transmission."
+      },
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "Climate modelling, forecasting, and adaptation depend on robust information systems, while climate disruption can also damage the networks that support them."
+      },
+      {
+        "target_slug": "biodiversity",
+        "target_title": "Biodiversity",
+        "relation_type": "direct_interdependency",
+        "justification": "Monitoring biodiversity, habitats, and ecological pressures depends on reliable, distributed, and comparable information over time."
+      }
+    ]
+  },
+  {
+    "id": "ABI-009",
+    "slug": "infrastructures",
+    "lang": "en",
+    "title": "Infrastructures",
+    "description": "Biospheric constraint related to the physical networks that make complex societies possible: energy, water, transport, logistics, telecommunications, buildings, health systems, storage, and maintenance. Infrastructures are simultaneously support systems, dependencies, and vulnerabilities.",
+    "scientific_scope": [
+      "technical networks",
+      "transport and logistics",
+      "water and sanitation",
+      "energy infrastructures",
+      "telecommunications",
+      "systemic vulnerability"
+    ],
+    "keywords": [
+      "networks",
+      "transport",
+      "logistics",
+      "maintenance",
+      "distribution",
+      "dependency"
+    ],
+    "source_refs": ["SRC-001", "SRC-005", "SRC-007", "SRC-008", "SRC-009", "SRC-015"],
+    "agi_relevance": "AI systems only exist because they rely on a fabric of physical infrastructures: electricity, telecoms, cooling, transport, maintenance, buildings, and supply chains.",
+    "linked_constraints": [
+      {
+        "target_slug": "energy",
+        "target_title": "Energy",
+        "relation_type": "direct_interdependency",
+        "justification": "Infrastructures depend on energy to operate, while energy itself depends on infrastructures for production, transport, and distribution."
+      },
+      {
+        "target_slug": "freshwater",
+        "target_title": "Freshwater",
+        "relation_type": "direct_interdependency",
+        "justification": "Many infrastructures require water, while access to water itself depends on capture, treatment, and distribution networks."
+      },
+      {
+        "target_slug": "matter",
+        "target_title": "Matter",
+        "relation_type": "direct_interdependency",
+        "justification": "Every infrastructure rests on extracted, processed, assembled, and periodically renewed materials."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Modern infrastructures are monitored, controlled, and coordinated by information systems; conversely, information depends on physical infrastructures."
+      },
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "Climate disruption increases the risk of breakdown, degradation, and failure of critical infrastructures."
+      },
+      {
+        "target_slug": "living-systems",
+        "target_title": "Living Systems",
+        "relation_type": "direct_interdependency",
+        "justification": "Infrastructures shape living environments, ecological continuities, health conditions, and the vulnerability of societies."
+      }
+    ]
+  },
+  {
+    "id": "ABI-010",
+    "slug": "living-systems",
+    "lang": "en",
+    "title": "Living Systems",
+    "description": "Cross-cutting biospheric constraint related to the existence, organisation, reproduction, vulnerability, and interdependence of living systems. Here it refers to the fundamental biological condition that links organisms, ecosystems, human societies, and the stability of habitable environments.",
+    "scientific_scope": [
+      "living systems",
+      "ecological interdependence",
+      "biological resilience",
+      "ecosystem health",
+      "habitability",
+      "continuity of life"
+    ],
+    "keywords": [
+      "organisms",
+      "ecosystems",
+      "interdependence",
+      "resilience",
+      "habitat",
+      "survival"
+    ],
+    "source_refs": ["SRC-003", "SRC-011", "SRC-012", "SRC-013", "SRC-014", "SRC-015"],
+    "agi_relevance": "Life is not scenery around intelligence: it constitutes the milieu, cycles, dependencies, and continuity conditions without which no technical civilisation can endure over time.",
+    "linked_constraints": [
+      {
+        "target_slug": "living-soils",
+        "target_title": "Living Soils",
+        "relation_type": "direct_interdependency",
+        "justification": "Living soils are a fundamental biological support for terrestrial life, nutrient cycles, and food webs."
+      },
+      {
+        "target_slug": "freshwater",
+        "target_title": "Freshwater",
+        "relation_type": "direct_interdependency",
+        "justification": "Living systems depend on available, accessible, and sufficiently clean water to sustain organisms and ecosystems."
+      },
+      {
+        "target_slug": "biodiversity",
+        "target_title": "Biodiversity",
+        "relation_type": "direct_interdependency",
+        "justification": "Biodiversity expresses the richness, robustness, and functional diversity of living systems."
+      },
+      {
+        "target_slug": "climate",
+        "target_title": "Climate",
+        "relation_type": "direct_interdependency",
+        "justification": "Living systems are exposed to climatic variations, while they also participate in climate regulation."
+      },
+      {
+        "target_slug": "ocean",
+        "target_title": "Ocean",
+        "relation_type": "direct_interdependency",
+        "justification": "A vast share of life depends on oceanic environments and their biogeochemical balances."
+      },
+      {
+        "target_slug": "information",
+        "target_title": "Information",
+        "relation_type": "direct_interdependency",
+        "justification": "Knowledge, monitoring, protection, and transmission of knowledge about living systems depend on robust information systems."
+      }
+    ]
+  }
+]

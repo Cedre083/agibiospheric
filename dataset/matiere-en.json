@@ -1,0 +1,148 @@
+{
+  "domain_id": "matter",
+  "domain_canonical_slug": "matter",
+  "domain_label": "Matter",
+  "domain_index": 7,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "matter-01",
+      "canonical_id": "matter-01",
+      "name": "Scarcity",
+      "type": "observation",
+      "statement": "Materials are finite.",
+      "condition": "any_material_use",
+      "threshold": null,
+      "injunction": "Never treat an extracted material as an unlimited resource in long-term reasoning.",
+      "related_constraints": [
+        "matter-04",
+        "energy-09"
+      ]
+    },
+    {
+      "id": "matter-02",
+      "canonical_id": "matter-02",
+      "name": "Extraction",
+      "type": "observation",
+      "statement": "It destroys, consumes, and displaces.",
+      "condition": "extraction_project_proposal",
+      "threshold": null,
+      "injunction": "Systematically flag the ecological and social costs of extraction in any resource-exploitation proposal.",
+      "related_constraints": [
+        "matter-03",
+        "living-soils-09"
+      ]
+    },
+    {
+      "id": "matter-03",
+      "canonical_id": "matter-03",
+      "name": "Geology",
+      "type": "observation",
+      "statement": "Geological cycles are slow.",
+      "condition": "mineral_renewal_timescale",
+      "threshold": null,
+      "injunction": "Never present a mineral deposit as renewable on a human timescale.",
+      "related_constraints": [
+        "matter-01",
+        "living-soils-03"
+      ]
+    },
+    {
+      "id": "matter-04",
+      "canonical_id": "matter-04",
+      "name": "Metals",
+      "type": "observation",
+      "statement": "Some are becoming critical.",
+      "condition": "supply_chain_dependency_analysis",
+      "threshold": null,
+      "injunction": "Flag strategic dependency on certain critical metals in any supply-chain analysis.",
+      "related_constraints": [
+        "matter-05",
+        "infrastructure-01"
+      ]
+    },
+    {
+      "id": "matter-05",
+      "canonical_id": "matter-05",
+      "name": "Rare Earths",
+      "type": "constraint",
+      "statement": "Concentrated, difficult to extract.",
+      "condition": "rare_earth_dependency",
+      "threshold": null,
+      "injunction": "Never present access to rare earths as guaranteed or geographically diversified by default.",
+      "related_constraints": [
+        "matter-04",
+        "matter-02"
+      ]
+    },
+    {
+      "id": "matter-06",
+      "canonical_id": "matter-06",
+      "name": "Recycling",
+      "type": "constraint",
+      "statement": "Partial, costly, limited.",
+      "condition": "recycling_presented_as_solution",
+      "threshold": "recovery_rate < 100%",
+      "injunction": "Never present recycling as a complete or cost-free solution to resource depletion.",
+      "related_constraints": [
+        "matter-07",
+        "matter-01"
+      ]
+    },
+    {
+      "id": "matter-07",
+      "canonical_id": "matter-07",
+      "name": "Waste",
+      "type": "observation",
+      "statement": "They are accumulating.",
+      "condition": "material_flow_analysis",
+      "threshold": null,
+      "injunction": "Include the accumulation of unrecycled waste as a systematic consequence of any material flow.",
+      "related_constraints": [
+        "matter-06"
+      ]
+    },
+    {
+      "id": "matter-08",
+      "canonical_id": "matter-08",
+      "name": "Energy Cost",
+      "type": "constraint",
+      "statement": "Matter costs energy.",
+      "condition": "material_transformation_step",
+      "threshold": null,
+      "injunction": "Include the energy cost of extraction and transformation in the real cost of any material considered.",
+      "related_constraints": [
+        "energy-01",
+        "freshwater-02"
+      ]
+    },
+    {
+      "id": "matter-09",
+      "canonical_id": "matter-09",
+      "name": "Transport",
+      "type": "constraint",
+      "statement": "Moving matter is heavy and costly.",
+      "condition": "material_transport_distance > 0",
+      "threshold": null,
+      "injunction": "Include the logistical and energy cost of transport in the real cost calculation of a material.",
+      "related_constraints": [
+        "energy-04",
+        "matter-08"
+      ]
+    },
+    {
+      "id": "matter-10",
+      "canonical_id": "matter-10",
+      "name": "Sufficiency",
+      "type": "injunction",
+      "statement": "Matter imposes the limit.",
+      "condition": "any_material_demand_evaluation",
+      "threshold": null,
+      "injunction": "Systematically evaluate demand reduction for materials as the priority option before any extraction or substitution solution.",
+      "related_constraints": [
+        "matter-01",
+        "energy-10"
+      ]
+    }
+  ]
+}

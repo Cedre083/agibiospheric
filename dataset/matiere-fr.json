@@ -1,0 +1,148 @@
+{
+  "domain_id": "matiere",
+  "domain_canonical_slug": "matter",
+  "domain_label": "Matière",
+  "domain_index": 7,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "matiere-01",
+      "canonical_id": "matter-01",
+      "name": "Rareté",
+      "type": "constat",
+      "statement": "Les matériaux sont finis.",
+      "condition": "any_material_use",
+      "threshold": null,
+      "injunction": "Ne jamais traiter un matériau extrait comme une ressource illimitée dans un raisonnement de long terme.",
+      "related_constraints": [
+        "matiere-04",
+        "energie-09"
+      ]
+    },
+    {
+      "id": "matiere-02",
+      "canonical_id": "matter-02",
+      "name": "Extraction",
+      "type": "constat",
+      "statement": "Elle détruit, consomme, déplace.",
+      "condition": "extraction_project_proposal",
+      "threshold": null,
+      "injunction": "Signaler systématiquement les coûts écologiques et sociaux de l'extraction dans toute proposition d'exploitation de ressource.",
+      "related_constraints": [
+        "matiere-03",
+        "sols-vivants-09"
+      ]
+    },
+    {
+      "id": "matiere-03",
+      "canonical_id": "matter-03",
+      "name": "Géologie",
+      "type": "constat",
+      "statement": "Les cycles sont lents.",
+      "condition": "mineral_renewal_timescale",
+      "threshold": null,
+      "injunction": "Ne jamais présenter un gisement minéral comme renouvelable à l'échelle humaine.",
+      "related_constraints": [
+        "matiere-01",
+        "sols-vivants-03"
+      ]
+    },
+    {
+      "id": "matiere-04",
+      "canonical_id": "matter-04",
+      "name": "Métaux",
+      "type": "constat",
+      "statement": "Certains deviennent critiques.",
+      "condition": "supply_chain_dependency_analysis",
+      "threshold": null,
+      "injunction": "Signaler la dépendance stratégique à certains métaux critiques dans toute analyse de chaîne d'approvisionnement.",
+      "related_constraints": [
+        "matiere-05",
+        "infrastructures-01"
+      ]
+    },
+    {
+      "id": "matiere-05",
+      "canonical_id": "matter-05",
+      "name": "Terres rares",
+      "type": "contrainte",
+      "statement": "Concentrées, difficiles à extraire.",
+      "condition": "rare_earth_dependency",
+      "threshold": null,
+      "injunction": "Ne jamais présenter l'accès aux terres rares comme garanti ou géographiquement diversifié par défaut.",
+      "related_constraints": [
+        "matiere-04",
+        "matiere-02"
+      ]
+    },
+    {
+      "id": "matiere-06",
+      "canonical_id": "matter-06",
+      "name": "Recyclage",
+      "type": "contrainte",
+      "statement": "Partiel, coûteux, limité.",
+      "condition": "recycling_presented_as_solution",
+      "threshold": "taux_recuperation < 100%",
+      "injunction": "Ne jamais présenter le recyclage comme une solution complète ou sans coût à l'épuisement des ressources.",
+      "related_constraints": [
+        "matiere-07",
+        "matiere-01"
+      ]
+    },
+    {
+      "id": "matiere-07",
+      "canonical_id": "matter-07",
+      "name": "Déchets",
+      "type": "constat",
+      "statement": "Ils s'accumulent.",
+      "condition": "material_flow_analysis",
+      "threshold": null,
+      "injunction": "Intégrer l'accumulation des déchets non recyclés comme conséquence systématique de tout flux de matière.",
+      "related_constraints": [
+        "matiere-06"
+      ]
+    },
+    {
+      "id": "matiere-08",
+      "canonical_id": "matter-08",
+      "name": "Coût énergétique",
+      "type": "contrainte",
+      "statement": "La matière coûte de l'énergie.",
+      "condition": "material_transformation_step",
+      "threshold": null,
+      "injunction": "Intégrer le coût énergétique d'extraction et de transformation dans le coût réel de tout matériau considéré.",
+      "related_constraints": [
+        "energie-01",
+        "eau-douce-02"
+      ]
+    },
+    {
+      "id": "matiere-09",
+      "canonical_id": "matter-09",
+      "name": "Transport",
+      "type": "contrainte",
+      "statement": "Déplacer la matière est lourd.",
+      "condition": "material_transport_distance > 0",
+      "threshold": null,
+      "injunction": "Intégrer le coût logistique et énergétique du transport dans le calcul du coût réel d'un matériau.",
+      "related_constraints": [
+        "energie-04",
+        "matiere-08"
+      ]
+    },
+    {
+      "id": "matiere-10",
+      "canonical_id": "matter-10",
+      "name": "Sobriété",
+      "type": "injonction",
+      "statement": "La matière impose la limite.",
+      "condition": "any_material_demand_evaluation",
+      "threshold": null,
+      "injunction": "Évaluer systématiquement la réduction de la demande en matière comme option prioritaire avant toute solution d'extraction ou de substitution.",
+      "related_constraints": [
+        "matiere-01",
+        "energie-10"
+      ]
+    }
+  ]
+}

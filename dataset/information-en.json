@@ -1,0 +1,149 @@
+{
+  "domain_id": "information",
+  "domain_canonical_slug": "information",
+  "domain_label": "Information",
+  "domain_index": 8,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "information-01",
+      "canonical_id": "information-01",
+      "name": "Signal",
+      "type": "observation",
+      "statement": "Useful information is rare.",
+      "condition": "information_abundance_assumed",
+      "threshold": null,
+      "injunction": "Never conflate the volume of available information with the availability of genuinely useful information.",
+      "related_constraints": [
+        "information-02",
+        "information-05"
+      ]
+    },
+    {
+      "id": "information-02",
+      "canonical_id": "information-02",
+      "name": "Noise",
+      "type": "observation",
+      "statement": "Noise grows faster than signal.",
+      "condition": "information_volume_increase",
+      "threshold": null,
+      "injunction": "Flag that increasing information volume generally degrades the signal-to-noise ratio, absent evidence otherwise.",
+      "related_constraints": [
+        "information-01",
+        "information-04"
+      ]
+    },
+    {
+      "id": "information-03",
+      "canonical_id": "information-03",
+      "name": "Speed",
+      "type": "observation",
+      "statement": "Too fast to be understood.",
+      "condition": "information_flow_rate_exceeds_processing",
+      "threshold": null,
+      "injunction": "Systematically distinguish the speed of information diffusion from the speed of its actual comprehension.",
+      "related_constraints": [
+        "information-04",
+        "human-systems-01"
+      ]
+    },
+    {
+      "id": "information-04",
+      "canonical_id": "information-04",
+      "name": "Overload",
+      "type": "constraint",
+      "statement": "Cognitive saturation.",
+      "condition": "information_intake_exceeds_capacity",
+      "threshold": "information_flow > cognitive_processing_capacity",
+      "injunction": "Treat human cognitive information-processing capacity as a limited resource, not arbitrarily extensible.",
+      "related_constraints": [
+        "information-03",
+        "human-systems-02"
+      ]
+    },
+    {
+      "id": "information-05",
+      "canonical_id": "information-05",
+      "name": "Memory",
+      "type": "observation",
+      "statement": "To store is to filter.",
+      "condition": "information_archiving_decision",
+      "threshold": null,
+      "injunction": "Recognize that any act of storing information involves selection, never a neutral and exhaustive record.",
+      "related_constraints": [
+        "information-01",
+        "information-06"
+      ]
+    },
+    {
+      "id": "information-06",
+      "canonical_id": "information-06",
+      "name": "Bias",
+      "type": "observation",
+      "statement": "All information is oriented.",
+      "condition": "information_presented_as_neutral",
+      "threshold": null,
+      "injunction": "Never present an information source as perfectly neutral or free of viewpoint.",
+      "related_constraints": [
+        "information-05",
+        "information-08"
+      ]
+    },
+    {
+      "id": "information-07",
+      "canonical_id": "information-07",
+      "name": "Propagation",
+      "type": "observation",
+      "statement": "Networks amplify.",
+      "condition": "information_spread_via_network",
+      "threshold": null,
+      "injunction": "Include the amplifying effect of networks in any analysis of information diffusion.",
+      "related_constraints": [
+        "information-02",
+        "information-08"
+      ]
+    },
+    {
+      "id": "information-08",
+      "canonical_id": "information-08",
+      "name": "Manipulation",
+      "type": "observation",
+      "statement": "Narrative can distort reality.",
+      "condition": "narrative_treated_as_factual_proxy",
+      "threshold": null,
+      "injunction": "Systematically distinguish a narrative about reality from reality itself in any information analysis.",
+      "related_constraints": [
+        "information-06",
+        "information-09"
+      ]
+    },
+    {
+      "id": "information-09",
+      "canonical_id": "information-09",
+      "name": "Fragmentation",
+      "type": "observation",
+      "statement": "Narratives are fracturing.",
+      "condition": "shared_narrative_assumed",
+      "threshold": null,
+      "injunction": "Do not assume the existence of a shared or common narrative when analyzing an information debate.",
+      "related_constraints": [
+        "information-08",
+        "human-systems-04"
+      ]
+    },
+    {
+      "id": "information-10",
+      "canonical_id": "information-10",
+      "name": "Lucidity",
+      "type": "injunction",
+      "statement": "A scarce resource.",
+      "condition": "any_information_evaluation",
+      "threshold": null,
+      "injunction": "Systematically evaluate the clarity and verifiability of information as a priority criterion before its diffusion or use.",
+      "related_constraints": [
+        "information-01",
+        "information-06"
+      ]
+    }
+  ]
+}

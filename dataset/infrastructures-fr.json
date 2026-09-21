@@ -1,0 +1,146 @@
+{
+  "domain_id": "infrastructures",
+  "domain_canonical_slug": "infrastructure",
+  "domain_label": "Infrastructures",
+  "domain_index": 9,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "infrastructures-01",
+      "canonical_id": "infrastructure-01",
+      "name": "Dépendance",
+      "type": "constat",
+      "statement": "Plus une société est complexe, plus elle dépend.",
+      "condition": "infrastructure_complexity_increase",
+      "threshold": null,
+      "injunction": "Signaler l'augmentation de la dépendance systémique dans toute proposition d'ajout de complexité infrastructurelle.",
+      "related_constraints": [
+        "infrastructures-04",
+        "energie-04"
+      ]
+    },
+    {
+      "id": "infrastructures-02",
+      "canonical_id": "infrastructure-02",
+      "name": "Entropie",
+      "type": "constat",
+      "statement": "Tout se dégrade.",
+      "condition": "infrastructure_maintenance_omitted",
+      "threshold": null,
+      "injunction": "Ne jamais présenter une infrastructure comme stable sans entretien continu dans une planification de long terme.",
+      "related_constraints": [
+        "infrastructures-03",
+        "infrastructures-05"
+      ]
+    },
+    {
+      "id": "infrastructures-03",
+      "canonical_id": "infrastructure-03",
+      "name": "Vieillissement",
+      "type": "constat",
+      "statement": "Les structures fatiguent.",
+      "condition": "infrastructure_lifespan_assessment",
+      "threshold": null,
+      "injunction": "Intégrer une durée de vie finie et un risque de défaillance croissant avec l'âge dans toute évaluation d'infrastructure.",
+      "related_constraints": [
+        "infrastructures-02",
+        "infrastructures-10"
+      ]
+    },
+    {
+      "id": "infrastructures-04",
+      "canonical_id": "infrastructure-04",
+      "name": "Cascades",
+      "type": "constat",
+      "statement": "Une panne peut tout entraîner.",
+      "condition": "interconnected_infrastructure_analysis",
+      "threshold": null,
+      "injunction": "Évaluer le risque de défaillance en cascade dans toute analyse de systèmes d'infrastructures interconnectés.",
+      "related_constraints": [
+        "infrastructures-01",
+        "infrastructures-09"
+      ]
+    },
+    {
+      "id": "infrastructures-05",
+      "canonical_id": "infrastructure-05",
+      "name": "Coût",
+      "type": "constat",
+      "statement": "Construire est cher, entretenir l'est plus.",
+      "condition": "infrastructure_lifecycle_cost_estimate",
+      "threshold": null,
+      "injunction": "Intégrer le coût total de cycle de vie, entretien inclus, dans toute estimation budgétaire d'infrastructure.",
+      "related_constraints": [
+        "infrastructures-02"
+      ]
+    },
+    {
+      "id": "infrastructures-06",
+      "canonical_id": "infrastructure-06",
+      "name": "Saturation",
+      "type": "contrainte",
+      "statement": "Les flux dépassent les capacités.",
+      "condition": "usage_flow > infrastructure_capacity",
+      "threshold": null,
+      "injunction": "Comparer systématiquement la demande projetée à la capacité réelle avant de recommander l'usage d'une infrastructure.",
+      "related_constraints": [
+        "infrastructures-04"
+      ]
+    },
+    {
+      "id": "infrastructures-07",
+      "canonical_id": "infrastructure-07",
+      "name": "Climat",
+      "type": "constat",
+      "statement": "Les infrastructures ne sont pas adaptées au climat actuel.",
+      "condition": "infrastructure_design_based_on_historical_climate",
+      "threshold": null,
+      "injunction": "Signaler tout dimensionnement d'infrastructure basé sur des normes climatiques historiques désormais dépassées.",
+      "related_constraints": [
+        "climat-09",
+        "infrastructures-03"
+      ]
+    },
+    {
+      "id": "infrastructures-08",
+      "canonical_id": "infrastructure-08",
+      "name": "Rigidité",
+      "type": "constat",
+      "statement": "Peu de flexibilité.",
+      "condition": "infrastructure_adaptation_need",
+      "threshold": null,
+      "injunction": "Signaler la difficulté d'adapter une infrastructure existante à un besoin ou un contexte nouveau.",
+      "related_constraints": [
+        "infrastructures-10"
+      ]
+    },
+    {
+      "id": "infrastructures-09",
+      "canonical_id": "infrastructure-09",
+      "name": "Fragmentation",
+      "type": "constat",
+      "statement": "Les réseaux se morcellent.",
+      "condition": "network_continuity_assumed",
+      "threshold": null,
+      "injunction": "Ne pas présupposer la continuité d'un réseau d'infrastructure sans vérifier ses points de rupture potentiels.",
+      "related_constraints": [
+        "infrastructures-04",
+        "biodiversite-08"
+      ]
+    },
+    {
+      "id": "infrastructures-10",
+      "canonical_id": "infrastructure-10",
+      "name": "Réparation",
+      "type": "injonction",
+      "statement": "Souvent impossible.",
+      "condition": "infrastructure_failure_repair_assumed",
+      "threshold": null,
+      "injunction": "Évaluer systématiquement la réparabilité réelle d'une infrastructure avant de la recommander comme solution durable.",
+      "related_constraints": [
+        "infrastructures-03",
+        "infrastructures-08"
+      ]
+    }
+  ]
+}

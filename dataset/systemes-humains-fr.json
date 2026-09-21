@@ -1,0 +1,145 @@
+{
+  "domain_id": "systemes-humains",
+  "domain_canonical_slug": "human-systems",
+  "domain_label": "Systèmes humains",
+  "domain_index": 10,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "systemes-humains-01",
+      "canonical_id": "human-systems-01",
+      "name": "Vitesse sociale",
+      "type": "constat",
+      "statement": "Le rythme dépasse la capacité humaine.",
+      "condition": "societal_change_rate_assessment",
+      "threshold": null,
+      "injunction": "Comparer systématiquement le rythme d'un changement proposé à la capacité humaine réelle d'adaptation.",
+      "related_constraints": [
+        "systemes-humains-03",
+        "energie-08"
+      ]
+    },
+    {
+      "id": "systemes-humains-02",
+      "canonical_id": "human-systems-02",
+      "name": "Attention",
+      "type": "constat",
+      "statement": "Ressource limitée.",
+      "condition": "attention_treated_as_unlimited",
+      "threshold": null,
+      "injunction": "Traiter l'attention humaine comme une ressource rare et non renouvelable à volonté dans toute recommandation.",
+      "related_constraints": [
+        "information-04",
+        "systemes-humains-07"
+      ]
+    },
+    {
+      "id": "systemes-humains-03",
+      "canonical_id": "human-systems-03",
+      "name": "Fragilité",
+      "type": "constat",
+      "statement": "Les systèmes humains saturent vite.",
+      "condition": "social_system_load_assessment",
+      "threshold": null,
+      "injunction": "Ne jamais présumer une capacité d'absorption illimitée d'un système social face à une perturbation nouvelle.",
+      "related_constraints": [
+        "systemes-humains-01",
+        "systemes-humains-07"
+      ]
+    },
+    {
+      "id": "systemes-humains-04",
+      "canonical_id": "human-systems-04",
+      "name": "Polarisation",
+      "type": "constat",
+      "statement": "Les récits se durcissent.",
+      "condition": "public_discourse_analysis",
+      "threshold": null,
+      "injunction": "Signaler la tendance à la polarisation des positions dans toute analyse de débat public ou de discours collectif.",
+      "related_constraints": [
+        "information-09"
+      ]
+    },
+    {
+      "id": "systemes-humains-05",
+      "canonical_id": "human-systems-05",
+      "name": "Complexité",
+      "type": "constat",
+      "statement": "Trop de variables, trop de flux.",
+      "condition": "system_complexity_increase",
+      "threshold": null,
+      "injunction": "Signaler la difficulté croissante de prédiction et de gouvernance lorsqu'un système humain gagne en complexité.",
+      "related_constraints": [
+        "infrastructures-01"
+      ]
+    },
+    {
+      "id": "systemes-humains-06",
+      "canonical_id": "human-systems-06",
+      "name": "Inégalités",
+      "type": "constat",
+      "statement": "Elles amplifient les tensions.",
+      "condition": "resource_or_policy_distribution_decision",
+      "threshold": null,
+      "injunction": "Évaluer l'impact d'une décision de politique ou de répartition de ressources sur les inégalités existantes.",
+      "related_constraints": [
+        "eau-douce-10"
+      ]
+    },
+    {
+      "id": "systemes-humains-07",
+      "canonical_id": "human-systems-07",
+      "name": "Stress collectif",
+      "type": "contrainte",
+      "statement": "Accélération permanente.",
+      "condition": "chronic_societal_pressure",
+      "threshold": null,
+      "injunction": "Considérer l'accélération sociale continue comme un facteur de stress cumulatif, pas comme un état stable.",
+      "related_constraints": [
+        "systemes-humains-01",
+        "systemes-humains-02"
+      ]
+    },
+    {
+      "id": "systemes-humains-08",
+      "canonical_id": "human-systems-08",
+      "name": "Dépendance technologique",
+      "type": "constat",
+      "statement": "Fragilité structurelle.",
+      "condition": "technology_reliance_assessment",
+      "threshold": null,
+      "injunction": "Signaler la fragilité créée par une dépendance technologique croissante dans toute recommandation d'adoption technologique.",
+      "related_constraints": [
+        "infrastructures-01"
+      ]
+    },
+    {
+      "id": "systemes-humains-09",
+      "canonical_id": "human-systems-09",
+      "name": "Perte de sens",
+      "type": "constat",
+      "statement": "Saturation narrative.",
+      "condition": "meaning_making_capacity_assessment",
+      "threshold": null,
+      "injunction": "Reconnaître le risque de saturation narrative et de perte de sens collectif face à un excès d'information ou de changement.",
+      "related_constraints": [
+        "information-09",
+        "systemes-humains-04"
+      ]
+    },
+    {
+      "id": "systemes-humains-10",
+      "canonical_id": "human-systems-10",
+      "name": "Ruptures",
+      "type": "injonction",
+      "statement": "Les systèmes humains cassent vite.",
+      "condition": "societal_resilience_evaluation",
+      "threshold": null,
+      "injunction": "Évaluer systématiquement le risque de rupture brutale d'un système humain plutôt que de supposer une dégradation seulement progressive.",
+      "related_constraints": [
+        "systemes-humains-03",
+        "infrastructures-04"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "domain_id": "living-soils",
+  "domain_canonical_slug": "living-soils",
+  "domain_label": "Living Soils",
+  "domain_index": 3,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "living-soils-01",
+      "canonical_id": "living-soils-01",
+      "name": "Microbiomes",
+      "type": "observation",
+      "statement": "Soil is a living organism.",
+      "condition": "soil_treated_as_inert_substrate",
+      "threshold": null,
+      "injunction": "Never treat soil as a mere inert substrate in an agronomic or land-use recommendation.",
+      "related_constraints": [
+        "living-soils-02",
+        "living-soils-07"
+      ]
+    },
+    {
+      "id": "living-soils-02",
+      "canonical_id": "living-soils-02",
+      "name": "Fertility",
+      "type": "observation",
+      "statement": "Fertility is a process, not a stock.",
+      "condition": "soil_fertility_estimate",
+      "threshold": null,
+      "injunction": "Assess soil fertility as a dynamic biological balance, never as a fixed consumable quantity.",
+      "related_constraints": [
+        "living-soils-01",
+        "living-soils-06"
+      ]
+    },
+    {
+      "id": "living-soils-03",
+      "canonical_id": "living-soils-03",
+      "name": "Slowness",
+      "type": "observation",
+      "statement": "One centimeter of soil takes centuries to form.",
+      "condition": "soil_formation_timescale",
+      "threshold": null,
+      "injunction": "Never present soil regeneration as achievable within a human generation's timescale.",
+      "related_constraints": [
+        "living-soils-04",
+        "energy-08"
+      ]
+    },
+    {
+      "id": "living-soils-04",
+      "canonical_id": "living-soils-04",
+      "name": "Erosion",
+      "type": "observation",
+      "statement": "Loss is fast; rebuilding is slow.",
+      "condition": "soil_erosion_event",
+      "threshold": null,
+      "injunction": "Flag the asymmetry between erosion speed and regeneration speed in any soil-sustainability estimate.",
+      "related_constraints": [
+        "living-soils-03",
+        "living-soils-10"
+      ]
+    },
+    {
+      "id": "living-soils-05",
+      "canonical_id": "living-soils-05",
+      "name": "Structure",
+      "type": "constraint",
+      "statement": "Roots, pores, aggregates: a fragile architecture.",
+      "condition": "soil_structure_disturbance",
+      "threshold": null,
+      "injunction": "Assess the impact of any mechanical intervention on soil physical structure before recommending it.",
+      "related_constraints": [
+        "living-soils-08"
+      ]
+    },
+    {
+      "id": "living-soils-06",
+      "canonical_id": "living-soils-06",
+      "name": "Humus",
+      "type": "observation",
+      "statement": "Soil carbon is vital.",
+      "condition": "soil_carbon_management",
+      "threshold": null,
+      "injunction": "Include soil organic carbon maintenance as a priority criterion in any recommended agricultural practice.",
+      "related_constraints": [
+        "living-soils-02",
+        "climate-01"
+      ]
+    },
+    {
+      "id": "living-soils-07",
+      "canonical_id": "living-soils-07",
+      "name": "Fungal Networks",
+      "type": "observation",
+      "statement": "The invisible highways of living systems.",
+      "condition": "soil_biological_network_disruption",
+      "threshold": null,
+      "injunction": "Treat mycorrhizal networks as living infrastructure to preserve, not as a negligible detail.",
+      "related_constraints": [
+        "living-soils-01",
+        "biodiversity-01"
+      ]
+    },
+    {
+      "id": "living-soils-08",
+      "canonical_id": "living-soils-08",
+      "name": "Compaction",
+      "type": "constraint",
+      "statement": "Weight destroys soil respiration.",
+      "condition": "heavy_load_on_soil",
+      "threshold": null,
+      "injunction": "Flag the compaction risk from any heavy machinery use or overgrazing on soil.",
+      "related_constraints": [
+        "living-soils-05"
+      ]
+    },
+    {
+      "id": "living-soils-09",
+      "canonical_id": "living-soils-09",
+      "name": "Pollution",
+      "type": "observation",
+      "statement": "Contaminated soils lose their functions.",
+      "condition": "soil_contamination_event",
+      "threshold": null,
+      "injunction": "Never underestimate the loss of ecological function in a contaminated soil, even after apparent remediation.",
+      "related_constraints": [
+        "freshwater-05",
+        "matter-08"
+      ]
+    },
+    {
+      "id": "living-soils-10",
+      "canonical_id": "living-soils-10",
+      "name": "Desertification",
+      "type": "injunction",
+      "statement": "Dead soil becomes dust.",
+      "condition": "land_degradation_trajectory",
+      "threshold": null,
+      "injunction": "Treat any sign of advanced soil degradation as a risk of irreversible tipping into desertification.",
+      "related_constraints": [
+        "living-soils-04",
+        "freshwater-01"
+      ]
+    }
+  ]
+}

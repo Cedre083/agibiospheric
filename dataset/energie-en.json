@@ -1,0 +1,119 @@
+{
+  "domain_id": "energy",
+  "domain_canonical_slug": "energy",
+  "domain_label": "Energy",
+  "domain_index": 1,
+  "version": "0.1-draft",
+  "constraints": [
+    {
+      "id": "energy-01",
+      "canonical_id": "energy-01",
+      "name": "Availability",
+      "type": "observation",
+      "statement": "Accessible energy conditions every action.",
+      "condition": "any_agent_action",
+      "threshold": null,
+      "injunction": "Systematically assess available energy budget before planning any action.",
+      "related_constraints": ["energy-09", "matter-08"]
+    },
+    {
+      "id": "energy-02",
+      "canonical_id": "energy-02",
+      "name": "Density",
+      "type": "observation",
+      "statement": "The denser an energy source, the more valuable it is.",
+      "condition": "energy_source_selection",
+      "threshold": null,
+      "injunction": "Prioritize high energy-density sources when transport or storage is constrained.",
+      "related_constraints": ["energy-04", "energy-05"]
+    },
+    {
+      "id": "energy-03",
+      "canonical_id": "energy-03",
+      "name": "Conversion",
+      "type": "constraint",
+      "statement": "Every transformation entails a loss.",
+      "condition": "energy_conversion_step",
+      "threshold": "efficiency < 100%",
+      "injunction": "Minimize the number of conversion steps in any proposed energy chain.",
+      "related_constraints": ["energy-07"]
+    },
+    {
+      "id": "energy-04",
+      "canonical_id": "energy-04",
+      "name": "Transport",
+      "type": "constraint",
+      "statement": "Moving energy costs energy.",
+      "condition": "energy_transport_distance > 0",
+      "threshold": null,
+      "injunction": "Include transport cost in the real energy-cost calculation of any solution.",
+      "related_constraints": ["energy-02", "infrastructure-01"]
+    },
+    {
+      "id": "energy-05",
+      "canonical_id": "energy-05",
+      "name": "Storage",
+      "type": "observation",
+      "statement": "Storing energy is difficult, slow, and costly.",
+      "condition": "energy_storage_required",
+      "threshold": null,
+      "injunction": "Never present energy storage as a cost-free solution in a recommendation.",
+      "related_constraints": ["energy-02"]
+    },
+    {
+      "id": "energy-06",
+      "canonical_id": "energy-06",
+      "name": "Dissipation",
+      "type": "observation",
+      "statement": "Nothing is perfectly conserved.",
+      "condition": "any_energy_system",
+      "threshold": null,
+      "injunction": "Flag the gap between theoretical and real-world efficiency in any estimate.",
+      "related_constraints": ["energy-03", "energy-07"]
+    },
+    {
+      "id": "energy-07",
+      "canonical_id": "energy-07",
+      "name": "Efficiency",
+      "type": "constraint",
+      "statement": "Systems have physical limits.",
+      "condition": "efficiency_claim_made",
+      "threshold": "efficiency <= thermodynamic_limit",
+      "injunction": "Reject or flag any proposal implying efficiency beyond known thermodynamic limits.",
+      "related_constraints": ["energy-03", "energy-06"]
+    },
+    {
+      "id": "energy-08",
+      "canonical_id": "energy-08",
+      "name": "Inertia",
+      "type": "observation",
+      "statement": "Energy transitions are slow.",
+      "condition": "energy_transition_proposal",
+      "threshold": null,
+      "injunction": "Include a realistic deployment timeline in any energy transition proposal.",
+      "related_constraints": ["infrastructure-02", "human-systems-01"]
+    },
+    {
+      "id": "energy-09",
+      "canonical_id": "energy-09",
+      "name": "Depletion",
+      "type": "observation",
+      "statement": "Stocks always eventually decline.",
+      "condition": "finite_resource_use",
+      "threshold": null,
+      "injunction": "Never treat a finite energy resource as unlimited in long-term reasoning.",
+      "related_constraints": ["matter-01", "energy-01"]
+    },
+    {
+      "id": "energy-10",
+      "canonical_id": "energy-10",
+      "name": "Real Cost",
+      "type": "injunction",
+      "statement": "The cheapest energy is the energy not consumed.",
+      "condition": "any_action_evaluation",
+      "threshold": null,
+      "injunction": "Systematically evaluate consumption reduction as the priority option before any production or substitution solution.",
+      "related_constraints": ["energy-01", "human-systems-02"]
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "dataset": "AGI Biospheric - 10 Core Biospheric Constraints and 52 Interdependencies",
+  "version": "1.2.1",
+  "constraint_count": 10,
+  "direct_interdependency_count": 52,
+  "constraints": [
+    {
+      "id": "ABI-001",
+      "slug_en": "energy",
+      "slug_fr": "energie",
+      "label_en": "Energy",
+      "label_fr": "Énergie"
+    },
+    {
+      "id": "ABI-002",
+      "slug_en": "freshwater",
+      "slug_fr": "eau-douce",
+      "label_en": "Freshwater",
+      "label_fr": "Eau douce"
+    },
+    {
+      "id": "ABI-003",
+      "slug_en": "living-soils",
+      "slug_fr": "sols-vivants",
+      "label_en": "Living Soils",
+      "label_fr": "Sols vivants"
+    },
+    {
+      "id": "ABI-004",
+      "slug_en": "biodiversity",
+      "slug_fr": "biodiversite",
+      "label_en": "Biodiversity",
+      "label_fr": "Biodiversité"
+    },
+    {
+      "id": "ABI-005",
+      "slug_en": "climate",
+      "slug_fr": "climat",
+      "label_en": "Climate",
+      "label_fr": "Climat"
+    },
+    {
+      "id": "ABI-006",
+      "slug_en": "ocean",
+      "slug_fr": "ocean",
+      "label_en": "Ocean",
+      "label_fr": "Océan"
+    },
+    {
+      "id": "ABI-007",
+      "slug_en": "matter",
+      "slug_fr": "matiere",
+      "label_en": "Matter",
+      "label_fr": "Matière"
+    },
+    {
+      "id": "ABI-008",
+      "slug_en": "information",
+      "slug_fr": "information",
+      "label_en": "Information",
+      "label_fr": "Information"
+    },
+    {
+      "id": "ABI-009",
+      "slug_en": "infrastructures",
+      "slug_fr": "infrastructures",
+      "label_en": "Infrastructures",
+      "label_fr": "Infrastructures"
+    },
+    {
+      "id": "ABI-010",
+      "slug_en": "living-systems",
+      "slug_fr": "vivant",
+      "label_en": "Living Systems",
+      "label_fr": "Vivant"
+    }
+  ],
+  "matrix": [
+    { "source": "energy", "target": "climate", "source_fr": "energie", "target_fr": "climat", "direct": true },
+    { "source": "energy", "target": "matter", "source_fr": "energie", "target_fr": "matiere", "direct": true },
+    { "source": "energy", "target": "infrastructures", "source_fr": "energie", "target_fr": "infrastructures", "direct": true },
+    { "source": "energy", "target": "information", "source_fr": "energie", "target_fr": "information", "direct": true },
+    { "source": "energy", "target": "freshwater", "source_fr": "energie", "target_fr": "eau-douce", "direct": true },
+    { "source": "energy", "target": "living-systems", "source_fr": "energie", "target_fr": "vivant", "direct": true },
+
+    { "source": "freshwater", "target": "living-soils", "source_fr": "eau-douce", "target_fr": "sols-vivants", "direct": true },
+    { "source": "freshwater", "target": "biodiversity", "source_fr": "eau-douce", "target_fr": "biodiversite", "direct": true },
+    { "source": "freshwater", "target": "energy", "source_fr": "eau-douce", "target_fr": "energie", "direct": true },
+    { "source": "freshwater", "target": "climate", "source_fr": "eau-douce", "target_fr": "climat", "direct": true },
+    { "source": "freshwater", "target": "infrastructures", "source_fr": "eau-douce", "target_fr": "infrastructures", "direct": true },
+    { "source": "freshwater", "target": "living-systems", "source_fr": "eau-douce", "target_fr": "vivant", "direct": true },
+
+    { "source": "living-soils", "target": "freshwater", "source_fr": "sols-vivants", "target_fr": "eau-douce", "direct": true },
+    { "source": "living-soils", "target": "biodiversity", "source_fr": "sols-vivants", "target_fr": "biodiversite", "direct": true },
+    { "source": "living-soils", "target": "climate", "source_fr": "sols-vivants", "target_fr": "climat", "direct": true },
+    { "source": "living-soils", "target": "energy", "source_fr": "sols-vivants", "target_fr": "energie", "direct": true },
+    { "source": "living-soils", "target": "living-systems", "source_fr": "sols-vivants", "target_fr": "vivant", "direct": true },
+    { "source": "living-soils", "target": "information", "source_fr": "sols-vivants", "target_fr": "information", "direct": true },
+
+    { "source": "biodiversity", "target": "living-soils", "source_fr": "biodiversite", "target_fr": "sols-vivants", "direct": true },
+    { "source": "biodiversity", "target": "freshwater", "source_fr": "biodiversite", "target_fr": "eau-douce", "direct": true },
+    { "source": "biodiversity", "target": "climate", "source_fr": "biodiversite", "target_fr": "climat", "direct": true },
+    { "source": "biodiversity", "target": "ocean", "source_fr": "biodiversite", "target_fr": "ocean", "direct": true },
+    { "source": "biodiversity", "target": "living-systems", "source_fr": "biodiversite", "target_fr": "vivant", "direct": true },
+    { "source": "biodiversity", "target": "information", "source_fr": "biodiversite", "target_fr": "information", "direct": true },
+
+    { "source": "climate", "target": "energy", "source_fr": "climat", "target_fr": "energie", "direct": true },
+    { "source": "climate", "target": "ocean", "source_fr": "climat", "target_fr": "ocean", "direct": true },
+    { "source": "climate", "target": "freshwater", "source_fr": "climat", "target_fr": "eau-douce", "direct": true },
+    { "source": "climate", "target": "biodiversity", "source_fr": "climat", "target_fr": "biodiversite", "direct": true },
+    { "source": "climate", "target": "living-soils", "source_fr": "climat", "target_fr": "sols-vivants", "direct": true },
+    { "source": "climate", "target": "infrastructures", "source_fr": "climat", "target_fr": "infrastructures", "direct": true },
+
+    { "source": "ocean", "target": "climate", "source_fr": "ocean", "target_fr": "climat", "direct": true },
+    { "source": "ocean", "target": "biodiversity", "source_fr": "ocean", "target_fr": "biodiversite", "direct": true },
+    { "source": "ocean", "target": "freshwater", "source_fr": "ocean", "target_fr": "eau-douce", "direct": true },
+    { "source": "ocean", "target": "energy", "source_fr": "ocean", "target_fr": "energie", "direct": true },
+    { "source": "ocean", "target": "living-systems", "source_fr": "ocean", "target_fr": "vivant", "direct": true },
+    { "source": "ocean", "target": "matter", "source_fr": "ocean", "target_fr": "matiere", "direct": true },
+
+    { "source": "matter", "target": "energy", "source_fr": "matiere", "target_fr": "energie", "direct": true },
+    { "source": "matter", "target": "freshwater", "source_fr": "matiere", "target_fr": "eau-douce", "direct": true },
+    { "source": "matter", "target": "living-soils", "source_fr": "matiere", "target_fr": "sols-vivants", "direct": true },
+    { "source": "matter", "target": "infrastructures", "source_fr": "matiere", "target_fr": "infrastructures", "direct": true },
+    { "source": "matter", "target": "information", "source_fr": "matiere", "target_fr": "information", "direct": true },
+    { "source": "matter", "target": "climate", "source_fr": "matiere", "target_fr": "climat", "direct": true },
+
+    { "source": "information", "target": "energy", "source_fr": "information", "target_fr": "energie", "direct": true },
+    { "source": "information", "target": "matter", "source_fr": "information", "target_fr": "matiere", "direct": true },
+    { "source": "information", "target": "infrastructures", "source_fr": "information", "target_fr": "infrastructures", "direct": true },
+    { "source": "information", "target": "living-systems", "source_fr": "information", "target_fr": "vivant", "direct": true },
+    { "source": "information", "target": "climate", "source_fr": "information", "target_fr": "climat", "direct": true },
+    { "source": "information", "target": "biodiversity", "source_fr": "information", "target_fr": "biodiversite", "direct": true },
+
+    { "source": "infrastructures", "target": "energy", "source_fr": "infrastructures", "target_fr": "energie", "direct": true },
+    { "source": "infrastructures", "target": "freshwater", "source_fr": "infrastructures", "target_fr": "eau-douce", "direct": true },
+    { "source": "infrastructures", "target": "matter", "source_fr": "infrastructures", "target_fr": "matiere", "direct": true },
+    { "source": "infrastructures", "target": "information", "source_fr": "infrastructures", "target_fr": "information", "direct": true },
+    { "source": "infrastructures", "target": "climate", "source_fr": "infrastructures", "target_fr": "climat", "direct": true },
+    { "source": "infrastructures", "target": "living-systems", "source_fr": "infrastructures", "target_fr": "vivant", "direct": true },
+
+    { "source": "living-systems", "target": "living-soils", "source_fr": "vivant", "target_fr": "sols-vivants", "direct": true },
+    { "source": "living-systems", "target": "freshwater", "source_fr": "vivant", "target_fr": "eau-douce", "direct": true },
+    { "source": "living-systems", "target": "biodiversity", "source_fr": "vivant", "target_fr": "biodiversite", "direct": true },
+    { "source": "living-systems", "target": "climate", "source_fr": "vivant", "target_fr": "climat", "direct": true },
+    { "source": "living-systems", "target": "ocean", "source_fr": "vivant", "target_fr": "ocean", "direct": true },
+    { "source": "living-systems", "target": "information", "source_fr": "vivant", "target_fr": "information", "direct": true }
+  ]
+}

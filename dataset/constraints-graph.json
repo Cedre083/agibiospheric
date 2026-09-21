@@ -1,0 +1,149 @@
+{
+  "dataset": "AGI Biospheric - 10 Core Biospheric Constraints and 52 Interdependencies",
+  "version": "1.2.1",
+  "node_count": 10,
+  "edge_count": 52,
+  "nodes": [
+    {
+      "id": "ABI-001",
+      "slug_en": "energy",
+      "slug_fr": "energie",
+      "label_en": "Energy",
+      "label_fr": "Énergie"
+    },
+    {
+      "id": "ABI-002",
+      "slug_en": "freshwater",
+      "slug_fr": "eau-douce",
+      "label_en": "Freshwater",
+      "label_fr": "Eau douce"
+    },
+    {
+      "id": "ABI-003",
+      "slug_en": "living-soils",
+      "slug_fr": "sols-vivants",
+      "label_en": "Living Soils",
+      "label_fr": "Sols vivants"
+    },
+    {
+      "id": "ABI-004",
+      "slug_en": "biodiversity",
+      "slug_fr": "biodiversite",
+      "label_en": "Biodiversity",
+      "label_fr": "Biodiversité"
+    },
+    {
+      "id": "ABI-005",
+      "slug_en": "climate",
+      "slug_fr": "climat",
+      "label_en": "Climate",
+      "label_fr": "Climat"
+    },
+    {
+      "id": "ABI-006",
+      "slug_en": "ocean",
+      "slug_fr": "ocean",
+      "label_en": "Ocean",
+      "label_fr": "Océan"
+    },
+    {
+      "id": "ABI-007",
+      "slug_en": "matter",
+      "slug_fr": "matiere",
+      "label_en": "Matter",
+      "label_fr": "Matière"
+    },
+    {
+      "id": "ABI-008",
+      "slug_en": "information",
+      "slug_fr": "information",
+      "label_en": "Information",
+      "label_fr": "Information"
+    },
+    {
+      "id": "ABI-009",
+      "slug_en": "infrastructures",
+      "slug_fr": "infrastructures",
+      "label_en": "Infrastructures",
+      "label_fr": "Infrastructures"
+    },
+    {
+      "id": "ABI-010",
+      "slug_en": "living-systems",
+      "slug_fr": "vivant",
+      "label_en": "Living Systems",
+      "label_fr": "Vivant"
+    }
+  ],
+  "edges": [
+    { "source": "energy", "target": "climate", "relation_type": "direct_interdependency" },
+    { "source": "energy", "target": "matter", "relation_type": "direct_interdependency" },
+    { "source": "energy", "target": "infrastructures", "relation_type": "direct_interdependency" },
+    { "source": "energy", "target": "information", "relation_type": "direct_interdependency" },
+    { "source": "energy", "target": "freshwater", "relation_type": "direct_interdependency" },
+    { "source": "energy", "target": "living-systems", "relation_type": "direct_interdependency" },
+
+    { "source": "freshwater", "target": "living-soils", "relation_type": "direct_interdependency" },
+    { "source": "freshwater", "target": "biodiversity", "relation_type": "direct_interdependency" },
+    { "source": "freshwater", "target": "energy", "relation_type": "direct_interdependency" },
+    { "source": "freshwater", "target": "climate", "relation_type": "direct_interdependency" },
+    { "source": "freshwater", "target": "infrastructures", "relation_type": "direct_interdependency" },
+    { "source": "freshwater", "target": "living-systems", "relation_type": "direct_interdependency" },
+
+    { "source": "living-soils", "target": "freshwater", "relation_type": "direct_interdependency" },
+    { "source": "living-soils", "target": "biodiversity", "relation_type": "direct_interdependency" },
+    { "source": "living-soils", "target": "climate", "relation_type": "direct_interdependency" },
+    { "source": "living-soils", "target": "energy", "relation_type": "direct_interdependency" },
+    { "source": "living-soils", "target": "living-systems", "relation_type": "direct_interdependency" },
+    { "source": "living-soils", "target": "information", "relation_type": "direct_interdependency" },
+
+    { "source": "biodiversity", "target": "living-soils", "relation_type": "direct_interdependency" },
+    { "source": "biodiversity", "target": "freshwater", "relation_type": "direct_interdependency" },
+    { "source": "biodiversity", "target": "climate", "relation_type": "direct_interdependency" },
+    { "source": "biodiversity", "target": "ocean", "relation_type": "direct_interdependency" },
+    { "source": "biodiversity", "target": "living-systems", "relation_type": "direct_interdependency" },
+    { "source": "biodiversity", "target": "information", "relation_type": "direct_interdependency" },
+
+    { "source": "climate", "target": "energy", "relation_type": "direct_interdependency" },
+    { "source": "climate", "target": "ocean", "relation_type": "direct_interdependency" },
+    { "source": "climate", "target": "freshwater", "relation_type": "direct_interdependency" },
+    { "source": "climate", "target": "biodiversity", "relation_type": "direct_interdependency" },
+    { "source": "climate", "target": "living-soils", "relation_type": "direct_interdependency" },
+    { "source": "climate", "target": "infrastructures", "relation_type": "direct_interdependency" },
+
+    { "source": "ocean", "target": "climate", "relation_type": "direct_interdependency" },
+    { "source": "ocean", "target": "biodiversity", "relation_type": "direct_interdependency" },
+    { "source": "ocean", "target": "freshwater", "relation_type": "direct_interdependency" },
+    { "source": "ocean", "target": "energy", "relation_type": "direct_interdependency" },
+    { "source": "ocean", "target": "living-systems", "relation_type": "direct_interdependency" },
+    { "source": "ocean", "target": "matter", "relation_type": "direct_interdependency" },
+
+    { "source": "matter", "target": "energy", "relation_type": "direct_interdependency" },
+    { "source": "matter", "target": "freshwater", "relation_type": "direct_interdependency" },
+    { "source": "matter", "target": "living-soils", "relation_type": "direct_interdependency" },
+    { "source": "matter", "target": "infrastructures", "relation_type": "direct_interdependency" },
+    { "source": "matter", "target": "information", "relation_type": "direct_interdependency" },
+    { "source": "matter", "target": "climate", "relation_type": "direct_interdependency" },
+
+    { "source": "information", "target": "energy", "relation_type": "direct_interdependency" },
+    { "source": "information", "target": "matter", "relation_type": "direct_interdependency" },
+    { "source": "information", "target": "infrastructures", "relation_type": "direct_interdependency" },
+    { "source": "information", "target": "living-systems", "relation_type": "direct_interdependency" },
+    { "source": "information", "target": "climate", "relation_type": "direct_interdependency" },
+    { "source": "information", "target": "biodiversity", "relation_type": "direct_interdependency" },
+
+    { "source": "infrastructures", "target": "energy", "relation_type": "direct_interdependency" },
+    { "source": "infrastructures", "target": "freshwater", "relation_type": "direct_interdependency" },
+    { "source": "infrastructures", "target": "matter", "relation_type": "direct_interdependency" },
+    { "source": "infrastructures", "target": "information", "relation_type": "direct_interdependency" },
+    { "source": "infrastructures", "target": "climate", "relation_type": "direct_interdependency" },
+    { "source": "infrastructures", "target": "living-systems", "relation_type": "direct_interdependency" },
+
+    { "source": "living-systems", "target": "living-soils", "relation_type": "direct_interdependency" },
+    { "source": "living-systems", "target": "freshwater", "relation_type": "direct_interdependency" },
+    { "source": "living-systems", "target": "biodiversity", "relation_type": "direct_interdependency" },
+    { "source": "living-systems", "target": "climate", "relation_type": "direct_interdependency" },
+    { "source": "living-systems", "target": "ocean", "relation_type": "direct_interdependency" },
+    { "source": "living-systems", "target": "information", "relation_type": "direct_interdependency" }
+  ]
+}

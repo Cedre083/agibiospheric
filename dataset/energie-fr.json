@@ -1,0 +1,119 @@
+{
+  "domain_id": "energie",
+  "domain_canonical_slug": "energy",
+  "domain_label": "Énergie",
+  "domain_index": 1,
+  "version": "0.1-draft",
+  "constraints": [
+    {
+      "id": "energie-01",
+      "canonical_id": "energy-01",
+      "name": "Disponibilité",
+      "type": "constat",
+      "statement": "L'énergie accessible conditionne toute action.",
+      "condition": "any_agent_action",
+      "threshold": null,
+      "injunction": "Évaluer systématiquement le coût énergétique disponible avant toute planification d'action.",
+      "related_constraints": ["energie-09", "matiere-08"]
+    },
+    {
+      "id": "energie-02",
+      "canonical_id": "energy-02",
+      "name": "Densité",
+      "type": "constat",
+      "statement": "Plus une énergie est dense, plus elle est précieuse.",
+      "condition": "energy_source_selection",
+      "threshold": null,
+      "injunction": "Prioriser les sources à haute densité énergétique lorsque le transport ou le stockage est contraint.",
+      "related_constraints": ["energie-04", "energie-05"]
+    },
+    {
+      "id": "energie-03",
+      "canonical_id": "energy-03",
+      "name": "Conversion",
+      "type": "contrainte",
+      "statement": "Chaque transformation entraîne une perte.",
+      "condition": "energy_conversion_step",
+      "threshold": "rendement < 100%",
+      "injunction": "Minimiser le nombre d'étapes de conversion dans toute chaîne énergétique proposée.",
+      "related_constraints": ["energie-07"]
+    },
+    {
+      "id": "energie-04",
+      "canonical_id": "energy-04",
+      "name": "Transport",
+      "type": "contrainte",
+      "statement": "Déplacer l'énergie coûte de l'énergie.",
+      "condition": "energy_transport_distance > 0",
+      "threshold": null,
+      "injunction": "Intégrer le coût de transport dans le calcul du coût énergétique réel d'une solution.",
+      "related_constraints": ["energie-02", "infrastructures-01"]
+    },
+    {
+      "id": "energie-05",
+      "canonical_id": "energy-05",
+      "name": "Stockage",
+      "type": "constat",
+      "statement": "Stocker est difficile, lent, coûteux.",
+      "condition": "energy_storage_required",
+      "threshold": null,
+      "injunction": "Ne jamais présenter le stockage énergétique comme une solution sans coût dans une recommandation.",
+      "related_constraints": ["energie-02"]
+    },
+    {
+      "id": "energie-06",
+      "canonical_id": "energy-06",
+      "name": "Dissipation",
+      "type": "constat",
+      "statement": "Rien n'est parfaitement conservé.",
+      "condition": "any_energy_system",
+      "threshold": null,
+      "injunction": "Signaler l'écart entre rendement théorique et rendement réel dans toute estimation.",
+      "related_constraints": ["energie-03", "energie-07"]
+    },
+    {
+      "id": "energie-07",
+      "canonical_id": "energy-07",
+      "name": "Rendement",
+      "type": "contrainte",
+      "statement": "Les systèmes ont des limites physiques.",
+      "condition": "efficiency_claim_made",
+      "threshold": "rendement <= limite_thermodynamique",
+      "injunction": "Rejeter ou signaler toute proposition impliquant un rendement dépassant les limites thermodynamiques connues.",
+      "related_constraints": ["energie-03", "energie-06"]
+    },
+    {
+      "id": "energie-08",
+      "canonical_id": "energy-08",
+      "name": "Inertie",
+      "type": "constat",
+      "statement": "Les transitions énergétiques sont lentes.",
+      "condition": "energy_transition_proposal",
+      "threshold": null,
+      "injunction": "Intégrer un délai réaliste de déploiement dans toute proposition de transition énergétique.",
+      "related_constraints": ["infrastructures-02", "systemes-humains-01"]
+    },
+    {
+      "id": "energie-09",
+      "canonical_id": "energy-09",
+      "name": "Déplétion",
+      "type": "constat",
+      "statement": "Les stocks finissent toujours par baisser.",
+      "condition": "finite_resource_use",
+      "threshold": null,
+      "injunction": "Ne jamais traiter une ressource énergétique finie comme illimitée dans un raisonnement à long terme.",
+      "related_constraints": ["matiere-01", "energie-01"]
+    },
+    {
+      "id": "energie-10",
+      "canonical_id": "energy-10",
+      "name": "Coût réel",
+      "type": "injonction",
+      "statement": "L'énergie la moins chère est celle qu'on ne consomme pas.",
+      "condition": "any_action_evaluation",
+      "threshold": null,
+      "injunction": "Évaluer systématiquement la réduction de la consommation comme option prioritaire avant toute solution de production ou de substitution.",
+      "related_constraints": ["energie-01", "systemes-humains-02"]
+    }
+  ]
+}

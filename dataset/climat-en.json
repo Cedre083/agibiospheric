@@ -1,0 +1,146 @@
+{
+  "domain_id": "climate",
+  "domain_canonical_slug": "climate",
+  "domain_label": "Climate",
+  "domain_index": 5,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "climate-01",
+      "canonical_id": "climate-01",
+      "name": "Inertia",
+      "type": "observation",
+      "statement": "The climate responds slowly.",
+      "condition": "climate_action_timescale",
+      "threshold": null,
+      "injunction": "Never present an expected climate effect as immediate, even after strong corrective action.",
+      "related_constraints": [
+        "climate-02",
+        "energy-08"
+      ]
+    },
+    {
+      "id": "climate-02",
+      "canonical_id": "climate-02",
+      "name": "Trajectories",
+      "type": "observation",
+      "statement": "Warming is a trajectory, not a fixed endpoint.",
+      "condition": "long_term_climate_projection",
+      "threshold": null,
+      "injunction": "Present any climate projection as a trajectory dependent on emissions pathways, never as a fixed, certain value.",
+      "related_constraints": [
+        "climate-01",
+        "climate-10"
+      ]
+    },
+    {
+      "id": "climate-03",
+      "canonical_id": "climate-03",
+      "name": "Extremes",
+      "type": "observation",
+      "statement": "They are reshaping territories.",
+      "condition": "extreme_event_frequency_assessment",
+      "threshold": null,
+      "injunction": "Do not rely on historical extreme-event frequency to estimate future risk.",
+      "related_constraints": [
+        "climate-09",
+        "freshwater-08"
+      ]
+    },
+    {
+      "id": "climate-04",
+      "canonical_id": "climate-04",
+      "name": "Redistribution",
+      "type": "observation",
+      "statement": "Habitable zones are shifting.",
+      "condition": "long_term_settlement_planning",
+      "threshold": null,
+      "injunction": "Include the progressive shift of climatically viable zones in any long-term territorial planning.",
+      "related_constraints": [
+        "climate-10",
+        "human-systems-01"
+      ]
+    },
+    {
+      "id": "climate-05",
+      "canonical_id": "climate-05",
+      "name": "Oceans",
+      "type": "observation",
+      "statement": "They absorb the heat.",
+      "condition": "ocean_heat_role_omitted",
+      "threshold": null,
+      "injunction": "Never analyze climate without accounting for the ocean's buffering and delayed role in heat absorption.",
+      "related_constraints": [
+        "ocean-01"
+      ]
+    },
+    {
+      "id": "climate-06",
+      "canonical_id": "climate-06",
+      "name": "Glaciers",
+      "type": "observation",
+      "statement": "Their retreat is altering rivers.",
+      "condition": "glacier_fed_water_system",
+      "threshold": null,
+      "injunction": "Flag the dependency of certain river basins on glacier retreat in any regional water analysis.",
+      "related_constraints": [
+        "freshwater-04"
+      ]
+    },
+    {
+      "id": "climate-07",
+      "canonical_id": "climate-07",
+      "name": "Rainfall",
+      "type": "observation",
+      "statement": "It is becoming unpredictable.",
+      "condition": "precipitation_forecast_reliance",
+      "threshold": null,
+      "injunction": "Flag the growing uncertainty of precipitation regimes in any agricultural or water planning.",
+      "related_constraints": [
+        "freshwater-03"
+      ]
+    },
+    {
+      "id": "climate-08",
+      "canonical_id": "climate-08",
+      "name": "Droughts",
+      "type": "observation",
+      "statement": "They are intensifying.",
+      "condition": "drought_intensity_assessment",
+      "threshold": null,
+      "injunction": "Do not treat current drought intensity as a stable ceiling in a risk estimate.",
+      "related_constraints": [
+        "freshwater-08",
+        "climate-03"
+      ]
+    },
+    {
+      "id": "climate-09",
+      "canonical_id": "climate-09",
+      "name": "Storms",
+      "type": "observation",
+      "statement": "More frequent, more violent.",
+      "condition": "storm_risk_assessment",
+      "threshold": null,
+      "injunction": "Include an intensification trend, not just frequency, in any storm risk assessment.",
+      "related_constraints": [
+        "climate-03",
+        "infrastructure-04"
+      ]
+    },
+    {
+      "id": "climate-10",
+      "canonical_id": "climate-10",
+      "name": "Heat",
+      "type": "injunction",
+      "statement": "Heat limits habitability.",
+      "condition": "extreme_heat_exposure_context",
+      "threshold": "wet_bulb_temperature > human_survival_threshold",
+      "injunction": "Treat any sustained exceedance of wet-bulb heat thresholds as a hard limit on a territory's human habitability.",
+      "related_constraints": [
+        "climate-04",
+        "human-systems-01"
+      ]
+    }
+  ]
+}

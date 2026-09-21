@@ -1,0 +1,146 @@
+{
+  "domain_id": "climat",
+  "domain_canonical_slug": "climate",
+  "domain_label": "Climat",
+  "domain_index": 5,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "climat-01",
+      "canonical_id": "climate-01",
+      "name": "Inertie",
+      "type": "constat",
+      "statement": "Le climat réagit lentement.",
+      "condition": "climate_action_timescale",
+      "threshold": null,
+      "injunction": "Ne jamais présenter un effet climatique attendu comme immédiat, même après une action corrective forte.",
+      "related_constraints": [
+        "climat-02",
+        "energie-08"
+      ]
+    },
+    {
+      "id": "climat-02",
+      "canonical_id": "climate-02",
+      "name": "Trajectoires",
+      "type": "constat",
+      "statement": "Le réchauffement est une direction.",
+      "condition": "long_term_climate_projection",
+      "threshold": null,
+      "injunction": "Présenter toute projection climatique comme une trajectoire dépendante des trajectoires d'émissions, jamais comme une valeur fixe certaine.",
+      "related_constraints": [
+        "climat-01",
+        "climat-10"
+      ]
+    },
+    {
+      "id": "climat-03",
+      "canonical_id": "climate-03",
+      "name": "Extrêmes",
+      "type": "constat",
+      "statement": "Ils redessinent les territoires.",
+      "condition": "extreme_event_frequency_assessment",
+      "threshold": null,
+      "injunction": "Ne pas s'appuyer sur la fréquence historique des événements extrêmes pour estimer un risque futur.",
+      "related_constraints": [
+        "climat-09",
+        "eau-douce-08"
+      ]
+    },
+    {
+      "id": "climat-04",
+      "canonical_id": "climate-04",
+      "name": "Redistribution",
+      "type": "constat",
+      "statement": "Les zones habitables se déplacent.",
+      "condition": "long_term_settlement_planning",
+      "threshold": null,
+      "injunction": "Intégrer le déplacement progressif des zones climatiquement viables dans toute planification territoriale de long terme.",
+      "related_constraints": [
+        "climat-10",
+        "systemes-humains-01"
+      ]
+    },
+    {
+      "id": "climat-05",
+      "canonical_id": "climate-05",
+      "name": "Océans",
+      "type": "constat",
+      "statement": "Ils absorbent la chaleur.",
+      "condition": "ocean_heat_role_omitted",
+      "threshold": null,
+      "injunction": "Ne jamais analyser le climat sans tenir compte du rôle tampon et différé de l'océan dans l'absorption thermique.",
+      "related_constraints": [
+        "ocean-01"
+      ]
+    },
+    {
+      "id": "climat-06",
+      "canonical_id": "climate-06",
+      "name": "Glaciers",
+      "type": "constat",
+      "statement": "Leur recul modifie les fleuves.",
+      "condition": "glacier_fed_water_system",
+      "threshold": null,
+      "injunction": "Signaler la dépendance de certains bassins fluviaux au recul glaciaire dans toute analyse hydrique régionale.",
+      "related_constraints": [
+        "eau-douce-04"
+      ]
+    },
+    {
+      "id": "climat-07",
+      "canonical_id": "climate-07",
+      "name": "Pluies",
+      "type": "constat",
+      "statement": "Elles deviennent imprévisibles.",
+      "condition": "precipitation_forecast_reliance",
+      "threshold": null,
+      "injunction": "Signaler l'incertitude croissante des régimes de précipitations dans toute planification agricole ou hydrique.",
+      "related_constraints": [
+        "eau-douce-03"
+      ]
+    },
+    {
+      "id": "climat-08",
+      "canonical_id": "climate-08",
+      "name": "Sécheresses",
+      "type": "constat",
+      "statement": "Elles s'intensifient.",
+      "condition": "drought_intensity_assessment",
+      "threshold": null,
+      "injunction": "Ne pas traiter l'intensité actuelle des sécheresses comme un plafond stable dans une estimation de risque.",
+      "related_constraints": [
+        "eau-douce-08",
+        "climat-03"
+      ]
+    },
+    {
+      "id": "climat-09",
+      "canonical_id": "climate-09",
+      "name": "Tempêtes",
+      "type": "constat",
+      "statement": "Plus fréquentes, plus violentes.",
+      "condition": "storm_risk_assessment",
+      "threshold": null,
+      "injunction": "Intégrer une tendance à l'intensification, pas seulement à la fréquence, dans toute évaluation de risque de tempête.",
+      "related_constraints": [
+        "climat-03",
+        "infrastructures-04"
+      ]
+    },
+    {
+      "id": "climat-10",
+      "canonical_id": "climate-10",
+      "name": "Chaleur",
+      "type": "injonction",
+      "statement": "La chaleur limite l'habitabilité.",
+      "condition": "extreme_heat_exposure_context",
+      "threshold": "temperature_humidite > seuil_survie_humaine",
+      "injunction": "Traiter tout dépassement durable des seuils de chaleur humide comme une limite dure à l'habitabilité humaine d'un territoire.",
+      "related_constraints": [
+        "climat-04",
+        "systemes-humains-01"
+      ]
+    }
+  ]
+}

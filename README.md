@@ -26,6 +26,12 @@ This repository contains a lightweight, verified website snapshot together with 
 
 Images, videos, PDF documents, and heavy visual assets are intentionally omitted from this lightweight GitHub snapshot. They remain available from the official website. This repository is an archival snapshot and is not presented as a guaranteed standalone deployment package.
 
+## Structured dataset and synchronization
+
+The reusable structured dataset is maintained separately under [`dataset/`](./dataset/) and published at [Hugging Face](https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints). A GitHub Actions workflow mirrors this directory to Hugging Face when a write-scoped `HF_TOKEN` secret is configured. The dataset is also archived through [Zenodo DOI 10.5281/zenodo.21456847](https://doi.org/10.5281/zenodo.21456847).
+
+The editorial website archive and the structured dataset have different scopes and rights. The website archive does not acquire the dataset licence merely because both resources are stored in this repository. See [`SYNC.md`](./SYNC.md) for the synchronization procedure.
+
 ## Scope
 
 AGI Biospheric connects ten core biospheric constraints and their interdependencies, an extended corpus of one hundred sub-constraints, scientific and institutional sources, bilingual educational pages and white papers, and machine-readable discovery resources. The separate structured dataset is published on Hugging Face and archived through Zenodo.

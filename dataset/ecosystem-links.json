@@ -1,0 +1,26 @@
+[
+{
+"site_name": "AGI Biospheric",
+"url": "https://agibiospheric.net/",
+"role": "Primary AGI Biospheric project website",
+"language": ["fr", "en"]
+},
+{
+"site_name": "The Seed",
+"url": "https://the-seed.net/",
+"role": "Associated project / ecosystem website",
+"language": ["fr", "en"]
+},
+{
+"site_name": "Flux Info",
+"url": "https://flux-info.net/",
+"role": "Associated project / ecosystem website",
+"language": ["fr"]
+},
+{
+"site_name": "Archipel Conscience",
+"url": "https://archipelconscience.org/",
+"role": "Associated project / ecosystem website",
+"language": ["fr"]
+}
+]

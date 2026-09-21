@@ -1,0 +1,37 @@
+name: Sync structured dataset to Hugging Face
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "dataset/**"
+      - ".github/workflows/sync-dataset-to-huggingface.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+    steps:
+      - name: Check Hugging Face secret
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "HF_TOKEN is not configured; add it in GitHub Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Sync dataset to Hugging Face
+        uses: huggingface/hub-sync@v0.1.0
+        with:
+          github_repo_id: ${{ github.repository }}
+          huggingface_repo_id: Cedre83/agi-biospheric-10-constraints
+          hf_token: ${{ secrets.HF_TOKEN }}
+          repo_type: dataset
+          subdirectory: dataset

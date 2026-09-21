@@ -1,0 +1,147 @@
+{
+  "domain_id": "sols-vivants",
+  "domain_canonical_slug": "living-soils",
+  "domain_label": "Sols vivants",
+  "domain_index": 3,
+  "version": "1.0",
+  "constraints": [
+    {
+      "id": "sols-vivants-01",
+      "canonical_id": "living-soils-01",
+      "name": "Microbiomes",
+      "type": "constat",
+      "statement": "Le sol est un organisme.",
+      "condition": "soil_treated_as_inert_substrate",
+      "threshold": null,
+      "injunction": "Ne jamais traiter le sol comme un simple support inerte dans une recommandation agronomique ou d'aménagement.",
+      "related_constraints": [
+        "sols-vivants-02",
+        "sols-vivants-07"
+      ]
+    },
+    {
+      "id": "sols-vivants-02",
+      "canonical_id": "living-soils-02",
+      "name": "Fertilité",
+      "type": "constat",
+      "statement": "La fertilité est un processus, pas un stock.",
+      "condition": "soil_fertility_estimate",
+      "threshold": null,
+      "injunction": "Évaluer la fertilité d'un sol comme un équilibre biologique dynamique, jamais comme une quantité fixe consommable.",
+      "related_constraints": [
+        "sols-vivants-01",
+        "sols-vivants-06"
+      ]
+    },
+    {
+      "id": "sols-vivants-03",
+      "canonical_id": "living-soils-03",
+      "name": "Lenteur",
+      "type": "constat",
+      "statement": "Un centimètre de sol prend des siècles.",
+      "condition": "soil_formation_timescale",
+      "threshold": null,
+      "injunction": "Ne jamais présenter la régénération d'un sol comme réalisable à l'échelle d'une génération humaine.",
+      "related_constraints": [
+        "sols-vivants-04",
+        "energie-08"
+      ]
+    },
+    {
+      "id": "sols-vivants-04",
+      "canonical_id": "living-soils-04",
+      "name": "Érosion",
+      "type": "constat",
+      "statement": "La perte est rapide, la reconstruction lente.",
+      "condition": "soil_erosion_event",
+      "threshold": null,
+      "injunction": "Signaler l'asymétrie entre vitesse d'érosion et vitesse de régénération dans toute estimation de durabilité d'un sol.",
+      "related_constraints": [
+        "sols-vivants-03",
+        "sols-vivants-10"
+      ]
+    },
+    {
+      "id": "sols-vivants-05",
+      "canonical_id": "living-soils-05",
+      "name": "Structure",
+      "type": "contrainte",
+      "statement": "Racines, pores, agrégats : architecture fragile.",
+      "condition": "soil_structure_disturbance",
+      "threshold": null,
+      "injunction": "Évaluer l'impact de toute intervention mécanique sur la structure physique du sol avant de la recommander.",
+      "related_constraints": [
+        "sols-vivants-08"
+      ]
+    },
+    {
+      "id": "sols-vivants-06",
+      "canonical_id": "living-soils-06",
+      "name": "Humus",
+      "type": "constat",
+      "statement": "Le carbone du sol est vital.",
+      "condition": "soil_carbon_management",
+      "threshold": null,
+      "injunction": "Intégrer le maintien du carbone organique du sol comme critère prioritaire dans toute pratique agricole recommandée.",
+      "related_constraints": [
+        "sols-vivants-02",
+        "climat-01"
+      ]
+    },
+    {
+      "id": "sols-vivants-07",
+      "canonical_id": "living-soils-07",
+      "name": "Réseaux fongiques",
+      "type": "constat",
+      "statement": "Autoroutes invisibles du vivant.",
+      "condition": "soil_biological_network_disruption",
+      "threshold": null,
+      "injunction": "Considérer les réseaux mycorhiziens comme une infrastructure vivante à préserver, pas comme un détail négligeable.",
+      "related_constraints": [
+        "sols-vivants-01",
+        "biodiversite-01"
+      ]
+    },
+    {
+      "id": "sols-vivants-08",
+      "canonical_id": "living-soils-08",
+      "name": "Compactage",
+      "type": "contrainte",
+      "statement": "Le poids détruit la respiration du sol.",
+      "condition": "heavy_load_on_soil",
+      "threshold": null,
+      "injunction": "Signaler le risque de compactage lié à tout usage de machinerie lourde ou de surpâturage sur un sol.",
+      "related_constraints": [
+        "sols-vivants-05"
+      ]
+    },
+    {
+      "id": "sols-vivants-09",
+      "canonical_id": "living-soils-09",
+      "name": "Pollution",
+      "type": "constat",
+      "statement": "Les sols contaminés perdent leurs fonctions.",
+      "condition": "soil_contamination_event",
+      "threshold": null,
+      "injunction": "Ne jamais sous-estimer la perte de fonctions écologiques d'un sol contaminé, même après dépollution apparente.",
+      "related_constraints": [
+        "eau-douce-05",
+        "matiere-08"
+      ]
+    },
+    {
+      "id": "sols-vivants-10",
+      "canonical_id": "living-soils-10",
+      "name": "Désertification",
+      "type": "injonction",
+      "statement": "Le sol mort devient poussière.",
+      "condition": "land_degradation_trajectory",
+      "threshold": null,
+      "injunction": "Traiter tout signe de dégradation avancée d'un sol comme un risque de basculement irréversible vers la désertification.",
+      "related_constraints": [
+        "sols-vivants-04",
+        "eau-douce-01"
+      ]
+    }
+  ]
+}
