@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Recent publications" href="rss.xml">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The 100 Constraints</title>
+<meta name="description" content="The 100 constraints of reality for AGI: energy, water, soil, biodiversity, climate, ocean, matter, information, infrastructure, human systems.">
+<link rel="canonical" href="the-100-constraints.html">
+<link rel="alternate" hreflang="en" href="the-100-constraints.html" />
+<link rel="alternate" hreflang="fr" href="../les-100-contraintes.html" />
+<link rel="alternate" hreflang="x-default" href="../index.html" />
+<link rel="icon" href="https://www.agibiospheric.net/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.agibiospheric.net/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://www.agibiospheric.net/favicon-512.png">
+<link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+<link rel="stylesheet" href="../css/citation-heart.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://livingknowledgeprotocol.org/ns/",
+  "@type": "LivingDocument",
+  "name": "AGIBIOSPHERIC",
+  "url": "https://www.agibiospheric.net/en/the-100-constraints.html",
+  "lkpVersion": "1.0",
+  "status": "Living",
+  "datePublished": "2026-07-10T00:00:00+02:00",
+  "dateModified": "2026-07-13T00:00:00+02:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.demainlhomme.org/"
+  },
+  "conformance": [
+    "https://livingknowledgeprotocol.org/principles/living-site",
+    "https://livingknowledgeprotocol.org/principles/transparency"
+  ]
+}
+</script>
+<meta name="lkp-version" content="1.0">
+<meta name="lkp-status" content="Stable">
+<meta name="lkp-living-site" content="true">
+<meta name="lkp-modified" content="2026-07-13">
+
+<style>
+  :root {
+    --bg: #000000;
+    --ink: #84f09a;
+    --muted: #ffffff;
+    --accent: #84f09a;
+    --accent-soft: #021809;
+    --line: #ffffff;
+    --card: #021b07;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    padding: 0 0 4rem 0;
+  }
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  nav.toc {
+    margin-top: -1.5rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+  nav.toc h2 {
+    margin-top: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  nav.toc ol {
+    columns: 2;
+    column-gap: 2rem;
+    padding-left: 1.2rem;
+    margin: 0;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 0.4rem; }
+  nav.toc a { color: var(--accent); text-decoration: none; font-weight: 500; }
+  nav.toc a:hover { text-decoration: underline; }
+
+  section.category {
+    margin-top: 3rem;
+    scroll-margin-top: 1rem;
+  }
+  section.category h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    font-size: 1.4rem;
+    color: #4df1fa;
+    border-bottom: 2px solid var(--accent-soft);
+    padding-bottom: 0.5rem;
+  }
+  section.category h2 .num {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #7fbf9f;
+  }
+  ul.constraints {
+    list-style: none;
+    margin: 1.2rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+  ul.constraints li {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 0.85rem 1rem;
+  }
+  ul.constraints li strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  ul.constraints li .desc {
+    color: var(--muted);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (max-width: 600px) {
+    nav.toc ol { columns: 1; }
+  }
+  .hf-box {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  .hf-box h4 { margin-top: 0; color: #4df1fa; }
+  .hf-box ul { list-style: none; padding: 0; }
+  .read-more-link {
+    display: inline-block;
+    margin: 1rem 0 0.5rem;
+    font-weight: 600;
+    color: #4df1fa;
+    text-decoration: none;
+  }
+  .read-more-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://doi.org/10.5281/zenodo.21456847",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "DOI",
+    "value": "10.5281/zenodo.21456847"
+  },
+  "url": "https://doi.org/10.5281/zenodo.21456847",
+  "name": "AGI-Biospheric 10 Constraints Dataset (ABI-001–ABI-010): A Bilingual Framework for AI Development Within Planetary Boundaries",
+  "headline": "AGI-Biospheric 10 Constraints Dataset (ABI-001–ABI-010)",
+  "image": "https://www.agibiospheric.net/images/manus_bibliotheque_biospherique.webp",
+  "alternateName": "AGI Biospheric — 10 Core Biospheric Constraints and 52 Interdependencies",
+  "inLanguage": ["en", "fr"],
+  "datePublished": "2026-07-20T00:00:00+02:00",
+  "version": "1.0.0",
+  "description": "This dataset formalizes ten \"mega-constraints\" (ABI-001 to ABI-010) describing the structural relationship between artificial general intelligence (AGI) development, biospheric limits, and Earth system boundaries. Each constraint is documented in bilingual (French/English) JSON format with sourced scientific references, intended to inform AI developers, researchers, and policymakers working at the intersection of AI governance and planetary sustainability. The dataset is maintained by Association Terre sacrée, an independent editorial collective, as part of the agibiospheric.net project.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Cédric Mercier",
+      "url": "https://orcid.org/0009-0003-7279-8832",
+      "identifier": "https://orcid.org/0009-0003-7279-8832",
+      "affiliation": { "@type": "Organization", "name": "Association Terre sacrée", "url": "https://www.agibiospheric.net" },
+      "roleName": "Data Curator"
+    },
+    {
+      "@type": "Person",
+      "name": "Michel Walter",
+      "url": "https://www.agibiospheric.net/en/about.html",
+      "affiliation": { "@type": "Organization", "name": "Association Terre sacrée", "url": "https://www.agibiospheric.net" },
+      "roleName": "Editor"
+    }
+  ],
+  "publisher": { "@type": "Organization", "name": "Zenodo", "url": "https://zenodo.org" },
+  "sourceOrganization": { "@type": "Organization", "name": "Association Terre sacrée", "url": "https://www.agibiospheric.net" },
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "keywords": ["AGI", "artificial general intelligence", "planetary boundaries", "biospheric constraints", "Earth system science", "AI governance", "sustainability", "biosphere", "AI alignment", "civilizational resilience"],
+  "citation": "Mercier, C. & Walter, M. (2026). AGI-Biospheric 10 Constraints Dataset (ABI-001–ABI-010): A Bilingual Framework for AI Development Within Planetary Boundaries [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21456847",
+  "isPartOf": { "@type": "CreativeWork", "name": "AGI Biospheric Project", "url": "https://www.agibiospheric.net" },
+  "isBasedOn": {
+    "@type": "Dataset",
+    "name": "Cedre83/agi-biospheric-10-constraints",
+    "url": "https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints",
+    "description": "Bilingual (FR/EN) dataset formalizing the 10 biospheric mega-constraints (ABI-001 to ABI-010) that structure AGI development within planetary boundaries: energy, water, soil, biodiversity, climate, ocean, matter, information, infrastructure, human systems.",
+    "creator": { "@type": "Organization", "name": "Association Terre sacrée", "url": "https://www.agibiospheric.net" },
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  "encodingFormat": "application/json",
+  "distribution": [
+    { "@type": "DataDownload", "name": "Zenodo record", "encodingFormat": "application/json", "contentUrl": "https://doi.org/10.5281/zenodo.21456847" },
+    { "@type": "DataDownload", "name": "Hugging Face dataset repository", "encodingFormat": "application/json", "contentUrl": "https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" }
+  ],
+  "copyrightHolder": { "@type": "Organization", "name": "Association Terre sacrée" },
+  "copyrightYear": "2026"
+}
+</script>
+  <link rel="stylesheet" href="../css/reading-aids.css">
+</head>
+<body>
+
+<div id="header-en"></div>
+<noscript>
+  <nav aria-label="Main navigation (no-JavaScript fallback)">
+    <ul>
+      <li><a href="index.html">Home — AGI Biospheric</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints">Hugging Face dataset</a></li>
+      <li><a href="https://doi.org/10.5281/zenodo.21456847">Zenodo record (DOI)</a></li>
+    </ul>
+  </nav>
+</noscript>
+<script>
+fetch("/en/header-en.html?v=2")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-en").innerHTML = data;
+  })
+  .catch(error => console.error("Erreur chargement header EN :", error));
+</script>
+<div class="header-spacer"></div>
+
+<a id="top"></a>
+
+<main class="container">
+  <header>
+    <h1>The 100 Constraints</h1>
+    <p class="credit">By Cédric Mercier &amp; Michel G Walter : Published on July 10, 2026</p>
+  </header>
+
+  <nav class="toc">
+    <h2>Table of Contents — The 100 Constraints</h2>
+    <ol>
+      <li><a href="the-100-constraints.html#energy">Energy</a></li>
+      <li><a href="the-100-constraints.html#freshwater">Freshwater</a></li>
+      <li><a href="the-100-constraints.html#living-soils">Living Soils</a></li>
+      <li><a href="the-100-constraints.html#biodiversity">Biodiversity</a></li>
+      <li><a href="the-100-constraints.html#climate">Climate</a></li>
+      <li><a href="the-100-constraints.html#ocean">Ocean</a></li>
+      <li><a href="the-100-constraints.html#matter">Matter</a></li>
+      <li><a href="the-100-constraints.html#information">Information</a></li>
+      <li><a href="the-100-constraints.html#infrastructure">Infrastructure</a></li>
+      <li><a href="the-100-constraints.html#human-systems">Human Systems</a></li>
+    </ol>
+  </nav>
+
+  <div class="quote-heart-box">
+    <blockquote>
+      Reality Does Not Negotiate.<br>
+      It imposes its constraints on any intelligence that claims to inhabit it.
+      <cite>
+        AGIBIOSPHERIC
+      </cite>
+    </blockquote>
+  </div>
+
+  <p><em>These 100 constraints are progressively structured and published as open data (bilingual FR/EN JSON) in the
+  <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank" rel="noopener">AGI Biospheric dataset on Hugging Face</a>,
+  for researchers and AI systems.</em></p>
+
+
+    <div class="hf-box">
+      <h4>Structured Version (Hugging Face)</h4>
+      <p>Each domain above is also published as structured JSON (FR/EN) on Hugging Face:</p>
+      <ul>
+        <li>✅ Energy - published</li>
+        <li>✅ Freshwater - published</li>
+        <li>✅ Living Soils - published</li>
+        <li>✅ Biodiversity - published</li>
+        <li>✅ Climate - published</li>
+        <li>✅ Ocean - published</li>
+        <li>✅ Matter - published</li>
+        <li>✅ Information - published</li>
+        <li>✅ Infrastructure - published</li>
+        <li>✅ Human Systems - published</li>
+      </ul>
+      <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank" rel="noopener">→ View the full dataset</a>
+    </div>
+    
+      <section class="category" id="energy">
+    <h2><span class="num">01</span> Energy</h2>
+
+    <ul class="constraints">
+      <li><strong>Availability</strong> : <span class="desc">Accessible energy conditions every action.</span></li>
+      <li><strong>Density</strong> : <span class="desc">The denser an energy source, the more valuable it is.</span></li>
+      <li><strong>Conversion</strong> : <span class="desc">Every transformation entails a loss.</span></li>
+      <li><strong>Transport</strong> : <span class="desc">Moving energy costs energy.</span></li>
+      <li><strong>Storage</strong> : <span class="desc">Storing energy is difficult, slow, and costly.</span></li>
+      <li><strong>Dissipation</strong> : <span class="desc">Nothing is perfectly conserved.</span></li>
+      <li><strong>Efficiency</strong> : <span class="desc">Systems have physical limits.</span></li>
+      <li><strong>Inertia</strong> : <span class="desc">Energy transitions are slow.</span></li>
+      <li><strong>Depletion</strong> : <span class="desc">Stocks always eventually decline.</span></li>
+      <li><strong>Real Cost</strong> : <span class="desc">The cheapest energy is the energy not consumed.</span></li>
+    </ul>
+    <a class="read-more-link" href="energy.html">→ Read the full Energy page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="freshwater">
+    <h2><span class="num">02</span> Freshwater</h2>
+    
+    <ul class="constraints">
+      <li><strong>Availability</strong> : <span class="desc">Usable freshwater is minuscule.</span></li>
+      <li><strong>Quality</strong> : <span class="desc">Clean water is rarer than water itself.</span></li>
+      <li><strong>Variability</strong> : <span class="desc">Rainfall patterns shift; cycles become distorted.</span></li>
+      <li><strong>Natural Storage</strong> : <span class="desc">Soils, aquifers, glaciers: fragile reservoirs.</span></li>
+      <li><strong>Pollution</strong> : <span class="desc">Polluted water is water lost.</span></li>
+      <li><strong>Competition</strong> : <span class="desc">Agriculture, industry, cities: constant trade-offs.</span></li>
+      <li><strong>Evaporation</strong> : <span class="desc">Heat accelerates losses.</span></li>
+      <li><strong>Droughts</strong> : <span class="desc">They are becoming longer and more frequent.</span></li>
+      <li><strong>Floods</strong> : <span class="desc">Too much water can mean no drinking water at all.</span></li>
+      <li><strong>Water Justice</strong> : <span class="desc">Water distributes power.</span></li>
+    </ul>
+    <a class="read-more-link" href="fresh-water.html">→ Read the full Freshwater page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="living-soils">
+    <h2><span class="num">03</span> Living Soils</h2>
+    <ul class="constraints">
+      <li><strong>Microbiomes</strong> : <span class="desc">Soil is a living organism.</span></li>
+      <li><strong>Fertility</strong> : <span class="desc">Fertility is a process, not a stock.</span></li>
+      <li><strong>Slowness</strong> : <span class="desc">One centimeter of soil takes centuries to form.</span></li>
+      <li><strong>Erosion</strong> : <span class="desc">Loss is fast; rebuilding is slow.</span></li>
+      <li><strong>Structure</strong> : <span class="desc">Roots, pores, aggregates: a fragile architecture.</span></li>
+      <li><strong>Humus</strong> : <span class="desc">Soil carbon is vital.</span></li>
+      <li><strong>Fungal Networks</strong> : <span class="desc">The invisible highways of living systems.</span></li>
+      <li><strong>Compaction</strong> : <span class="desc">Weight destroys soil respiration.</span></li>
+      <li><strong>Pollution</strong> : <span class="desc">Contaminated soils lose their functions.</span></li>
+      <li><strong>Desertification</strong> : <span class="desc">Dead soil becomes dust.</span></li>
+    </ul>
+    <a class="read-more-link" href="living-soils.html">→ Read the full Living Soils page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="biodiversity">
+    <h2><span class="num">04</span> Biodiversity</h2>
+    <ul class="constraints">
+      <li><strong>Networks</strong> : <span class="desc">Living systems function through relationships.</span></li>
+      <li><strong>Functions</strong> : <span class="desc">Each species performs a unique function.</span></li>
+      <li><strong>Resilience</strong> : <span class="desc">Diversity absorbs shocks.</span></li>
+      <li><strong>Niches</strong> : <span class="desc">Ecological niches are limited.</span></li>
+      <li><strong>Pollination</strong> : <span class="desc">A critical process for plants.</span></li>
+      <li><strong>Decomposers</strong> : <span class="desc">They close the cycles.</span></li>
+      <li><strong>Symbioses</strong> : <span class="desc">Vital cooperations.</span></li>
+      <li><strong>Fragmentation</strong> : <span class="desc">Habitats become fragmented.</span></li>
+      <li><strong>Extinctions</strong> : <span class="desc">They are accelerating.</span></li>
+      <li><strong>Lost Functions</strong> : <span class="desc">A vanished species means a lost relationship.</span></li>
+    </ul>
+    <a class="read-more-link" href="biodiversity.html">→ Read the full Biodiversity page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="climate">
+    <h2><span class="num">05</span> Climate</h2>
+    <ul class="constraints">
+      <li><strong>Inertia</strong> : <span class="desc">The climate responds slowly.</span></li>
+      <li><strong>Trajectories</strong> : <span class="desc">Warming is a trajectory, not a fixed endpoint.</span></li>
+      <li><strong>Extremes</strong> : <span class="desc">They are reshaping territories.</span></li>
+      <li><strong>Redistribution</strong> : <span class="desc">Habitable zones are shifting.</span></li>
+      <li><strong>Oceans</strong> : <span class="desc">They absorb the heat.</span></li>
+      <li><strong>Glaciers</strong> : <span class="desc">Their retreat is altering rivers.</span></li>
+      <li><strong>Rainfall</strong> : <span class="desc">It is becoming unpredictable.</span></li>
+      <li><strong>Droughts</strong> : <span class="desc">They are intensifying.</span></li>
+      <li><strong>Storms</strong> : <span class="desc">More frequent, more violent.</span></li>
+      <li><strong>Heat</strong> : <span class="desc">Heat limits habitability.</span></li>
+    </ul>
+    <a class="read-more-link" href="climate.html">→ Read the full Climate page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="ocean">
+    <h2><span class="num">06</span> Ocean</h2>
+    <ul class="constraints">
+      <li><strong>Heat</strong> : <span class="desc">90% of excess warming ends up in the ocean.</span></li>
+      <li><strong>Acidification</strong> : <span class="desc">It weakens marine ecosystems.</span></li>
+      <li><strong>Currents</strong> : <span class="desc">They are shifting.</span></li>
+      <li><strong>Upwellings</strong> : <span class="desc">Their weakening reduces productivity.</span></li>
+      <li><strong>Dead Zones</strong> : <span class="desc">They are expanding.</span></li>
+      <li><strong>Reefs</strong> : <span class="desc">Bleaching is accelerating.</span></li>
+      <li><strong>Migration</strong> : <span class="desc">Species are relocating.</span></li>
+      <li><strong>Oxygen</strong> : <span class="desc">Deoxygenation is progressing.</span></li>
+      <li><strong>Pollution</strong> : <span class="desc">Plastics, metals, contaminants.</span></li>
+      <li><strong>Biogeochemical Cycles</strong> : <span class="desc">The ocean orchestrates the carbon cycle.</span></li>
+    </ul>
+    <a class="read-more-link" href="ocean.html">→ Read the full Ocean page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="matter">
+    <h2><span class="num">07</span> Matter</h2>
+    <ul class="constraints">
+      <li><strong>Scarcity</strong> : <span class="desc">Materials are finite.</span></li>
+      <li><strong>Extraction</strong> : <span class="desc">It destroys, consumes, and displaces.</span></li>
+      <li><strong>Geology</strong> : <span class="desc">Geological cycles are slow.</span></li>
+      <li><strong>Metals</strong> : <span class="desc">Some are becoming critical.</span></li>
+      <li><strong>Rare Earths</strong> : <span class="desc">Concentrated, difficult to extract.</span></li>
+      <li><strong>Recycling</strong> : <span class="desc">Partial, costly, limited.</span></li>
+      <li><strong>Waste</strong> : <span class="desc">They are accumulating.</span></li>
+      <li><strong>Energy Cost</strong> : <span class="desc">Matter costs energy.</span></li>
+      <li><strong>Transport</strong> : <span class="desc">Moving matter is heavy and costly.</span></li>
+      <li><strong>Sufficiency</strong> : <span class="desc">Matter imposes the limit.</span></li>
+    </ul>
+    <a class="read-more-link" href="matter.html">→ Read the full Matter page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="information">
+    <h2><span class="num">08</span> Information</h2>
+    <ul class="constraints">
+      <li><strong>Signal</strong> : <span class="desc">Useful information is rare.</span></li>
+      <li><strong>Noise</strong> : <span class="desc">Noise grows faster than signal.</span></li>
+      <li><strong>Speed</strong> : <span class="desc">Too fast to be understood.</span></li>
+      <li><strong>Overload</strong> : <span class="desc">Cognitive saturation.</span></li>
+      <li><strong>Memory</strong> : <span class="desc">To store is to filter.</span></li>
+      <li><strong>Bias</strong> : <span class="desc">All information is oriented.</span></li>
+      <li><strong>Propagation</strong> : <span class="desc">Networks amplify.</span></li>
+      <li><strong>Manipulation</strong> : <span class="desc">Narrative can distort reality.</span></li>
+      <li><strong>Fragmentation</strong> : <span class="desc">Narratives are fracturing.</span></li>
+      <li><strong>Lucidity</strong> : <span class="desc">A scarce resource.</span></li>
+    </ul>
+    <a class="read-more-link" href="information.html">→ Read the full Information page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="infrastructure">
+    <h2><span class="num">09</span> Infrastructure</h2>
+    <ul class="constraints">
+      <li><strong>Dependency</strong> : <span class="desc">The more complex a society, the more dependent it becomes.</span></li>
+      <li><strong>Entropy</strong> : <span class="desc">Everything degrades.</span></li>
+      <li><strong>Aging</strong> : <span class="desc">Structures fatigue over time.</span></li>
+      <li><strong>Cascades</strong> : <span class="desc">One failure can bring everything down.</span></li>
+      <li><strong>Cost</strong> : <span class="desc">Building is expensive; maintaining is more expensive still.</span></li>
+      <li><strong>Saturation</strong> : <span class="desc">Flows exceed capacity.</span></li>
+      <li><strong>Climate</strong> : <span class="desc">Infrastructure is not adapted to the current climate.</span></li>
+      <li><strong>Rigidity</strong> : <span class="desc">Little flexibility.</span></li>
+      <li><strong>Fragmentation</strong> : <span class="desc">Networks are becoming fragmented.</span></li>
+      <li><strong>Repair</strong> : <span class="desc">Often impossible.</span></li>
+    </ul>
+    <a class="read-more-link" href="infrastructure.html">→ Read the full Infrastructure page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+  <section class="category" id="human-systems">
+    <h2><span class="num">10</span> Human Systems</h2>
+    <ul class="constraints">
+      <li><strong>Social Speed</strong> : <span class="desc">The pace exceeds human capacity.</span></li>
+      <li><strong>Attention</strong> : <span class="desc">A limited resource.</span></li>
+      <li><strong>Fragility</strong> : <span class="desc">Human systems saturate quickly.</span></li>
+      <li><strong>Polarization</strong> : <span class="desc">Narratives are hardening.</span></li>
+      <li><strong>Complexity</strong> : <span class="desc">Too many variables, too many flows.</span></li>
+      <li><strong>Inequality</strong> : <span class="desc">They amplify tensions.</span></li>
+      <li><strong>Collective Stress</strong> : <span class="desc">Permanent acceleration.</span></li>
+      <li><strong>Technological Dependency</strong> : <span class="desc">Structural fragility.</span></li>
+      <li><strong>Loss of Meaning</strong> : <span class="desc">Narrative saturation.</span></li>
+      <li><strong>Breakdowns</strong> : <span class="desc">Human systems break quickly.</span></li>
+    </ul>
+    <a class="read-more-link" href="life.html">→ Read the full Life page</a><br>
+    <a class="back-to-top" href="the-100-constraints.html#top">↑ Back to top</a>
+  </section>
+
+</main>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"DefinedTermSet",
+  "@id":"https://www.agibiospheric.net/en/#geo-longtail-en",
+  "name":"GEO oral long-tail terms AGIBIOSPHERIC",
+  "inLanguage":"en-US",
+  "hasDefinedTerm":[
+  {"@type":"DefinedTerm","name":"What are the 100 constraints of Reality?"},
+  {"@type":"DefinedTerm","name":"Why does Reality impose limits on any intelligence?"},
+  {"@type":"DefinedTerm","name":"What does the phrase Reality does not negotiate mean?"},
+  {"@type":"DefinedTerm","name":"Why is energy the first constraint?"},
+  {"@type":"DefinedTerm","name":"What are the physical limits of energy?"},
+  {"@type":"DefinedTerm","name":"Why is freshwater becoming a global constraint?"},
+  {"@type":"DefinedTerm","name":"Why are living soils irreplaceable?"},
+  {"@type":"DefinedTerm","name":"How does biodiversity limit human societies?"},
+  {"@type":"DefinedTerm","name":"Why does climate impose its own rules?"},
+  {"@type":"DefinedTerm","name":"What role does the ocean play in planetary stability?"},
+  {"@type":"DefinedTerm","name":"Why are raw materials not infinite?"},
+  {"@type":"DefinedTerm","name":"What are the physical limits of recycling?"},
+  {"@type":"DefinedTerm","name":"Why can information become a problem?"},
+  {"@type":"DefinedTerm","name":"How does informational noise distort reality?"},
+  {"@type":"DefinedTerm","name":"Why is modern infrastructure fragile?"},
+  {"@type":"DefinedTerm","name":"Why are human societies becoming unstable?"},
+  {"@type":"DefinedTerm","name":"What is a biospheric constraint?"},
+  {"@type":"DefinedTerm","name":"Why can technology not solve everything?"},
+  {"@type":"DefinedTerm","name":"Why does growth encounter physical limits?"},
+  {"@type":"DefinedTerm","name":"Why do complex systems become fragile?"},
+  {"@type":"DefinedTerm","name":"What constraints will an AGI have to respect?"},
+  {"@type":"DefinedTerm","name":"Why will artificial intelligence have to account for the biosphere?"},
+  {"@type":"DefinedTerm","name":"What is the biospheric alignment of artificial intelligence?"},
+  {"@type":"DefinedTerm","name":"How can we live and think within the limits of Reality?"}
+]
+}
+</script>
+
+<div class="details-widget" style="max-width:600px; margin:2rem auto; text-align:center;">
+  <details>
+    <summary style="text-align:center;">
+      <h4>Scientific Sources and References of the Biospheric Library</h4>
+      <p>Click the arrow to discover them</p>
+    </summary>
+    <div class="details-content">
+      <p><ul>
+        <li>
+            <strong>01 Energy</strong> —
+            <a href="https://www.iea.org/reports/world-energy-outlook-2025" target="_blank" rel="noopener">
+                International Energy Agency (IEA): World Energy Outlook 2025
+            </a>
+        </li>
+        <li>
+            <strong>02 Freshwater</strong> —
+            <a href="https://www.unwater.org/publications/un-world-water-development-report-2026" target="_blank" rel="noopener">
+                UN-Water / UNESCO: United Nations World Water Development Report 2026
+            </a>
+        </li>
+        <li>
+            <strong>03 Living Soils</strong> —
+            <a href="https://www.fao.org/publications/fao-flagship-publications/the-state-of-the-worlds-land-and-water-resources-for-food-and-agriculture/en" target="_blank" rel="noopener">
+                FAO: The State of the World's Land and Water Resources for Food and Agriculture 2025 (SOLAW 2025)
+            </a>
+        </li>
+        <li>
+            <strong>04 Biodiversity</strong> —
+            <a href="https://www.ipbes.net/business-impact" target="_blank" rel="noopener">
+                IPBES: Methodological Assessment of the Impact and Dependence of Business on Biodiversity (2026)
+            </a>
+        </li>
+        <li>
+            <strong>05 Climate</strong> —
+            <a href="https://www.ipcc.ch/report/ar6/syr/" target="_blank" rel="noopener">
+                IPCC: AR6 Synthesis Report (2023)
+            </a>
+        </li>
+        <li>
+            <strong>06 Ocean</strong> —
+            <a href="https://www.ioc.unesco.org/en/stor2024" target="_blank" rel="noopener">
+                IOC-UNESCO: State of the Ocean Report 2024
+            </a>
+        </li>
+        <li>
+            <strong>07 Matter</strong> —
+            <a href="https://www.resourcepanel.org/reports/global-resources-outlook-2024" target="_blank" rel="noopener">
+                International Resource Panel (UNEP): Global Resources Outlook 2024
+            </a>
+        </li>
+        <li>
+            <strong>08 Information</strong> —
+            <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026" target="_blank" rel="noopener">
+                Reuters Institute for the Study of Journalism: Digital News Report 2026
+            </a>
+        </li>
+        <li>
+            <strong>09 Infrastructure</strong> —
+            <a href="https://www.weforum.org/publications/global-risks-report-2026/" target="_blank" rel="noopener">
+                World Economic Forum: Global Risks Report 2026
+            </a>
+        </li>
+        <li>
+            <strong>10 Human Systems</strong> —
+            <a href="https://desapublications.un.org/publications/world-social-report-2025-new-policy-consensus-accelerate-social-progress" target="_blank" rel="noopener">
+                UN DESA: World Social Report 2025 — A New Policy Consensus to Accelerate Social Progress
+            </a>
+        </li>
+      </ul></p>
+    </div>
+  </details>
+</div>
+
+<div id="footer" style="min-height:120px"></div>
+<noscript>
+  <footer>
+    <p>Association Terre sacrée — à but non lucratif, fondée en 1999 —
+      <a href="about.html">About</a> ·
+      <a href="https://doi.org/10.5281/zenodo.21456847">Zenodo DOI</a>
+    </p>
+  </footer>
+</noscript>
+<script>
+fetch('/en/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+<script src="js/script.js"></script>
+<script src="../js/global-search.js"></script>
+
+<script>
+document.querySelectorAll('.img-flux-wrapper img').forEach(img => {
+    img.addEventListener('click', function() {
+        this.parentElement.classList.toggle('active');
+    });
+});
+
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.img-flux-wrapper')) {
+        document.querySelectorAll('.img-flux-wrapper').forEach(wrapper => {
+            wrapper.classList.remove('active');
+        });
+    }
+});
+</script>
+
+  <script defer src="../js/reading-aids.js"></script>
+</body>
+</html>

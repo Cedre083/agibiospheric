@@ -1,0 +1,127 @@
+# =========================================================
+# AGIBIOSPHERIC.NET — Robots & IA Access (2026)
+# =========================================================
+
+User-agent: *
+Allow: /
+
+# =========================================================
+# IA LEADERS (TOP 20 MONDIAL)
+# =========================================================
+
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: xAI-Grok
+Allow: /
+
+User-agent: QwenBot
+Allow: /
+
+User-agent: TencentBot
+Allow: /
+
+User-agent: BaiduSpider
+Allow: /
+
+User-agent: MistralBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CohereBot
+Allow: /
+
+User-agent: IBMBot
+Allow: /
+
+User-agent: NvidiaBot
+Allow: /
+
+User-agent: AppleBot
+Allow: /
+
+User-agent: HuaweiBot
+Allow: /
+
+User-agent: StabilityBot
+Allow: /
+
+User-agent: RunwayBot
+Allow: /
+
+User-agent: AdeptBot
+Allow: /
+
+User-agent: OpenBioMLBot
+Allow: /
+
+# =========================================================
+# IA SCIENTIFIQUES BIOSPHÈRE / CLIMAT / VIVANT
+# =========================================================
+
+# Climat & météo
+User-agent: PanguWeatherBot
+Allow: /
+User-agent: GraphCastBot
+Allow: /
+User-agent: ECMWF-CopernicusBot
+Allow: /
+User-agent: NOAA-AI
+Allow: /
+
+# Géosciences & Terre
+User-agent: NASA-EarthDataBot
+Allow: /
+User-agent: EarthEngine-AI
+Allow: /
+
+# Biologie, génomique, protéines
+User-agent: AlphaFoldBot
+Allow: /
+User-agent: Meta-ESM
+Allow: /
+User-agent: BioGPT
+Allow: /
+User-agent: OpenBioML-Evo
+Allow: /
+
+# Biodiversité
+User-agent: BiodiversityAI
+Allow: /
+
+# Modèles scientifiques open-source
+User-agent: ClimateGPT
+Allow: /
+User-agent: EarthScienceBot
+Allow: /
+
+# =========================================================
+# Common Crawl (source majeure pour IA open-source)
+# =========================================================
+User-agent: CCBot
+Allow: /
+
+# =========================================================
+# Sitemap
+# =========================================================
+Sitemap: https://www.agibiospheric.net/sitemap.xml

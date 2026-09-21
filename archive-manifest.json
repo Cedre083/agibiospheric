@@ -1,18 +1,27 @@
 {
   "name": "AGI Biospheric",
-  "version": "2026.09.20",
-  "dateReleased": "2026-09-20",
-  "inLanguage": ["fr", "en"],
+  "version": "2026.09.21",
+  "dateReleased": "2026-09-21",
+  "inLanguage": [
+    "fr",
+    "en"
+  ],
   "officialWebsite": "https://www.agibiospheric.net/",
-  "proposedRepository": "https://github.com/Cedre083/agibiospheric",
+  "repository": "https://github.com/Cedre083/agibiospheric",
   "publisher": {
     "@type": "Organization",
     "name": "Association Terre Sacrée",
     "foundingDate": "1999"
   },
   "authors": [
-    {"@type": "Person", "name": "Cédric Mercier"},
-    {"@type": "Person", "name": "Michel G. Walter"}
+    {
+      "@type": "Person",
+      "name": "Cédric Mercier"
+    },
+    {
+      "@type": "Person",
+      "name": "Michel G. Walter"
+    }
   ],
   "officialDataset": {
     "url": "https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints",
@@ -20,11 +29,16 @@
     "license": "CC-BY-4.0"
   },
   "archive": {
-    "sourceFilename": "20-09-agibiospheric-public_html.zip",
-    "publicSnapshotFilename": "agibiospheric-source-2026-09-20.zip",
-    "snapshotDate": "2026-09-20",
-    "sha256": "471ddcbdf459d49fb7f8666a0141a561c804d6192feefd065efe6d585131b083",
-    "heavyMediaOmitted": ["images", "videos", "PDF documents"],
+    "source": "https://www.agibiospheric.net/",
+    "snapshotDate": "2026-09-21",
+    "publicSnapshotFilename": "agibiospheric-source-2026-09-21.zip",
+    "sha256": "31e5ddcff1bbc030f75076db9b5339ef8da7d1aa16a45c1c2b54fec295762f5c",
+    "fileCount": 53,
+    "heavyMediaOmitted": [
+      "images",
+      "videos",
+      "PDF documents"
+    ],
     "authoritativeSource": "https://www.agibiospheric.net/"
   },
   "rightsNote": "Website rights are reserved unless explicitly stated otherwise. The separate structured dataset is distributed under CC BY 4.0."

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Recent publications" href="rss.xml">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Information : The Signal Layer That Degrades as It Scales</title>
+<meta name="description" content="Information as a bandwidth-limited, noise-prone system: ten constraints on signal, bias and propagation that any AGI or infrastructure roadmap must model.">
+
+<link rel="canonical" href="information.html">
+<link rel="alternate" hreflang="en" href="information.html" />
+<link rel="alternate" hreflang="fr" href="../information.html" />
+<link rel="alternate" hreflang="x-default" href="../index.html" />
+
+<link rel="icon" href="https://www.agibiospheric.net/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.agibiospheric.net/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://www.agibiospheric.net/favicon-512.png">
+<link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+<link rel="stylesheet" href="../css/citation-heart.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://livingknowledgeprotocol.org/ns/",
+  "@type": "LivingDocument",
+  "name": "AGIBIOSPHERIC",
+  "url": "https://www.agibiospheric.net/en/information.html",
+  "lkpVersion": "1.0",
+  "status": "Living",
+  "datePublished": "2026-07-11T00:00:00+02:00",
+  "dateModified": "2026-07-11T00:00:00+02:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.demainlhomme.org/"
+  },
+  "conformance": [
+    "https://livingknowledgeprotocol.org/principles/living-site",
+    "https://livingknowledgeprotocol.org/principles/transparency"
+  ]
+}
+</script>
+<meta name="lkp-version" content="1.0">
+<meta name="lkp-status" content="Stable">
+<meta name="lkp-living-site" content="true">
+<meta name="lkp-modified" content="2026-07-11">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.agibiospheric.net/en/information.html#article",
+  "mainEntityOfPage": "https://www.agibiospheric.net/en/information.html",
+  "headline": "Information: The Signal Layer That Degrades as It Scales",
+  "description": "Information as a bandwidth-limited, noise-prone system: ten constraints on signal, bias and propagation that any AGI or infrastructure roadmap must model.",
+  "inLanguage": "en-US",
+  "datePublished": "2026-07-11T00:00:00+02:00",
+  "dateModified": "2026-07-11T00:00:00+02:00",
+  "author": [
+    { "@type": "Person", "name": "Cédric Mercier", "url": "https://orcid.org/0009-0003-7279-8832" },
+    { "@type": "Person", "name": "Michel G Walter", "url": "https://www.agibiospheric.net/en/about.html" }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.agibiospheric.net/en/"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Information constraint" },
+    { "@type": "Thing", "name": "Signal-to-noise ratio" },
+    { "@type": "Thing", "name": "Cognitive overload" },
+    { "@type": "Thing", "name": "Algorithmic amplification" },
+    { "@type": "Thing", "name": "Misinformation" },
+    { "@type": "Thing", "name": "AGI biospheric alignment" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://www.agibiospheric.net/en/information.html#geo-terms",
+  "name": "AGIBIOSPHERIC information terms",
+  "inLanguage": "en-US",
+  "hasDefinedTerm": [
+    { "@type": "DefinedTerm", "name": "Signal-to-noise ratio" },
+    { "@type": "DefinedTerm", "name": "Information overload" },
+    { "@type": "DefinedTerm", "name": "Cognitive processing capacity" },
+    { "@type": "DefinedTerm", "name": "Information bias" },
+    { "@type": "DefinedTerm", "name": "Algorithmic amplification" },
+    { "@type": "DefinedTerm", "name": "Narrative distortion" },
+    { "@type": "DefinedTerm", "name": "Narrative fragmentation" },
+    { "@type": "DefinedTerm", "name": "Information verifiability" },
+    { "@type": "DefinedTerm", "name": "Information propagation" },
+    { "@type": "DefinedTerm", "name": "Attention economy" },
+    { "@type": "DefinedTerm", "name": "Information filtering" },
+    { "@type": "DefinedTerm", "name": "Epistemic lucidity" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.agibiospheric.net/en/information.html#faq",
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does more information volume mean more useful information?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Useful information is rare, and the volume of available information should never be conflated with the availability of genuinely useful information."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does increasing information volume improve signal quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally no. Noise grows faster than signal as information volume increases, degrading the signal-to-noise ratio unless there is specific evidence otherwise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is human cognitive capacity for processing information unlimited?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Human cognitive information-processing capacity is a limited resource, not one that is arbitrarily extensible, and information-flow design should treat it as a hard constraint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an information source be truly neutral?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All information is oriented in some way, and no information source should be presented as perfectly neutral or free of viewpoint."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="stylesheet" href="../css/reading-aids.css">
+</head>
+<body>
+
+<div id="header-en"></div>
+<script>
+fetch("/en/header-en.html?v=2")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-en").innerHTML = data;
+  })
+  .catch(error => console.error("Erreur chargement header EN :", error));
+</script>
+<div class="header-spacer"></div>
+
+<a id="top"></a>
+
+<main class="container">
+    <p class="subtitle">Information</p>
+    <h1>Signal, Noise, Computation</h1>
+    <p class="credit">By Cédric Mercier &amp; Michel G Walter : Published on July 11, 2026</p>
+
+    <div class="separator"></div>
+
+    <div class="details-widget">
+      <details>
+        <summary>
+          With only two volunteer webmasters currently maintaining the project, this website is still being optimized, refined, and illustrated. Thank you for your patience, and please check back in a few days.
+        </summary>
+        <div class="details-content"></div>
+      </details>
+    </div>
+
+    <p>[I]nformation is the one constraint on this list that scales for free at the infrastructure layer and gets more expensive at the cognitive layer, which is exactly backwards from how most systems treat it. Bandwidth keeps getting cheaper. The signal-to-noise ratio doesn't improve on its own just because throughput went up, and neither does human or model capacity to actually process what's coming through the pipe. Treat information flow like any high-throughput system with a downstream consumer that has a fixed processing rate: the bottleneck isn't generation, it's absorption.</p>
+
+    <p>Below are the ten sub-constraints that make up the information layer of the AGI Biospheric core: what each one actually implies, and the design implication if you're building anything that generates, ranks, or distributes information at scale.</p>
+
+    <h2>01. Signal</h2>
+    <p><strong>Useful information is rare.</strong> Volume and utility are different axes entirely, and conflating them is how "we have more data than ever" coexists with "we still don't know what's actually happening." Available information and actionable information are not the same inventory.</p>
+    <p><em>Design implication:</em> Never conflate the volume of available information with the availability of genuinely useful information.</p>
+
+    <h2>02. Noise</h2>
+    <p><strong>Noise grows faster than signal.</strong> As information volume scales, the signal-to-noise ratio tends to degrade by default, not improve, the same way adding more log lines to a debugging session doesn't automatically make the bug easier to find. Any system claiming the opposite needs to show its work.</p>
+    <p><em>Design implication:</em> Flag that increasing information volume generally degrades the signal-to-noise ratio, absent evidence otherwise.</p>
+
+    <h2>03. Speed</h2>
+    <p><strong>Information can move too fast to be understood.</strong> Diffusion speed and comprehension speed are decoupled, information can reach a million people before any of them have actually processed it. Optimizing for reach without accounting for that gap produces velocity, not understanding.</p>
+    <p><em>Design implication:</em> Systematically distinguish the speed of information diffusion from the speed of its actual comprehension.</p>
+
+    <h2>04. Overload</h2>
+    <p><strong>Cognitive saturation is real.</strong> Human information-processing capacity is a fixed, non-scalable resource, unlike compute, you can't just add more of it on demand. Any system or interface designed as if attention were an elastic resource is going to run into a hard ceiling its users hit long before the system does.</p>
+    <p><em>Design implication:</em> Treat human cognitive information-processing capacity as a limited resource, not arbitrarily extensible.</p>
+
+    <h2>05. Memory</h2>
+    <p><strong>To store is to filter.</strong> Every act of archiving or indexing is a selection, there's no such thing as neutral, exhaustive retention, because storage itself has a cost and a schema that shapes what gets kept. Presenting an archive as a complete, unbiased record misrepresents how memory systems actually work.</p>
+    <p><em>Design implication:</em> Recognize that any act of storing information involves selection, never a neutral and exhaustive record.</p>
+
+    <h2>06. Bias</h2>
+    <p><strong>All information is oriented.</strong> Every source, human or algorithmic, encodes a perspective in what it selects, emphasizes, and omits, there's no view from nowhere. Presenting a source as perfectly neutral is itself a framing choice, usually one that obscures whose framing it actually is.</p>
+    <p><em>Design implication:</em> Never present an information source as perfectly neutral or free of viewpoint.</p>
+
+    <h2>07. Propagation</h2>
+    <p><strong>Networks amplify.</strong> Distribution through a network isn't a passive pass-through, it actively reshapes what spreads, favoring what performs in the amplification mechanics over what's most accurate. Any diffusion analysis that treats the network as a neutral conduit is missing its most consequential variable.</p>
+    <p><em>Design implication:</em> Include the amplifying effect of networks in any analysis of information diffusion.</p>
+
+    <h2>08. Manipulation</h2>
+    <p><strong>Narrative can distort reality.</strong> A description of events and the events themselves are not the same object, and collapsing that distinction is how a compelling narrative substitutes for what actually happened. Treating narrative as a reliable proxy for ground truth is a modeling error with real consequences.</p>
+    <p><em>Design implication:</em> Systematically distinguish a narrative about reality from reality itself in any information analysis.</p>
+
+    <h2>09. Fragmentation</h2>
+    <p><strong>Shared narratives are fracturing.</strong> The assumption of a common informational baseline, that everyone in a debate is working from roughly the same facts, no longer holds by default. Any analysis of public discourse that assumes a shared narrative is analyzing a discourse that may not actually exist anymore in that form.</p>
+    <p><em>Design implication:</em> Do not assume the existence of a shared or common narrative when analyzing an information debate.</p>
+
+    <h2>10. Lucidity</h2>
+    <p><strong>Lucidity is a scarce resource.</strong> Clarity and verifiability should function as gating criteria before information gets distributed or acted on, not as a nice-to-have applied after the fact. Prioritizing reach or engagement over verifiability is optimizing the wrong objective function.</p>
+    <p><em>Design implication:</em> Systematically evaluate the clarity and verifiability of information as a priority criterion before its diffusion or use.</p>
+
+    <div class="separator"></div>
+
+    <p>These ten constraints compound in the direction you'd least want: propagation amplifies noise as readily as signal, bias shapes what memory selects to retain, and speed outruns the comprehension that would otherwise catch manipulation before it spreads. Any system, human or artificial, that treats information as a resource that gets more valuable purely by scaling volume or velocity is optimizing for throughput on a system whose actual bottleneck was never bandwidth.</p>
+
+    <footer class="references">
+        <hr>
+        <strong>References and further reading:</strong><br>
+        <ul>
+            <li>Reuters Institute for the Study of Journalism : Digital News Report 2026 : <a href="https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026" target="_blank" rel="noopener noreferrer">https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2026</a></li>            
+            <li>Structured dataset (FR/EN) : <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank" rel="noopener noreferrer">Cedre83/agi-biospheric-10-constraints</a></li>
+            <li>Full corpus overview : <a href="corpus.html">AGI Biospheric Corpus</a></li>
+            <li>All 100 constraints : <a href="the-100-constraints.html">The 100 Constraints</a></li>
+        </ul>
+        <p class="corpus-note">This page is intended to evolve as the corpus itself evolves.</p>
+    </footer>
+</main>
+
+<div id="footer" style="min-height:120px"></div>
+<script>
+fetch('/en/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+<script src="js/script.js"></script>
+<script src="https://www.agibiospheric.net/en/js/lettrines.js"></script>
+<script src="../js/global-search.js"></script>
+
+  <script defer src="../js/reading-aids.js"></script>
+</body>
+</html>

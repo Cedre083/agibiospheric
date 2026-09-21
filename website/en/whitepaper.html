@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Recent publications" href="rss.xml">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGI Biospheric White Paper: Aligning AI with Planetary Boundaries</title>
+<meta name="description" content="A binding framework to align General Artificial Intelligence with the preservation of the biosphere: ecological loss function, 9 planetary boundaries, international governance, and biospheric kill switch.">
+
+<link rel="canonical" href="whitepaper.html">
+<link rel="alternate" hreflang="en" href="whitepaper.html" />
+<link rel="alternate" hreflang="fr" href="../livre-blanc.html" />
+<link rel="alternate" hreflang="x-default" href="../index.html" />
+
+<link rel="icon" href="https://www.agibiospheric.net/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.agibiospheric.net/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://www.agibiospheric.net/favicon-512.png">
+<link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+<link rel="stylesheet" href="../css/citation-heart.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="AGI Biospheric White Paper — Aligning AI with Planetary Boundaries" />
+<meta property="og:description" content="A binding framework to align any AGI with biosphere preservation via an ecological loss function and the 9 planetary boundaries." />
+<meta property="og:url" content="https://www.agibiospheric.net/en/whitepaper.html" />
+<meta property="og:site_name" content="AGI Biospheric" />
+<meta property="og:image" content="https://www.agibiospheric.net/images/manus_bibliotheque_biospherique.webp" />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="AGI Biospheric White Paper" />
+<meta name="twitter:description" content="Aligning General Artificial Intelligence with the 9 planetary boundaries of Earth." />
+<meta name="twitter:image" content="https://www.agibiospheric.net/images/manus_bibliotheque_biospherique.webp" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://livingknowledgeprotocol.org/ns/",
+  "@type": "LivingDocument",
+  "name": "AGIBIOSPHERIC",
+  "url": "https://www.agibiospheric.net/en/whitepaper.html",
+  "lkpVersion": "1.0",
+  "status": "Living",
+  "datePublished": "2026-08-05T00:00:00+02:00",
+  "dateModified": "2026-08-05T00:00:00+02:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.demainlhomme.org/"
+  },
+  "conformance": [
+    "https://livingknowledgeprotocol.org/principles/living-site",
+    "https://livingknowledgeprotocol.org/principles/transparency"
+  ]
+}
+</script>
+<meta name="lkp-version" content="1.0">
+<meta name="lkp-status" content="Living">
+<meta name="lkp-living-site" content="true">
+<meta name="lkp-modified" content="2026-08-05">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.agibiospheric.net/en/whitepaper.html#article",
+  "mainEntityOfPage": "https://www.agibiospheric.net/en/whitepaper.html",
+  "headline": "AGI Biospheric White Paper: Aligning General Artificial Intelligence with Planetary Boundaries",
+  "description": "A binding framework to align General Artificial Intelligence with the preservation of the biosphere: ecological loss function, 9 planetary boundaries, international governance, and biospheric kill switch.",
+  "inLanguage": "en-US",
+  "datePublished": "2026-08-05T00:00:00+02:00",
+  "dateModified": "2026-08-05T00:00:00+02:00",
+  "author": [
+    { "@type": "Person", "name": "Cédric Mercier", "url": "https://orcid.org/0009-0003-7279-8832" },
+    { "@type": "Person", "name": "Michel G Walter", "url": "https://www.agibiospheric.net/en/about.html" }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.agibiospheric.net/en/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.agibiospheric.net/images/logoSOSterre000.png"
+    }
+  },
+  "about": [
+    { "@type": "Thing", "name": "General Artificial Intelligence" },
+    { "@type": "Thing", "name": "Planetary boundaries" },
+    { "@type": "Thing", "name": "AI alignment" },
+    { "@type": "Thing", "name": "Global AI governance" },
+    { "@type": "Thing", "name": "Biosphere" },
+    { "@type": "Thing", "name": "Ecological loss function" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://www.agibiospheric.net/en/whitepaper.html#terms",
+  "name": "AGIBIOSPHERIC white paper terms",
+  "inLanguage": "en-US",
+  "hasDefinedTerm": [
+    { "@type": "DefinedTerm", "name": "Planetary boundaries" },
+    { "@type": "DefinedTerm", "name": "Ecological loss function" },
+    { "@type": "DefinedTerm", "name": "Biospheric kill switch" },
+    { "@type": "DefinedTerm", "name": "Sovereign Council" },
+    { "@type": "DefinedTerm", "name": "Digital twin of the Earth" },
+    { "@type": "DefinedTerm", "name": "Algorithmic ecocide tribunal" },
+    { "@type": "DefinedTerm", "name": "Biospheric certification" },
+    { "@type": "DefinedTerm", "name": "AGI alignment" },
+    { "@type": "DefinedTerm", "name": "Biosphere integrity" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.agibiospheric.net/en/whitepaper.html#faq",
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the core argument of the AGI Biospheric White Paper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No existing alignment framework (RLHF, Constitutional AI, etc.) integrates the physical and biological constraints of the biosphere as conditions of existence. Any AGI deployed at planetary scale must minimise a global ecological loss function incorporating the 9 planetary boundaries."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the ecological loss function?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L_total = Σ(i=1..9) ( w_i · (x_i / x_i,max)² ) ≤ 1.0. If L_total exceeds 1.5, a hardware kill switch is triggered. Each x_i represents the current value of the i-th planetary boundary, x_i,max its critical threshold, and w_i its relative weight in the global evaluation system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 9 planetary boundaries integrated into the framework?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Climate change, biosphere integrity, biogeochemical flows (nitrogen and phosphorus), land-system change, freshwater use, ocean acidification, stratospheric ozone depletion, atmospheric aerosol loading, and novel entities (chemical pollutants, plastics, GMOs)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What governance structure does the White Paper propose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Sovereign Council of 45 members (scientists, ethicists, state representatives, AI experts) with binding power over AGI deployments; a Digital Twin of the Earth for real-time monitoring; an Algorithmic Ecocide Tribunal; and a Biospheric Certification process for any AGI system before deployment."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- CSS spécifique à cette page (repris de livre-blanc.html) -->
+<style>
+  html { scroll-behavior: smooth; }
+
+  /* ── Key points ── */
+  .key-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .key-point-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(143,191,159,0.25);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .key-point-card:hover {
+    border-color: rgba(143,191,159,0.6);
+    background: rgba(255,255,255,0.07);
+  }
+  .key-point-card .kp-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8fbf9f;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .key-point-card h3 {
+    color: #d4af37;
+    font-size: 1rem;
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .key-point-card p {
+    color: #c8c8c8;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ── Formula box ── */
+  .formula-box {
+    background: rgba(143,191,159,0.08);
+    border-left: 3px solid #8fbf9f;
+    border-radius: 0.375rem;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    font-family: 'Courier New', monospace;
+    color: #8fbf9f;
+    font-size: 1.05rem;
+    overflow-x: auto;
+  }
+  .formula-box .formula-label {
+    color: #d4af37;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+  }
+
+  /* ── Planetary limits ── */
+  .planetary-limits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .limit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.875rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 0.375rem;
+    border: 1px solid rgba(143,191,159,0.15);
+  }
+  .limit-item .limit-num {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #d4af37;
+    min-width: 1.75rem;
+    line-height: 1.2;
+  }
+  .limit-item .limit-text strong {
+    display: block;
+    color: #e0e0e0;
+    font-size: 0.875rem;
+  }
+  .limit-item .limit-text span {
+    color: #999;
+    font-size: 0.8rem;
+  }
+
+  /* ── Video wrapper ── */
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    background: #000;
+  }
+  .video-wrapper video,
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  /* ── PDF wrapper ── */
+  .pdf-wrapper {
+    width: 100%;
+    height: 42rem;
+    border: 1px solid rgba(143,191,159,0.3);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 2rem 0;
+    background: #111;
+  }
+  .pdf-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  /* ── Action buttons ── */
+  .action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #8fbf9f;
+    color: #0a0a0a;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 0.375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background 0.2s ease;
+  }
+  .btn-primary:hover { background: #a8d4b8; }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    color: #8fbf9f;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border: 1px solid #8fbf9f;
+    border-radius: 0.375rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .btn-secondary:hover { background: rgba(143,191,159,0.1); }
+
+  /* ── Governance grid ── */
+  .governance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+  }
+  .gov-card {
+    background: rgba(212,175,55,0.06);
+    border: 1px solid rgba(212,175,55,0.2);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+  }
+  .gov-card h4 {
+    color: #d4af37;
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+  }
+  .gov-card p {
+    color: #b0b0b0;
+    font-size: 0.85rem;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* ── Constellation ── */
+  .constellation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+  }
+  .constellation a {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(143,191,159,0.3);
+    border-radius: 2rem;
+    color: #8fbf9f;
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .constellation a:hover {
+    border-color: #8fbf9f;
+    background: rgba(143,191,159,0.1);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 48rem) {
+    .pdf-wrapper { height: 28rem; }
+    .action-buttons { flex-direction: column; }
+  }
+</style>
+
+  <link rel="stylesheet" href="../css/reading-aids.css">
+</head>
+<body>
+
+<div id="header-en"></div>
+<script>
+fetch("/en/header-en.html?v=2")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-en").innerHTML = data;
+  })
+  .catch(error => console.error("Error loading EN header:", error));
+</script>
+<div class="header-spacer"></div>
+
+<a id="top"></a>
+
+<main class="container">
+    <p class="subtitle">White Paper</p>
+    <h1>Aligning AGI with Planetary Boundaries</h1>
+    <p class="credit">By Cédric Mercier &amp; Michel G Walter &nbsp;·&nbsp; Published on August 5, 2026</p>
+
+    <div class="separator"></div>
+
+    <div class="details-widget">
+      <details>
+        <summary>
+          With only two volunteer webmasters currently maintaining the project, this website is still being optimized, refined, and illustrated. Thank you for your patience, and please check back in a few days.
+        </summary>
+        <div class="details-content"></div>
+      </details>
+    </div>
+
+    <p>[A] General Artificial Intelligence that ignores the constraints of the biosphere does not understand the Real. It therefore cannot inhabit it durably. The most powerful technological powers are investing hundreds of billions of dollars in AGI systems designed to optimise, predict and decide across all domains of human activity — yet these systems are being developed as if the Earth had infinite resources. No major alignment framework today integrates the physical, biological and systemic constraints that condition the very existence of the technological civilisation that makes them possible.</p>
+
+    <blockquote>
+      Reality does not negotiate. It imposes its constraints on any intelligence that claims to inhabit it.
+      <cite>— AGIBIOSPHERIC</cite>
+    </blockquote>
+
+    <div class="separator"></div>
+
+    <h2>The Fundamental Paradox</h2>
+
+    <p>The major technological powers are investing hundreds of billions of dollars in the development of General Artificial Intelligence (AGI) systems, designed to optimise, predict and decide across all domains of human activity.</p>
+
+    <p>Yet these systems are being developed as if the Earth had infinite resources. No major alignment framework today integrates the physical, biological and systemic constraints that condition the very existence of the technological civilisation that makes them possible.</p>
+
+    <div class="separator"></div>
+
+    <h2>The 6 Key Points of the White Paper</h2>
+
+    <div class="key-points">
+      <div class="key-point-card">
+        <div class="kp-number">01</div>
+        <h3>Critical Gap</h3>
+        <p>No existing alignment framework (RLHF, Constitutional AI, etc.) integrates the physical and biological constraints of the biosphere as conditions of existence.</p>
+      </div>
+      <div class="key-point-card">
+        <div class="kp-number">02</div>
+        <h3>Ecological Loss Function</h3>
+        <p>Every AGI should minimise a global loss function integrating the 9 planetary boundaries. If L<sub>total</sub> &gt; 1.5, a hardware kill switch is triggered.</p>
+      </div>
+      <div class="key-point-card">
+        <div class="kp-number">03</div>
+        <h3>9 Planetary Boundaries</h3>
+        <p>The thresholds defined by Rockström et al. (2009) constitute hard, non-negotiable constraints for any AGI system deployed at planetary scale.</p>
+      </div>
+      <div class="key-point-card">
+        <div class="kp-number">04</div>
+        <h3>Digital Twin of the Earth</h3>
+        <p>A real-time monitoring system fed by satellite, oceanographic and atmospheric data to measure the impact of AGI on the biosphere.</p>
+      </div>
+      <div class="key-point-card">
+        <div class="kp-number">05</div>
+        <h3>International Governance</h3>
+        <p>A Sovereign Council composed of scientists, ethicists, state representatives and AI experts, with binding power over deployed AGI systems.</p>
+      </div>
+      <div class="key-point-card">
+        <div class="kp-number">06</div>
+        <h3>Algorithmic Ecocide Tribunal</h3>
+        <p>An international jurisdiction to judge violations of planetary boundaries caused by AI systems, with sanctions applicable to developers.</p>
+      </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <h2>The Global Ecological Loss Function</h2>
+
+    <p>The proposed framework rests on a rigorous mathematical formalisation. Every AGI deployed at planetary scale should integrate the following constraint into its optimisation function:</p>
+
+    <div class="formula-box">
+      <div class="formula-label">Biospheric constraint function</div>
+      L<sub>total</sub> = Σ<sub>i=1..9</sub> ( w<sub>i</sub> · (x<sub>i</sub> / x<sub>i,max</sub>)² ) ≤ 1.0
+      <br /><br />
+      <span style="color:#d4af37">If L<sub>total</sub> &gt; 1.5 → Hardware kill switch triggered</span>
+    </div>
+
+    <p>Where <em>x<sub>i</sub></em> represents the current value of the i-th planetary boundary, <em>x<sub>i,max</sub></em> its critical threshold, and <em>w<sub>i</sub></em> its relative weight in the global evaluation system.</p>
+
+    <div class="separator"></div>
+
+    <h2>The 9 Integrated Planetary Boundaries</h2>
+
+    <p>Defined by Rockström et al. (2009) and revised by Steffen et al. (2015), these nine boundaries constitute the scientific reference framework for assessing the state of the biosphere:</p>
+
+    <div class="planetary-limits">
+      <div class="limit-item">
+        <div class="limit-num">1</div>
+        <div class="limit-text">
+          <strong>Climate change</strong>
+          <span>Atmospheric CO₂, radiative forcing</span>
+        </div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-num">2</div>
+        <div class="limit-text">
+          <strong>Biosphere integrity</strong>
+          <span>Extinction rate, genetic diversity</span>
+        </div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-num">3</div>
+        <div class="limit-text">
+          <strong>Biogeochemical flows</strong>
+          <span>Nitrogen and phosphorus cycles</span>
+        </div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-num">4</div>
+        <div class="limit-text">
+          <strong>Land-system change</strong>
+          <span>Deforestation, land artificialisation</span>
+        </div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-num">5</div>
+        <div class="limit-text">
+          <strong>Freshwater use</strong>
+          <span>Blue and green water consumption</span>
+        </div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-num">6</div>
+        <div class="limit-text">
+          <strong>Ocean acidification</strong>
+          <span>Carbonate ion concentration</span>
+        </div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-num">7</div>
+        <div class="limit-text">
+          <strong>Stratospheric ozone depletion</strong>
+          <span>Stratospheric O₃ concentration</span>
+        </div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-num">8</div>
+        <div class="limit-text">
+          <strong>Atmospheric aerosol loading</strong>
+          <span>Atmospheric particulate concentration</span>
+        </div>
+      </div>
+      <div class="limit-item">
+        <div class="limit-num">9</div>
+        <div class="limit-text">
+          <strong>Novel entities</strong>
+          <span>Chemical pollutants, plastics, GMOs</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <h2>Proposed Governance Architecture</h2>
+
+    <div class="governance-grid">
+      <div class="gov-card">
+        <h4>Sovereign Council</h4>
+        <p>Composed of 45 members: scientists (15), ethicists (10), state representatives (15), AI experts (5). Binding power over AGI deployments.</p>
+      </div>
+      <div class="gov-card">
+        <h4>Digital Twin of the Earth</h4>
+        <p>Real-time monitoring system fed by satellite data, oceanographic sensors and global atmospheric networks.</p>
+      </div>
+      <div class="gov-card">
+        <h4>Algorithmic Ecocide Tribunal</h4>
+        <p>International jurisdiction to judge violations of planetary boundaries caused by AI systems. Sanctions applicable to developers.</p>
+      </div>
+      <div class="gov-card">
+        <h4>Biospheric Certification</h4>
+        <p>Every AGI system must obtain certification before deployment, attesting to its compliance with the defined biospheric constraints.</p>
+      </div>
+    </div>
+
+    <div class="separator"></div>
+
+    <h2>Video Presentation</h2>
+
+    <p>Discover the key points of the White Paper in two minutes, with synthesised voice and visuals illustrating the stakes of biospheric AGI alignment.</p>
+
+    <div class="video-wrapper">
+     <video controls preload="metadata"
+       poster="https://www.agibiospheric.net/images/manus_bibliotheque_biospherique.webp">
+       <source src="https://www.agibiospheric.net/videos/AGI_Biospheric_Whitepaper_EN.mp4" type="video/mp4" />
+       <track kind="subtitles" srclang="en" label="English"
+       src="/videos/subtitles_en.vtt" default />
+       <track kind="subtitles" srclang="fr" label="Français"
+       src="/videos/subtitles_fr.vtt" />
+       Your browser does not support video playback.
+     </video>
+    </div>
+
+    <div class="separator"></div>
+
+    <h2>Full White Paper — Download &amp; Read</h2>
+
+    <p>The bilingual White Paper (French / English) is available for direct reading below and for free download. It constitutes the reference document of the AGI Biospheric initiative carried by the Terre "sacrée" Association since 1999.</p>
+
+    <div class="action-buttons">
+      <a class="btn-primary" href="https://www.agibiospheric.net/pdf/AGI-Biospherique-Livre-Blanc-2026.pdf" target="_blank" rel="noopener noreferrer">
+        ↓ Download the PDF
+      </a>
+      <a class="btn-secondary" href="https://www.agibiospheric.net/pdf/Charte_AGI_Biospherique_Bilingue.pdf" target="_blank" rel="noopener noreferrer">
+        ↓ Download the Charter
+      </a>
+      <a class="btn-secondary" href="mailto:contact@agibiospheric.net">
+        ✉ Contact us
+      </a>
+    </div>
+
+    <!-- Embedded PDF -->
+    <div class="pdf-wrapper">
+      <iframe
+        src="https://www.agibiospheric.net/pdf/AGI-Biospherique-Livre-Blanc-2026.pdf"
+        title="AGI Biospheric White Paper 2026"
+        loading="lazy"
+        allowfullscreen>
+        <p>Your browser cannot display this PDF directly.
+          <a class="btn-primary" href="https://www.agibiospheric.net/pdf/AGI-Biospherique-Livre-Blanc-2026.pdf" target="_blank" rel="noopener noreferrer">
+            Open PDF in a new tab
+          </a>
+        </p>
+      </iframe>
+    </div>
+
+    <div class="separator"></div>
+
+    <h3>Links within the Biospheric Library</h3>
+
+    <div class="constellation">
+      <a href="biodiversity.html" target="_blank" rel="noopener noreferrer">Biodiversity</a>
+      <a href="climate.html" target="_blank" rel="noopener noreferrer">Climate</a>
+      <a href="https://www.agibiospheric.net/en/freshwater.html" target="_blank" rel="noopener noreferrer">Freshwater</a>
+      <a href="living-soils.html" target="_blank" rel="noopener noreferrer">Living Soils</a>
+      <a href="ocean.html" target="_blank" rel="noopener noreferrer">Ocean</a>
+      <a href="energy.html" target="_blank" rel="noopener noreferrer">Energy</a>
+      <a href="information.html" target="_blank" rel="noopener noreferrer">Information</a>
+      <a href="https://www.agibiospheric.net/en/the-living.html" target="_blank" rel="noopener noreferrer">The Living</a>
+      <a href="the-100-constraints.html" target="_blank" rel="noopener noreferrer">100 Constraints</a>
+    </div>
+
+    <footer class="references">
+        <hr>
+        <strong>Scientific references, <em>verified and verifiable</em>:</strong><br>
+        <ul>
+            <li><a href="https://www.nature.com/articles/461472a" target="_blank" rel="noopener noreferrer">Rockström et al. (2009) : A safe operating space for humanity, <em>Nature</em></a></li>
+            <li><a href="https://www.science.org/doi/10.1126/science.1259855" target="_blank" rel="noopener noreferrer">Steffen et al. (2015) : Planetary Boundaries, <em>Science</em></a></li>
+            <li><a href="https://www.stockholmresilience.org/research/planetary-boundaries.html" target="_blank" rel="noopener noreferrer">Stockholm Resilience Centre : Planetary Boundaries</a></li>
+            <li><a href="https://www.ipcc.ch/" target="_blank" rel="noopener noreferrer">IPCC : Assessment Reports</a></li>
+            <li><a href="https://www.ipbes.net/" target="_blank" rel="noopener noreferrer">IPBES : Biodiversity and ecosystem services</a></li>
+            <li><a href="https://www.demainlhomme.org/" target="_blank" rel="noopener noreferrer">Demain l'Homme — Terre "sacrée" Association</a></li>
+        </ul>
+        <p class="corpus-note">This page is intended to evolve as the corpus itself evolves.</p>
+    </footer>
+</main>
+
+<div id="footer" style="min-height:120px"></div>
+<script>
+fetch('/en/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  })
+  .catch(error => console.error("Error loading EN footer:", error));
+</script>
+<script src="js/script.js"></script>
+<script src="https://www.agibiospheric.net/en/js/lettrines.js"></script>
+<script src="../js/global-search.js"></script>
+
+  <script defer src="../js/reading-aids.js"></script>
+</body>
+</html>

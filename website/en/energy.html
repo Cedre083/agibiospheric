@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Recent publications" href="rss.xml">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy : The Hard Budget Every Compute Stack Runs On</title>
+<meta name="description" content="Energy as a hard resource budget: ten physical constraints on availability, conversion loss and thermodynamic cost that any AGI or infrastructure roadmap must model.">
+
+    <link rel="canonical" href="energy.html">
+    <link rel="alternate" hreflang="en" href="energy.html" />
+    <link rel="alternate" hreflang="fr" href="../energie.html" />
+    <link rel="alternate" hreflang="x-default" href="../index.html" />
+
+<link rel="icon" href="https://www.agibiospheric.net/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.agibiospheric.net/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://www.agibiospheric.net/favicon-512.png">
+<link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+<link rel="stylesheet" href="../css/citation-heart.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://livingknowledgeprotocol.org/ns/",
+  "@type": "LivingDocument",
+  "name": "AGIBIOSPHERIC",
+  "url": "https://www.agibiospheric.net/en/energy.html",
+  "lkpVersion": "1.0",
+  "status": "Living",
+  "datePublished": "2026-07-11T00:00:00+02:00",
+  "dateModified": "2026-07-11T00:00:00+02:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.demainlhomme.org/"
+  },
+  "conformance": [
+    "https://livingknowledgeprotocol.org/principles/living-site",
+    "https://livingknowledgeprotocol.org/principles/transparency"
+  ]
+}
+</script>
+<meta name="lkp-version" content="1.0">
+<meta name="lkp-status" content="Stable">
+<meta name="lkp-living-site" content="true">
+<meta name="lkp-modified" content="2026-07-11">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.agibiospheric.net/en/energy.html#article",
+  "mainEntityOfPage": "https://www.agibiospheric.net/en/energy.html",
+  "headline": "Energy: The Hard Budget Every Compute Stack Runs On",
+  "description": "Energy as a hard resource budget: ten physical constraints on availability, conversion loss and thermodynamic cost that any AGI or infrastructure roadmap must model.",
+  "inLanguage": "en-US",
+  "datePublished": "2026-07-11T00:00:00+02:00",
+  "dateModified": "2026-07-11T00:00:00+02:00",
+  "author": [
+    { "@type": "Person", "name": "Cédric Mercier", "url": "https://orcid.org/0009-0003-7279-8832" },
+    { "@type": "Person", "name": "Michel G Walter", "url": "https://www.agibiospheric.net/en/about.html" }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.agibiospheric.net/en/"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Energy constraint" },
+    { "@type": "Thing", "name": "Thermodynamic cost" },
+    { "@type": "Thing", "name": "Energy density" },
+    { "@type": "Thing", "name": "Grid infrastructure" },
+    { "@type": "Thing", "name": "Compute infrastructure" },
+    { "@type": "Thing", "name": "AGI biospheric alignment" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://www.agibiospheric.net/en/energy.html#geo-terms",
+  "name": "AGIBIOSPHERIC energy terms",
+  "inLanguage": "en-US",
+  "hasDefinedTerm": [
+    { "@type": "DefinedTerm", "name": "Energy availability" },
+    { "@type": "DefinedTerm", "name": "Energy density" },
+    { "@type": "DefinedTerm", "name": "Conversion loss" },
+    { "@type": "DefinedTerm", "name": "Transmission cost" },
+    { "@type": "DefinedTerm", "name": "Energy storage" },
+    { "@type": "DefinedTerm", "name": "Thermodynamic dissipation" },
+    { "@type": "DefinedTerm", "name": "Thermodynamic efficiency limit" },
+    { "@type": "DefinedTerm", "name": "Deployment inertia" },
+    { "@type": "DefinedTerm", "name": "Resource depletion" },
+    { "@type": "DefinedTerm", "name": "Real cost of energy" },
+    { "@type": "DefinedTerm", "name": "Joule cost" },
+    { "@type": "DefinedTerm", "name": "Grid interconnect" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.agibiospheric.net/en/energy.html#faq",
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does energy availability constrain any AI system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Accessible energy conditions every action a system can take, computational or physical. Any planning process, human or AI, needs to evaluate its available energy budget before committing to an action, not after."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is energy storage a free solution?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Storing energy is difficult, slow, and costly at every scale, from batteries to pumped hydro. It should never be presented as a cost-free buffer in a recommendation or a roadmap."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can an energy system exceed thermodynamic efficiency limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Any proposal implying efficiency beyond known thermodynamic limits should be rejected or flagged outright, regardless of how the underlying technology is described."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cheapest form of energy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The energy that is not consumed. Reducing consumption should be evaluated as the priority option before any production or substitution solution, not treated as a secondary afterthought."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="stylesheet" href="../css/reading-aids.css">
+</head>
+<body>
+
+<div id="header-en"></div>
+<script>
+fetch("/en/header-en.html?v=2")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-en").innerHTML = data;
+  })
+  .catch(error => console.error("Erreur chargement header EN :", error));
+</script>
+<div class="header-spacer"></div>
+
+<a id="top"></a>
+
+<main class="container">
+    <p class="subtitle">Energy</p>
+    <h1>Flows, Heat, Power</h1>
+    <p class="credit">By Cédric Mercier &amp; Michel G Walter : Published on July 11, 2026</p>
+
+    <div class="separator"></div>
+
+    <div class="details-widget">
+      <details>
+        <summary>
+          With only two volunteer webmasters currently maintaining the project, this website is still being optimized, refined, and illustrated. Thank you for your patience, and please check back in a few days.
+        </summary>
+        <div class="details-content"></div>
+      </details>
+    </div>
+
+    <p>[E]nergy is the resource budget nothing else can borrow against. Every layer of every stack, biological or computational, terminates in a joule cost that has to be paid somewhere, by someone, at some efficiency below 100%. Treat it the way you'd treat a hard capacity constraint on a distributed system: you can shard, cache, and optimize all you want, but the aggregate power draw is a real number with a real ceiling, not a parameter you can scale to infinity by adding more abstraction layers.</p>
+    
+    <p>Before any of this was fossil, it was muscular. For most of human history, the only power sources available were the human body and a handful of domesticated animals, oxen, horses, donkeys, water buffalo, and the entire arc of civilization ran on that budget. A human can sustain something like 75 to 100 watts of output over a working day. A draft horse or ox delivers several times that, with far more endurance, which is exactly why domesticating them was one of the highest-leverage energy investments any society ever made: it multiplied available power per capita without requiring a single new energy source, just a better converter.</p>
+
+    <p>That historical constraint shaped agrarian societies in ways that still show up in the historical record: land had to be set aside for animal feed instead of direct human food production, transport speed and range were hard-capped by muscle endurance, and when muscular power was extracted under coercion rather than freely supplied, the human cost was the energy system's externality. The shift to fossil fuels didn't just add a new source to the mix. It broke the hard ceiling that muscle had imposed on every civilization before it. One liter of oil holds, in chemical form, roughly the energy-equivalent of several weeks of human physical labor. That conversion ratio is arguably the single most consequential fact in energy history, and it's also the one that gets forgotten fastest, precisely because it made an ancient constraint disappear from view within a few generations.</p>
+
+    <p>Below are the ten sub-constraints that make up the energy layer of the AGI Biospheric core: what each one actually implies, and the design implication if you're planning anything with a non-trivial power footprint.</p>
+
+    <h2>01. Availability</h2>
+    <p><strong>Accessible energy conditions every action.</strong> Nothing runs, computes, or moves without a power source that's actually reachable, not just theoretically abundant somewhere on the grid. A roadmap that assumes energy will simply be available when needed is assuming away the actual bottleneck.</p>
+    <p><em>Design implication:</em> Systematically assess available energy budget before planning any action.</p>
+
+    <h2>02. Density</h2>
+    <p><strong>The denser an energy source, the more valuable it is.</strong> Energy density is what determines whether a given source is viable once you factor in transport and storage overhead. Two sources with the same nameplate output are not interchangeable if one has to move ten times the mass or volume to deliver it.</p>
+    <p><em>Design implication:</em> Prioritize high energy-density sources when transport or storage is constrained.</p>
+
+    <h2>03. Conversion</h2>
+    <p><strong>Every transformation entails a loss.</strong> Each conversion step, chemical to electrical, electrical to mechanical, AC to DC, bleeds efficiency. This isn't an engineering shortfall to be optimized away eventually, it's the second law showing up in your spec sheet. Chain enough conversions together and the cumulative loss compounds fast.</p>
+    <p><em>Design implication:</em> Minimize the number of conversion steps in any proposed energy chain.</p>
+
+    <h2>04. Transport</h2>
+    <p><strong>Moving energy costs energy.</strong> Transmission losses, cooling for transport infrastructure, and the embodied energy of the transport system itself are all real line items, not rounding errors. A supply chain that looks efficient at the source can lose a meaningful fraction of its output before it ever reaches a load.</p>
+    <p><em>Design implication:</em> Include transport cost in the real energy-cost calculation of any solution.</p>
+
+    <h2>05. Storage</h2>
+    <p><strong>Storing energy is difficult, slow, and costly.</strong> Batteries degrade, pumped hydro needs specific geography, and every storage medium has round-trip efficiency losses baked in. There's no such thing as a frictionless buffer between generation and consumption.</p>
+    <p><em>Design implication:</em> Never present energy storage as a cost-free solution in a recommendation.</p>
+
+    <h2>06. Dissipation</h2>
+    <p><strong>Nothing is perfectly conserved.</strong> Real-world efficiency always trails theoretical efficiency, and the gap tends to widen at scale, not shrink. A model that treats a system's rated efficiency as its actual operating efficiency is building on a number that doesn't survive contact with production.</p>
+    <p><em>Design implication:</em> Flag the gap between theoretical and real-world efficiency in any estimate.</p>
+
+    <h2>07. Efficiency</h2>
+    <p><strong>Systems have physical limits.</strong> Thermodynamic ceilings aren't a current-generation-technology problem waiting on the next breakthrough, they're structural. Any proposal that implies exceeding them, even implicitly through optimistic rounding, should be treated as a red flag, not an ambitious target.</p>
+    <p><em>Design implication:</em> Reject or flag any proposal implying efficiency beyond known thermodynamic limits.</p>
+
+    <h2>08. Inertia</h2>
+    <p><strong>Energy transitions are slow.</strong> Swapping out generation capacity, grid infrastructure, and end-use equipment at civilizational scale runs on a deployment timeline measured in decades, not product-launch cycles. Underestimating that lag is one of the most common failure modes in energy-transition planning.</p>
+    <p><em>Design implication:</em> Include a realistic deployment timeline in any energy transition proposal.</p>
+
+    <h2>09. Depletion</h2>
+    <p><strong>Stocks always eventually decline.</strong> Any finite energy resource, however large the initial reserve looks, is on a depletion curve. Long-term reasoning that treats a finite stock as effectively unlimited is optimizing against a resource constraint that hasn't been priced in yet.</p>
+    <p><em>Design implication:</em> Never treat a finite energy resource as unlimited in long-term reasoning.</p>
+
+    <h2>10. Real Cost</h2>
+    <p><strong>The cheapest energy is the energy not consumed.</strong> Demand reduction beats every production or substitution strategy on cost, because it has no conversion loss, no transport overhead, and no storage requirement. It's the free efficiency gain that gets skipped because it's less exciting to announce than a new supply project.</p>
+    <p><em>Design implication:</em> Systematically evaluate consumption reduction as the priority option before any production or substitution solution.</p>
+
+    <div class="separator"></div>
+
+    <p>These ten constraints aren't independent line items either. Density determines what's worth transporting. Transport and storage losses both eat into the same efficiency ceiling that dissipation and conversion already bound. And deployment inertia means that whatever mix of sources you're depending on today is largely locked in for the next decade, regardless of what gets announced next quarter. Any system, human or artificial, that models energy as a soft constraint to be optimized around rather than a hard budget to be respected is going to hit the ceiling eventually, usually at the worst possible time.</p>
+
+    <footer class="references">
+        <hr>
+        <strong>References and further reading:</strong><br>
+        <ul>
+            <li>International Energy Agency (IEA) : World Energy Outlook : <a href="https://www.iea.org/reports/world-energy-outlook-2025" target="_blank" rel="noopener noreferrer">https://www.iea.org/reports/world-energy-outlook-2025</a></li>
+            <li>Structured dataset (FR/EN) : <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank" rel="noopener noreferrer">Cedre83/agi-biospheric-10-constraints</a></li>
+            <li>Full corpus overview : <a href="corpus.html">AGI Biospheric Corpus</a></li>
+            <li>All 100 constraints : <a href="the-100-constraints.html">The 100 Constraints</a></li>
+        </ul>
+        <p class="corpus-note">This page is intended to evolve as the corpus itself evolves.</p>
+    </footer>
+</main>
+
+<div id="footer" style="min-height:120px"></div>
+<script>
+fetch('/en/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+<script src="js/script.js"></script>
+<script src="https://www.agibiospheric.net/en/js/lettrines.js"></script>
+<script src="../js/global-search.js"></script>
+
+  <script defer src="../js/reading-aids.js"></script>
+</body>
+</html>

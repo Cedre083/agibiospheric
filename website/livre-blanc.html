@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Publications r&eacute;centes" href="rss.xml">
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Livre Blanc AGI Biosphérique : Aligner l'IA avec les Limites Planétaires</title>
+
+
+
+  <!-- SEO -->
+
+  <meta name="description" content="Livre Blanc bilingue de l'Association Terre sacrée : aligner l'Intelligence Artificielle Générale avec les 9 limites planétaires. Cadre contraignant, fonction de perte écologique, gouvernance mondiale." />
+
+  <meta name="keywords" content="AGI biosphérique, limites planétaires, intelligence artificielle, alignement IA, livre blanc, Association Terre sacrée, Cédric Mercier, Michel Walter, agibiospheric" />
+
+  <meta name="author" content="Cédric Mercier et Michel G. Walter (Association Terre sacrée)" />
+
+  <meta name="robots" content="index, follow" />
+
+
+
+  <!-- Canonique -->
+
+  <link rel="canonical" href="livre-blanc.html" />
+
+  
+
+
+
+  <!-- Hreflang -->
+
+  <link rel="alternate" hreflang="fr" href="livre-blanc.html" />
+
+  <link rel="alternate" hreflang="en" href="en/whitepaper.html" />
+
+  <link rel="alternate" hreflang="x-default" href="livre-blanc.html" />
+
+  <link rel="alternate" hreflang="x-default" href="index.html">
+
+  <link rel="icon" href="https://www.agibiospheric.net/favicon.ico" sizes="any">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="https://www.agibiospheric.net/favicon-192.png">
+
+  <link rel="icon" type="image/png" sizes="512x512" href="https://www.agibiospheric.net/favicon-512.png">
+
+  <link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+
+  <link rel="preload" as="image" href="https://www.agibiospheric.net/logo-1024.png">
+
+  
+
+  <!-- Open Graph -->
+
+  <meta property="og:type" content="article" />
+
+  <meta property="og:title" content="Livre Blanc AGI Biosphérique : Aligner l'IA avec les Limites Planétaires" />
+
+  <meta property="og:description" content="Cadre contraignant pour aligner toute AGI avec la préservation de la biosphère. Fonction de perte écologique, 9 limites planétaires, gouvernance mondiale." />
+
+  <meta property="og:url" content="https://www.agibiospheric.net/livre-blanc.html" />
+
+  <meta property="og:site_name" content="AGI Biospheric" />
+
+  <meta property="og:image" content="https://www.agibiospheric.net/images/Gemini_fille-puces-electronique-recyclage-1150.webp" />
+
+  <meta property="og:locale" content="fr_FR" />
+
+
+
+  <!-- Twitter Card -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="twitter:title" content="Livre Blanc AGI Biosphérique" />
+
+  <meta name="twitter:description" content="Aligner l'Intelligence Artificielle Générale avec les 9 limites planétaires de la Terre." />
+
+  <meta name="twitter:image" content="https://www.agibiospheric.net/images/manus_bibliotheque_biospherique.webp" />
+
+
+
+  <!-- Favicon -->
+
+  <link rel="icon" href="https://www.agibiospheric.net/favicon.ico" type="image/x-icon" />
+
+
+
+  <!-- CSS du site (même que vivant.html) -->
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="css/citation-heart.css" />
+
+  <link rel="stylesheet" href="css/global-search.css" />
+
+
+
+  <!-- CSS spécifique à cette page -->
+
+  <style>
+
+    html { scroll-behavior: smooth; }
+
+
+
+    /* ── Points clés ── */
+
+    .key-points {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+
+      gap: 1.5rem;
+
+      margin: 2.5rem 0;
+
+    }
+
+    .key-point-card {
+
+      background: rgba(255,255,255,0.04);
+
+      border: 1px solid rgba(143,191,159,0.25);
+
+      border-radius: 0.5rem;
+
+      padding: 1.5rem;
+
+      transition: border-color 0.2s ease, background 0.2s ease;
+
+    }
+
+    .key-point-card:hover {
+
+      border-color: rgba(143,191,159,0.6);
+
+      background: rgba(255,255,255,0.07);
+
+    }
+
+    .key-point-card .kp-number {
+
+      font-size: 2rem;
+
+      font-weight: 700;
+
+      color: #8fbf9f;
+
+      line-height: 1;
+
+      margin-bottom: 0.5rem;
+
+    }
+
+    .key-point-card h3 {
+
+      color: #d4af37;
+
+      font-size: 1rem;
+
+      margin: 0 0 0.75rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+
+    }
+
+    .key-point-card p {
+
+      color: #c8c8c8;
+
+      font-size: 0.9rem;
+
+      line-height: 1.6;
+
+      margin: 0;
+
+    }
+
+
+
+    /* ── Formule mathématique ── */
+
+    .formula-box {
+
+      background: rgba(143,191,159,0.08);
+
+      border-left: 3px solid #8fbf9f;
+
+      border-radius: 0.375rem;
+
+      padding: 1.5rem 2rem;
+
+      margin: 2rem 0;
+
+      font-family: 'Courier New', monospace;
+
+      color: #8fbf9f;
+
+      font-size: 1.05rem;
+
+      overflow-x: auto;
+
+    }
+
+    .formula-box .formula-label {
+
+      color: #d4af37;
+
+      font-size: 0.8rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.08em;
+
+      margin-bottom: 0.5rem;
+
+      font-family: inherit;
+
+    }
+
+
+
+    /* ── Limites planétaires ── */
+
+    .planetary-limits {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+
+      gap: 1rem;
+
+      margin: 2rem 0;
+
+    }
+
+    .limit-item {
+
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 0.75rem;
+
+      padding: 0.875rem;
+
+      background: rgba(255,255,255,0.03);
+
+      border-radius: 0.375rem;
+
+      border: 1px solid rgba(143,191,159,0.15);
+
+    }
+
+    .limit-item .limit-num {
+
+      font-size: 1.25rem;
+
+      font-weight: 700;
+
+      color: #d4af37;
+
+      min-width: 1.75rem;
+
+      line-height: 1.2;
+
+    }
+
+    .limit-item .limit-text strong {
+
+      display: block;
+
+      color: #e0e0e0;
+
+      font-size: 0.875rem;
+
+    }
+
+    .limit-item .limit-text span {
+
+      color: #999;
+
+      font-size: 0.8rem;
+
+    }
+
+
+
+    /* ── Vidéo intégrée ── */
+
+    .video-wrapper {
+
+      position: relative;
+
+      padding-bottom: 56.25%;
+
+      height: 0;
+
+      overflow: hidden;
+
+      border-radius: 0.5rem;
+
+      margin: 2rem 0;
+
+      background: #000;
+
+    }
+
+    .video-wrapper video,
+
+    .video-wrapper iframe {
+
+      position: absolute;
+
+      top: 0; left: 0;
+
+      width: 100%; height: 100%;
+
+      border: none;
+
+      border-radius: 0.5rem;
+
+    }
+
+
+
+    /* ── PDF intégré ── */
+
+    .pdf-wrapper {
+
+      width: 100%;
+
+      height: 42rem;
+
+      border: 1px solid rgba(143,191,159,0.3);
+
+      border-radius: 0.5rem;
+
+      overflow: hidden;
+
+      margin: 2rem 0;
+
+      background: #111;
+
+    }
+
+    .pdf-wrapper iframe {
+
+      width: 100%;
+
+      height: 100%;
+
+      border: none;
+
+    }
+
+    .pdf-fallback {
+
+      display: none;
+
+      padding: 2rem;
+
+      text-align: center;
+
+      color: #999;
+
+    }
+
+
+
+    /* ── Boutons d'action ── */
+
+    .action-buttons {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 1rem;
+
+      margin: 2rem 0;
+
+    }
+
+    .btn-primary {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 0.5rem;
+
+      padding: 0.75rem 1.5rem;
+
+      background: #8fbf9f;
+
+      color: #0a0a0a;
+
+      font-weight: 700;
+
+      font-size: 0.9rem;
+
+      text-decoration: none;
+
+      border-radius: 0.375rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+
+      transition: background 0.2s ease;
+
+    }
+
+    .btn-primary:hover { background: #a8d4b8; }
+
+    .btn-secondary {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 0.5rem;
+
+      padding: 0.75rem 1.5rem;
+
+      background: transparent;
+
+      color: #8fbf9f;
+
+      font-weight: 700;
+
+      font-size: 0.9rem;
+
+      text-decoration: none;
+
+      border: 1px solid #8fbf9f;
+
+      border-radius: 0.375rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.05em;
+
+      transition: background 0.2s ease, color 0.2s ease;
+
+    }
+
+    .btn-secondary:hover { background: rgba(143,191,159,0.1); }
+
+
+
+    /* ── Gouvernance ── */
+
+    .governance-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+      gap: 1.25rem;
+
+      margin: 2rem 0;
+
+    }
+
+    .gov-card {
+
+      background: rgba(212,175,55,0.06);
+
+      border: 1px solid rgba(212,175,55,0.2);
+
+      border-radius: 0.5rem;
+
+      padding: 1.25rem;
+
+    }
+
+    .gov-card h4 {
+
+      color: #d4af37;
+
+      margin: 0 0 0.5rem;
+
+      font-size: 0.95rem;
+
+    }
+
+    .gov-card p {
+
+      color: #b0b0b0;
+
+      font-size: 0.85rem;
+
+      line-height: 1.55;
+
+      margin: 0;
+
+    }
+
+
+
+    /* ── Constellation ── */
+
+    .constellation {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 0.75rem;
+
+      margin: 1.5rem 0;
+
+    }
+
+    .constellation a {
+
+      padding: 0.4rem 0.9rem;
+
+      border: 1px solid rgba(143,191,159,0.3);
+
+      border-radius: 2rem;
+
+      color: #8fbf9f;
+
+      font-size: 0.82rem;
+
+      text-decoration: none;
+
+      transition: border-color 0.2s, background 0.2s;
+
+    }
+
+    .constellation a:hover {
+
+      border-color: #8fbf9f;
+
+      background: rgba(143,191,159,0.1);
+
+    }
+
+
+
+    /* ── Section séparateur ── */
+
+    .section-divider {
+
+      border: none;
+
+      border-top: 1px solid rgba(143,191,159,0.2);
+
+      margin: 3rem 0;
+
+    }
+
+
+
+    /* ── Responsive ── */
+
+    @media (max-width: 48rem) {
+
+      .pdf-wrapper { height: 28rem; }
+
+      .action-buttons { flex-direction: column; }
+
+    }
+
+  </style>
+
+
+
+  <!-- Schema.org Article -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.agibiospheric.net/livre-blanc.html#article",
+
+  "mainEntityOfPage": "https://www.agibiospheric.net/livre-blanc.html",
+
+  "headline": "Livre Blanc AGI Biosphérique . Aligner l'Intelligence Artificielle Générale avec les Limites Planétaires",
+
+  "description": "Cadre contraignant pour aligner toute AGI avec la préservation de la Biosphère via une fonction de perte écologique globale et les 9 limites planétaires.",
+
+  "inLanguage": "fr-FR",
+
+  "datePublished": "2026-08-05T00:00:00+02:00",
+  "dateModified": "2026-08-05T00:00:00+02:00",
+
+  "author": [
+    { "@type": "Person", "name": "Cédric Mercier", "url": "https://orcid.org/0009-0003-7279-8832" },
+    { "@type": "Person", "name": "Michel G. Walter", "url": "https://www.agibiospheric.net/a-propos.html" }
+  ],
+
+  "publisher": {
+    "@type": "Organization",
+    "name": "Association Terre sacrée",
+    "url": "https://www.agibiospheric.net/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.agibiospheric.net/images/logoSOSterre000.png"
+    }
+  },
+
+  "image": "https://agibiospheric.net/images/Gemini_fille-puces-electronique-recyclage-1150.webp",
+
+  "video": {
+    "@type": "VideoObject",
+    "name": "Le Livre Blanc de l'AGI Biosphérique",
+    "description": "Appel aux concepteurs d'IA, développeurs, programmeurs, designers, ingénieurs, citoyens, politiques",
+    "contentUrl": "https://agibiospheric.net/videos/AGI_Biospherique_Presentation.mp4"
+  },
+
+  "about": [
+    { "@type": "Thing", "name": "Intelligence Artificielle Générale" },
+    { "@type": "Thing", "name": "Limites planétaires" },
+    { "@type": "Thing", "name": "Alignement de l'IA" },
+    { "@type": "Thing", "name": "Gouvernance mondiale de l'IA" },
+    { "@type": "Thing", "name": "Biosphère" }
+  ]
+}
+</script>
+
+
+
+
+
+  <!-- LKP (Living Knowledge Protocol) -->
+
+  <script type="application/ld+json">
+
+  {
+
+    "@context": "https://livingknowledgeprotocol.org/schema/",
+
+    "@type": "LivingDocument",
+
+    "url": "https://www.agibiospheric.net/livre-blanc.html",
+
+    "lkpVersion": "1.0",
+
+    "status": "Living",
+
+    "datePublished": "2026-08-05T00:00:00+02:00",
+
+    "dateModified": "2026-08-05T00:00:00+02:00",
+
+    "author": {
+
+      "@type": "Organization",
+
+      "name": "Association Terre sacrée",
+
+      "url": "https://www.agibiospheric.net/"
+
+    },
+
+    "conformance": [
+
+      "https://livingknowledgeprotocol.org/principles/living-site",
+
+      "https://livingknowledgeprotocol.org/principles/transparency"
+
+    ]
+
+  }
+
+  </script>
+
+  <meta content="1.0" name="lkp-version" />
+
+  <meta content="Living" name="lkp-status" />
+
+  <meta content="true" name="lkp-living-site" />
+
+  <meta content="2026-08-05" name="lkp-modified" />
+
+  <link rel="stylesheet" href="css/reading-aids.css">
+</head>
+
+
+
+<body id="top">
+
+
+
+<!-- ═══════════════════════════════════════════════
+
+     HEADER — chargé depuis /header.html
+
+═══════════════════════════════════════════════ -->
+
+<div id="header-placeholder"></div>
+
+<script>
+fetch("./header.html")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Impossible de charger le header");
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+    })
+    .catch(error => {
+        console.error(error);
+    });
+</script>
+
+
+
+<!-- ═══════════════════════════════════════════════
+
+     CONTENU PRINCIPAL
+
+═══════════════════════════════════════════════ -->
+
+<main class="container">
+
+  <article>
+
+
+
+    <!-- Titre de page (style vivant.html) -->
+
+    <p class="subtitle">Livre Blanc</p>
+
+ <div style="height: 40px;"></div>
+
+
+
+ <div style="text-align:center;">
+
+    <img src="https://www.agibiospheric.net/images/Gemini_fille-puces-electronique-recyclage-1150.webp" alt="Etude des puces informatiques- Capsules granite à transmettre à l'AGI Biosphérique">
+  </div>
+
+        <p class="credit"><em>Graphisme <strong>HD</strong> réalisé par Michel G. avec l'<a href="https://chatgpt.com/"
+   target="_blank"
+   rel="noopener"
+   style="text-decoration:none; font-size:inherit; color:#777777;">IA ChatGPT Go</a>.</em></p>
+
+
+<div style="height: 40px;"></div>
+
+
+    <h1>Aligner l'AGI avec les Limites Planétaires</h1>
+
+    <div style="height: 40px;"></div>
+
+
+
+    <p style="text-align:center;color:#999;font-size:0.85rem;margin-top:-1rem;margin-bottom:2rem;">Par Cédric Mercier et Michel G. Walter</p>
+
+   <div style="height: 40px;"></div>
+
+    <!-- Citation d'accroche -->
+
+    <p class="biospheric-text">
+
+      [U]ne Intelligence Artificielle Générale qui ignore les contraintes de la Biosphère
+
+      ne comprend pas le Réel. Elle ne peut donc pas l'habiter durablement.
+
+    </p>
+
+
+
+    <hr class="section-divider" />
+
+
+
+    <!-- ── Section 1 : Contexte ── -->
+
+    <h2>Le Paradoxe Fondamental</h2>
+
+    <div style="height: 40px;"></div>
+
+    <p>
+
+      [L]es grandes puissances technologiques investissent des centaines de milliards de dollars
+
+      dans le développement de systèmes d'Intelligence Artificielle Générale <em>(AGI),</em> conçus pour
+
+      optimiser, prévoir et décider dans tous les domaines de l'activité humaine.
+
+    </p>
+
+    <p>
+
+      Pourtant, ces systèmes sont développés comme si la Terre disposait de ressources infinies.<br><br>
+
+      Aucun cadre d'alignement majeur n'intègre aujourd'hui les contraintes, <em>physiques,
+
+      biologiques et systémiques,</em> qui conditionnent l'existence même de la civilisation
+
+      technologique qui les rend possibles.
+
+    </p>
+    <div class="quote-heart-box">
+  <blockquote>
+    Le Réel dépasse ce qui tente de le saisir.  
+    Toute forme d’esprit altère ce qu’elle croit comprendre.
+    <cite>AGIBIOSPHERIC</cite>
+  </blockquote>
+   </div>
+
+
+
+
+    <hr class="section-divider" />
+
+
+
+    <!-- ── Section 2 : Points clés ── -->
+
+    <h2>Les 6 Points Clés du Livre Blanc</h2>
+
+    <div style="height: 40px;"></div>
+
+    <div class="key-points">
+
+      <div class="key-point-card">
+
+        <div class="kp-number">01</div>
+
+        <h3>Lacune Critique</h3>
+
+        <p>Aucun cadre d'alignement existant <em>(RLHF, Constitutional AI, etc.)</em> n'intègre les
+
+        contraintes physiques et biologiques de la Biosphère comme conditions d'existence.</p>
+
+      </div>
+
+      <div class="key-point-card">
+
+        <div class="kp-number">02</div>
+
+        <h3>Fonction de Rupture Écologique Profonde</h3>
+
+        <p>Toute AGI devrait minimiser une fonction de perte globale intégrant les 9 limites
+
+        planétaires. Si L<sub>total</sub> &gt; 1,5, un mécanisme d'arrêt matériel est déclenché.</p>
+
+      </div>
+
+      <div class="key-point-card">
+
+        <div class="kp-number">03</div>
+
+        <h3>Les 9 Limites Planétaires approuvées par la Communauté scientifique internationale</h3>
+
+        <p>[L]es seuils définis par Rockström et al. <em>(2009)</em> constituent des contraintes dures non négociables pour tout système d'AGI déployé à l'échelle planétaire.</p>
+
+      </div>
+
+      <div class="key-point-card">
+
+        <div class="kp-number">04</div>
+
+        <h3>Un Jumeau Numérique de la Terre</h3>
+
+        <p>Un système de surveillance en temps réel alimenté par des données satellitaires,
+
+        océanographiques et atmosphériques pour mesurer l'impact de l'AGI sur la Biosphère.</p>
+
+      </div>
+
+      <div class="key-point-card">
+
+        <div class="kp-number">05</div>
+
+        <h3>Gouvernance Internationale</h3>
+
+        <p>[U]n Conseil Souverain composé de scientifiques, éthiciens, représentants d'États
+
+        et experts en IA, avec pouvoir contraignant sur les systèmes AGI déployés.</p>
+
+      </div>
+
+      <div class="key-point-card">
+
+        <div class="kp-number">06</div>
+
+        <h3>Tribunal de l'Écocide Algorithmique</h3>
+
+        <p>Une juridiction internationale pour juger les violations des limites planétaires
+
+        causées par des systèmes d'IA, avec sanctions applicables aux développeurs.</p>
+
+      </div>
+
+    </div>
+
+
+
+    <hr class="section-divider" />
+
+
+
+    <!-- ── Section 3 : Formule ── -->
+
+    <h2>La Fonction de Perte Écologique Globale</h2>
+
+    <div style="height: 40px;"></div>
+
+    <p>
+
+      [L]e cadre proposé repose sur une formalisation mathématique rigoureuse.<br><br> Chaque AGI
+
+      déployée à l'échelle planétaire devrait intégrer la contrainte suivante dans sa
+
+      fonction d'optimisation :
+
+    </p>
+
+
+
+    <div class="formula-box">
+
+      <div class="formula-label">Fonction de contrainte biosphérique</div>
+
+      L<sub>total</sub> = Σ<sub>i=1..9</sub> ( w<sub>i</sub> · (x<sub>i</sub> / x<sub>i,max</sub>)² ) ≤ 1,0
+
+      <br><br>
+
+      <span style="color:#d4af37">Si L<sub>total</sub> &gt; 1,5 → Kill Switch matériel déclenché</span>
+
+    </div>
+
+
+
+    <p>
+
+      Où <em>x<sub>i</sub></em> représente la valeur actuelle de la i-ème limite planétaire,
+
+      <em>x<sub>i,max</sub></em> son seuil critique, et <em>w<sub>i</sub></em> son poids
+
+      relatif dans le système d'évaluation global.
+
+    </p>
+
+ <!-- ── Section 4 : 9 limites ── -->
+
+    <hr class="section-divider" />
+
+    <a id="neuf-limites-planetaires"></a>
+
+ <div style="text-align:center;">
+  <div class="btn-livre-blanc-container">
+    <div class="btn-pulse-ring" aria-hidden="true"></div>
+    <a href="livre-blanc.html#breve-video-action"
+       class="btn-livre-blanc"
+       rel="noopener"
+       style="text-decoration:none; font-size:inherit; color:inherit;">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0-3-3h7z"></path>
+      </svg>Vidéo Action</a>
+  </div>
+
+
+     
+
+    <h2>Les 9 Limites Planétaires Intégrées</h2>
+
+   <div style="height: 40px;"></div>
+
+    <p>
+
+      Définies par Rockström et al. <em>(2009)</em> et révisées par Steffen et al. <em>(2015),</em> ces neuf limites constituent le cadre scientifique de référence pour évaluer l'état de la Biosphère :
+
+    </p>
+
+
+
+    <div class="planetary-limits">
+
+      <div class="limit-item">
+
+        <div class="limit-num">1</div>
+
+        <div class="limit-text">
+
+          <strong>Changement climatique</strong>
+
+          <span>CO₂ atmosphérique, forçage radiatif</span>
+
+        </div>
+
+      </div>
+
+      <div class="limit-item">
+
+        <div class="limit-num">2</div>
+
+        <div class="limit-text">
+
+          <strong>Intégrité de la Biosphère</strong>
+
+          <span>Taux d'extinction, diversité génétique</span>
+
+        </div>
+
+      </div>
+
+      <div class="limit-item">
+
+        <div class="limit-num">3</div>
+
+        <div class="limit-text">
+
+          <strong>Cycles biogéochimiques</strong>
+
+          <span>Azote et phosphore dans les cycles</span>
+
+        </div>
+
+      </div>
+
+      <div class="limit-item">
+
+        <div class="limit-num">4</div>
+
+        <div class="limit-text">
+
+          <strong>Changement d'utilisation des terres</strong>
+
+          <span>Déforestation, artificialisation</span>
+
+        </div>
+
+      </div>
+
+      <div class="limit-item">
+
+        <div class="limit-num">5</div>
+
+        <div class="limit-text">
+
+          <strong>Eau douce</strong>
+
+          <span>Consommation d'eau bleue et verte</span>
+
+        </div>
+
+      </div>
+
+      <div class="limit-item">
+
+        <div class="limit-num">6</div>
+
+        <div class="limit-text">
+
+          <strong>Acidification des océans</strong>
+
+          <span>Concentration en ions carbonate</span>
+
+        </div>
+
+      </div>
+
+      <div class="limit-item">
+
+        <div class="limit-num">7</div>
+
+        <div class="limit-text">
+
+          <strong>Appauvrissement de l'ozone</strong>
+
+          <span>Concentration stratosphérique O₃</span>
+
+        </div>
+
+      </div>
+
+      <div class="limit-item">
+
+        <div class="limit-num">8</div>
+
+        <div class="limit-text">
+
+          <strong>Charge en aérosols</strong>
+
+          <span>Concentration particulaire atmosphérique</span>
+
+        </div>
+
+      </div>
+
+      <div class="limit-item">
+
+        <div class="limit-num">9</div>
+
+        <div class="limit-text">
+
+          <strong>Entités nouvelles</strong>
+
+          <span>Polluants chimiques, plastiques, OGM</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <hr class="section-divider" />
+
+
+
+    <!-- ── Section 5 : Gouvernance ── -->
+
+    <h3>Livre Blanc : Architecture de Gouvernance Proposée</h3>
+
+    <div style="height: 40px;"></div>
+
+    <div class="governance-grid">
+
+      <div class="gov-card">
+
+        <h4>Conseil Souverain</h4> 
+
+         <div style="height: 40px;"></div>
+
+        <p>Composé de 45 membres : scientifiques (15), éthiciens (10), représentants d'États (15),
+
+        experts IA (5). Pouvoir contraignant sur les déploiements AGI.</p>
+
+      </div>
+
+      <div class="gov-card">
+
+        <h4>Jumeau Numérique de la Terre</h4>
+
+         <div style="height: 40px;"></div>
+
+        <p>Système de surveillance en temps réel alimenté par données satellitaires, capteurs océanographiques et réseaux atmosphériques mondiaux.</p>
+
+      </div>
+
+      <div class="gov-card">
+
+        <h4>Tribunal de l'Écocide Algorithmique</h4>
+
+         <div style="height: 40px;"></div>
+
+        <p>Juridiction internationale pour juger les violations des limites planétaires
+
+        causées par des systèmes d'IA. Sanctions applicables aux développeurs.</p>
+
+      </div>
+
+      <div class="gov-card">
+
+        <h4>Certification Biosphérique</h4>
+
+         <div style="height: 40px;"></div>
+
+        <p>Tout système AGI doit obtenir une certification avant déploiement, attestant
+
+        de sa conformité aux contraintes biosphériques définies.</p>
+
+      </div>
+
+    </div>
+
+
+
+    <hr class="section-divider" />
+
+ <a id="breve-video-action"></a>
+
+    <!-- ── Section 6 : Vidéo ── -->
+
+    <h2>Présentation en Vidéo</h2>
+
+    <div style="height: 40px;"></div>
+
+    <p>
+
+      [D]écouvrez les points essentiels du Livre Blanc en deux minutes, <em>avec voix de synthèse et visuels,</em> illustrant les enjeux de l'alignement biosphérique de l'AGI.
+
+    </p>
+
+    <div style="height: 40px;"></div>
+
+    <div class="video-wrapper">
+
+      <video controls preload="metadata" poster="https://www.agibiospheric.net/images/manus_bibliotheque_biospherique.webp">
+
+        <source src="https://www.agibiospheric.net/videos/AGI_Biospherique_Presentation.mp4" type="video/mp4" />
+
+        Votre navigateur ne supporte pas la lecture vidéo.
+
+        <a href="https://www.agibiospheric.net/videos/AGI_Biospherique_Presentation.mp4" target="_blank" rel="noopener">Télécharger la vidéo</a>
+
+      </video>
+
+    </div>
+
+    <div style="height: 40px;"></div>
+
+    <p class="credit">Brève vidéo <em>(01:49)</em> et Livre Blanc réalisés par Cédric Mercier et Michel G. Walter avec les <strong>IA Claude et Manus</strong>, pour agibiospheric.net . Monter le son</p>
+          
+    <div style="height: 10px;"></div>
+
+         <div style="text-align:center;">
+  <div class="btn-livre-blanc-container">
+    <div class="btn-pulse-ring" aria-hidden="true"></div>
+    <a href="livre-blanc.html#neuf-limites-planetaires"
+       class="btn-livre-blanc"
+       rel="noopener"
+       style="text-decoration:none; font-size:inherit; color:inherit;">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 0-3-3h7z"></path>
+      </svg>9 Limites Planétaires</a>
+  </div> 
+
+
+    <hr class="section-divider" />
+
+  
+
+    <!-- ── Section 7 : PDF ── -->
+
+    <h2>Livre Blanc Complet : <em>Téléchargement et Lecture</em></h2>
+
+    <div style="height: 40px;"></div>
+  
+    <p>
+
+      [L]e Livre Blanc bilingue <em>(français / anglais)</em> est disponible en lecture directe ci-dessous
+
+      et en téléchargement libre.<br><br>Il constitue le document de référence de l'initiative AGI
+
+      Biosphérique portée par l'Association Terre <em>« sacrée* »</em> depuis 1999.
+
+    </p>
+
+<p style="color:#99ccff; font-size:1.125rem;">
+  * Dans le sens du Petit Larousse de "Digne de Respect"
+</p>
+
+
+    <div class="action-buttons">
+
+      <a class="btn-primary" href="https://www.agibiospheric.net/pdf/AGI-Biospherique-Livre-Blanc-2026.pdf" target="_blank" rel="noopener">
+
+        ↓ Télécharger le PDF
+
+      </a>
+
+      <a class="btn-secondary" href="https://www.agibiospheric.net/pdf/Charte_AGI_Biospherique_Bilingue.pdf" target="_blank" rel="noopener">
+
+        ↓ Télécharger la Charte
+
+      </a>
+
+      <a class="btn-secondary" href="mailto:contact@agibiospheric.net">
+
+        ✉ Nous contacter
+
+      </a>
+
+    </div>
+
+
+
+    <!-- PDF intégré -->
+
+    <div class="pdf-wrapper">
+
+      <iframe
+
+        src="https://www.agibiospheric.net/pdf/AGI-Biospherique-Livre-Blanc-2026.pdf"
+
+        title="Livre Blanc AGI Biosphérique 2026"
+
+        loading="lazy"
+
+        allowfullscreen>
+
+        <div class="pdf-fallback">
+
+          <p>Votre navigateur ne peut pas afficher ce PDF directement.</p>
+
+      <a class="btn-primary" href="https://www.agibiospheric.net/pdf/AGI-Biospherique-Livre-Blanc-2026.pdf" target="_blank" rel="noopener">
+
+        Ouvrir le PDF dans un nouvel onglet
+
+      </a>
+
+        </div>
+
+      </iframe>
+
+    </div>
+
+
+
+    <hr class="section-divider" />
+
+
+
+    <!-- ── Section 8 : Maillage ── -->
+
+    <h3>Maillage avec la Bibliothèque Biosphérique</h3>
+
+    <div style="height: 40px;"></div>
+
+    <div class="constellation">
+
+      <a href="biodiversite.html" target="_blank" rel="noopener">Biodiversité</a>
+
+      <a href="climat.html" target="_blank" rel="noopener">Climat</a>
+
+      <a href="eau-douce.html" target="_blank" rel="noopener">Eau douce</a>
+
+      <a href="sols-vivants.html" target="_blank" rel="noopener">Sols vivants</a>
+
+      <a href="ocean.html" target="_blank" rel="noopener">Océan</a>
+
+      <a href="energie.html" target="_blank" rel="noopener">Énergie</a>
+
+      <a href="information.html" target="_blank" rel="noopener">Information</a>
+
+      <a href="vivant.html" target="_blank" rel="noopener">Le Vivant</a>
+
+      <a href="les-100-contraintes.html" target="_blank" rel="noopener">100 Contraintes</a>
+
+    </div>
+
+
+
+    <!-- ── Sources ── -->
+
+    <footer class="references">
+
+      <hr />
+
+      Sources scientifiques, <em>vérifiées et vérifiables</em> :
+
+      <ul>
+
+        <li><a href="https://www.nature.com/articles/461472a" target="_blank" rel="noopener">Rockström et al. (2009) : A safe operating space for humanity, <em>Nature</em></a></li>
+
+        <li><a href="https://www.science.org/doi/10.1126/science.1259855" target="_blank" rel="noopener">Steffen et al. <em>(2015) :</em> Planetary Boundaries, <em>Science</em></a></li>
+
+        <li><a href="https://www.stockholmresilience.org/research/planetary-boundaries.html" target="_blank" rel="noopener">Stockholm Resilience Centre : Planetary Boundaries</a></li>
+
+        <li><a href="https://www.ipcc.ch/" target="_blank" rel="noopener">GIEC / IPCC : Rapports d'évaluation climatique</a></li>
+
+        <li><a href="https://www.ipbes.net/" target="_blank" rel="noopener">IPBES : Biodiversité et services écosystémiques</a></li>
+
+        <li><a href="https://www.demainlhomme.org/" target="_blank" rel="noopener">Demain l'Homme - Association Terre <em>« sacrée »</em></a></li>
+
+      </ul>
+
+    </footer>
+
+
+
+  </article>
+
+</main>
+
+
+
+<!-- ═══════════════════════════════════════════════
+
+     FOOTER — chargé depuis /footer.html
+
+═══════════════════════════════════════════════ -->
+
+<div id="footer"></div>
+
+
+
+<!-- Chargement dynamique header/footer -->
+
+<script>
+
+  ['header', 'footer'].forEach(function(id) {
+
+    fetch('/' + id + '.html')
+
+      .then(function(r) { return r.text(); })
+
+      .then(function(html) {
+
+        document.getElementById(id).innerHTML = html;
+
+      })
+
+      .catch(function() {
+
+        console.warn('Impossible de charger /' + id + '.html');
+
+      });
+
+  });
+
+</script>
+
+<script src="js/script.js"></script>
+<script src="https://www.agibiospheric.net/js/style.js"></script>
+<script src="js/global-search.js"></script>
+
+  <script defer src="js/reading-aids.js"></script>
+</body>
+
+</html>
+

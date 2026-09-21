@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="lightGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="15%" stop-color="#FFF000" />
+      <stop offset="40%" stop-color="#FF9900" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#1A1300" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="goldFrame" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6C687" />
+      <stop offset="30%" stop-color="#B38F44" />
+      <stop offset="50%" stop-color="#FFF1C2" />
+      <stop offset="70%" stop-color="#A67C33" />
+      <stop offset="100%" stop-color="#664614" />
+    </linearGradient>
+
+    <linearGradient id="metalPin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#AA8844" />
+      <stop offset="50%" stop-color="#FFEFA8" />
+      <stop offset="100%" stop-color="#775522" />
+    </linearGradient>
+
+    <radialGradient id="substrateBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#112244" />
+      <stop offset="100%" stop-color="#050B14" />
+    </radialGradient>
+
+    <mask id="circleMask">
+      <circle cx="256" cy="256" r="250" fill="#FFFFFF" />
+    </mask>
+  </defs>
+
+  <rect width="512" height="512" fill="#000000" />
+
+  <g mask="url(#circleMask)">
+    <circle cx="256" cy="256" r="250" fill="#0A4FE6" />
+    <path d="M256,256 L60,120 A250,250 0 0,1 430,110 Z" fill="#083CB3" opacity="0.4" />
+    <path d="M256,256 L430,110 A250,250 0 0,1 462,360 Z" fill="#063094" opacity="0.5" />
+    <path d="M256,256 L462,360 A250,250 0 0,1 150,470 Z" fill="#0944CC" opacity="0.3" />
+    <path d="M256,256 L150,470 A250,250 0 0,1 30,300 Z" fill="#052775" opacity="0.6" />
+    <path d="M256,256 L30,300 A250,250 0 0,1 60,120 Z" fill="#0B55FA" opacity="0.3" />
+  </g>
+
+  <g fill="#EAF4FF" stroke="#BACEDD" stroke-width="1">
+    <path d="M256,256 L220,160 L256,12 L292,160 Z" />
+    <path d="M256,12 L256,256" stroke="#FFFFFF" stroke-width="2" opacity="0.7" />
+    
+    <path d="M256,256 L210,210 L24,172 L180,140 Z" />
+    <path d="M24,172 L256,256" stroke="#FFFFFF" stroke-width="2" opacity="0.7" />
+    
+    <path d="M256,256 L332,140 L488,172 L302,210 Z" />
+    <path d="M488,172 L256,256" stroke="#FFFFFF" stroke-width="2" opacity="0.7" />
+    
+    <path d="M256,256 L174,270 L104,450 L256,330 Z" />
+    <path d="M104,450 L256,256" stroke="#FFFFFF" stroke-width="2" opacity="0.7" />
+    
+    <path d="M256,256 L256,330 L408,450 L338,270 Z" />
+    <path d="M408,450 L256,256" stroke="#FFFFFF" stroke-width="2" opacity="0.7" />
+  </g>
+
+  <rect x="136" y="146" width="240" height="240" rx="26" fill="#000000" opacity="0.6" filter="blur(10px)" />
+
+  <rect x="140" y="140" width="232" height="232" rx="24" fill="url(#substrateBg)" stroke="#111111" stroke-width="3" />
+
+  <circle cx="158" cy="158" r="6" fill="url(#metalPin)" />
+  <circle cx="158" cy="158" r="3" fill="#333" />
+  <circle cx="354" cy="158" r="5" fill="url(#metalPin)" />
+  <circle cx="158" cy="354" r="5" fill="url(#metalPin)" />
+  <circle cx="354" cy="354" r="5" fill="url(#metalPin)" />
+
+  <g stroke="url(#metalPin)" stroke-width="1.5" stroke-linecap="round" opacity="0.85">
+    <path d="M180,142 L180,165 M188,142 L188,165 M196,142 L196,165 M204,142 L204,165 M212,142 L212,165 M220,142 L220,165 M228,142 L228,165 M236,142 L236,165 M244,142 L244,165 M252,142 L252,165 M260,142 L260,165 M268,142 L268,165 M276,142 L276,165 M284,142 L284,165 M292,142 L292,165 M300,142 L300,165 M308,142 L308,165 M316,142 L316,165 M324,142 L324,165 M332,142 L332,165" />
+    <path d="M180,370 L180,347 M188,370 L188,347 M196,370 L196,347 M204,370 L204,347 M212,370 L212,347 M220,370 L220,347 M228,370 L228,347 M236,370 L236,347 M244,370 L244,347 M252,370 L252,347 M260,370 L260,347 M268,370 L268,347 M276,370 L276,347 M284,370 L284,347 M292,370 L292,347 M300,370 L300,347 M308,370 L308,347 M316,370 L316,347 M324,370 L324,347 M332,370 L332,347" />
+    <path d="M142,180 L165,180 M142,188 L165,188 M142,196 L165,196 M142,204 L165,204 M142,212 L165,212 M142,220 L165,220 M142,228 L165,228 M142,236 L165,236 M142,244 L165,244 M142,252 L165,252 M142,260 L165,260 M142,268 L165,268 M142,276 L165,276 M142,284 L165,284 M142,292 L165,292 M142,300 L165,300 M142,308 L165,308 M142,316 L165,316 M142,324 L165,324 M142,332 L165,332" />
+    <path d="M370,180 L347,180 M370,188 L347,188 M370,196 L347,196 M370,204 L347,204 M370,212 L347,212 M370,220 L347,220 M370,228 L347,228 M370,236 L347,236 M370,244 L347,244 M370,252 L347,252 M370,260 L347,260 M370,268 L347,268 M370,276 L347,276 M370,284 L347,284 M370,292 L347,292 M370,300 L347,300 M370,308 L347,308 M370,316 L347,316 M370,324 L347,324 M370,332 L347,332" />
+  </g>
+
+  <rect x="174" y="174" width="164" height="164" fill="none" stroke="#224477" stroke-width="1" />
+  <rect x="178" y="178" width="156" height="156" fill="none" stroke="url(#metalPin)" stroke-width="0.5" opacity="0.5" />
+
+  <rect x="182" y="182" width="148" height="148" fill="none" stroke="url(#goldFrame)" stroke-width="5" />
+  <rect x="187" y="187" width="138" height="138" fill="#151005" stroke="#000000" stroke-width="2" />
+
+  <g stroke="#332200" stroke-width="0.5" opacity="0.7">
+    <line x1="187" y1="187" x2="325" y2="325" />
+    <line x1="325" y1="187" x2="187" y2="325" />
+    <line x1="256" y1="187" x2="256" y2="325" />
+    <line x1="187" y1="256" x2="325" y2="256" />
+  </g>
+
+  <g stroke="url(#goldFrame)" stroke-width="1" opacity="0.65">
+    <line x1="256" y1="256" x2="210" y2="210" /> <line x1="256" y1="256" x2="302" y2="210" />
+    <line x1="256" y1="256" x2="210" y2="302" /> <line x1="256" y1="256" x2="302" y2="302" />
+    <line x1="256" y1="256" x2="195" y2="230" /> <line x1="256" y1="256" x2="317" y2="230" />
+    <line x1="256" y1="256" x2="195" y2="282" /> <line x1="256" y1="256" x2="317" y2="282" />
+    <line x1="256" y1="256" x2="230" y1="195" /> <line x1="256" y1="256" x2="282" y1="195" />
+    <line x1="256" y1="256" x2="230" y2="317" /> <line x1="256" y1="256" x2="282" y2="317" />
+    <line x1="256" y1="256" x2="256" y2="190" /> <line x1="256" y1="256" x2="256" y2="322" />
+    <line x1="256" y1="256" x2="190" y2="256" /> <line x1="256" y1="256" x2="322" y2="256" />
+  </g>
+
+  <circle cx="256" cy="256" r="60" fill="url(#lightGlow)" />
+  <circle cx="256" cy="256" r="8" fill="#FFFFFF" />
+</svg>

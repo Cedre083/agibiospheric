@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Publications récentes" href="rss.xml">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Méthodologie de sélection des 10 méga-contraintes d’AGIBIOSPHERIC : critères, regroupement, interdépendances, limites et révision du corpus.">
+  <title>Méthodologie de Sélection des 10 Méga-Contraintes | AGI Biospheric</title>
+  <link rel="canonical" href="methodologie-selection-10-mega-contraintes.html">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+  <link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preload" as="image" href="https://www.agibiospheric.net/images/Gemini_AGI-television-famille-etonnee-the-seed-futur-1150.webp">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/citation-heart.css">
+  <link rel="stylesheet" href="css/global-search.css">
+  <link rel="stylesheet" href="css/reading-aids.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .method-hero { margin: 2rem 0 2.5rem; text-align: center; }
+    .method-hero img {
+      display: block;
+      width: 100%;
+      max-width: 1150px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+
+    .method-lead,
+    .method-box,
+    .method-callout {
+      margin: 2rem 0;
+      padding: 1.35rem 1.45rem;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 18px;
+      background: rgba(255,255,255,.03);
+    }
+
+    .method-lead {
+      border-left: 4px solid rgba(0,212,255,.72);
+      background: linear-gradient(135deg, rgba(0,50,55,.34), rgba(0,20,24,.55));
+    }
+
+    .method-callout {
+      border-color: rgba(124,220,151,.32);
+      background: linear-gradient(135deg, rgba(0,62,35,.28), rgba(0,25,22,.48));
+    }
+
+    .method-lead h2,
+    .method-box h2,
+    .method-callout h2 { margin-top: 0; }
+
+    .criteria-grid,
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 1rem;
+      margin: 1.4rem 0;
+    }
+
+    .criterion,
+    .method-card {
+      padding: 1.05rem 1.1rem;
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 14px;
+      background: rgba(255,255,255,.025);
+    }
+
+    .criterion h3,
+    .method-card h3 { margin: 0 0 .55rem; font-size: 1.08rem; line-height: 1.35; }
+    .criterion p,
+    .method-card p { margin-bottom: 0; }
+
+    .method-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      margin-right: .55rem;
+      border: 1px solid rgba(0,212,255,.42);
+      border-radius: 50%;
+      color: #9eeeff;
+      font-size: .85rem;
+      vertical-align: middle;
+    }
+
+    .method-sequence { margin: 1.4rem 0 0; padding: 0; list-style: none; counter-reset: method-step; }
+    .method-sequence li {
+      position: relative;
+      margin: 0 0 1rem;
+      padding: .95rem 1rem .95rem 3.45rem;
+      border-left: 2px solid rgba(0,212,255,.35);
+      background: rgba(255,255,255,.025);
+      counter-increment: method-step;
+    }
+    .method-sequence li::before {
+      content: counter(method-step);
+      position: absolute;
+      left: .8rem;
+      top: .85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      background: rgba(0,212,255,.12);
+      color: #9eeeff;
+      font-weight: 700;
+    }
+
+    .method-table-wrap { overflow-x: auto; }
+    .method-table { width: 100%; margin: 1.25rem 0 0; border-collapse: collapse; }
+    .method-table th,
+    .method-table td {
+      padding: .85rem .9rem;
+      border: 1px solid rgba(255,255,255,.12);
+      text-align: left;
+      vertical-align: top;
+    }
+    .method-table th { background: rgba(0,212,255,.08); }
+
+    .method-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: .8rem;
+      margin: 2.5rem auto;
+    }
+    .method-nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: .7rem 1.1rem;
+      border: 1px solid rgba(0,212,255,.32);
+      border-radius: 999px;
+      background: rgba(0,40,48,.38);
+      text-decoration: none;
+    }
+
+    .references li { margin-bottom: .75rem; }
+
+    @media (max-width: 700px) {
+      .criteria-grid,
+      .method-grid { grid-template-columns: 1fr; }
+      .method-lead,
+      .method-box,
+      .method-callout { padding: 1.1rem 1rem; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://www.agibiospheric.net/methodologie-selection-10-mega-contraintes.html#article",
+    "mainEntityOfPage": "https://www.agibiospheric.net/methodologie-selection-10-mega-contraintes.html",
+    "headline": "Méthodologie de Sélection des 10 Méga-Contraintes",
+    "description": "Critères, étapes, limites et procédure de révision de la taxonomie des dix méga-contraintes d’AGIBIOSPHERIC.",
+    "inLanguage": "fr-FR",
+    "datePublished": "2026-09-17T00:00:00+02:00",
+    "dateModified": "2026-09-18T00:00:00+02:00",
+    "author": {
+      "@type": "Person",
+      "name": "Cédric Mercier",
+      "url": "https://orcid.org/0009-0003-7279-8832"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Association Terre sacrée",
+      "url": "https://www.agibiospheric.net/"
+    },
+    "about": ["Méga-contraintes", "Biosphère", "Intelligence artificielle générale", "Systèmes complexes", "Limites planétaires"]
+  }
+  </script>
+</head>
+
+<body id="top">
+<div id="header-placeholder"></div>
+
+<script>
+fetch("/header.html")
+  .then(response => {
+    if (!response.ok) throw new Error("Impossible de charger le header");
+    return response.text();
+  })
+  .then(data => { document.getElementById("header-placeholder").innerHTML = data; })
+  .catch(error => { console.error(error); });
+</script>
+
+<main class="container">
+  <p class="subtitle">Corpus et méthode</p>
+  <h1>Méthodologie de Sélection des 10 Méga-Contraintes</h1>
+  <div style="height: 40px;"></div>
+  <p class="credit">Une Grille Systémique pour Relier l’Intelligence au Monde Réel</p>
+
+  <div class="method-hero">
+    <img src="https://www.agibiospheric.net/images/Gemini_AGI-television-famille-etonnee-the-seed-futur-1150.webp" alt="Une famille découvre une intelligence artificielle inscrite dans le monde réel">
+  </div>
+<div style="height: 40px;"></div>
+  <section class="method-lead" aria-labelledby="idee-centrale">
+    <h2 id="idee-centrale">L’Idée Centrale</h2>
+    <p>[L]es dix méga-contraintes d’AGIBIOSPHERIC ne prétendent pas découper définitivement le Réel en dix parties. Elles constituent un <strong>niveau d’organisation du corpus</strong> : assez compact pour rester intelligible, assez large pour rendre visibles les principales dépendances physiques, biologiques, informationnelles, techniques et humaines dont toute intelligence dépend.</p>
+    <p>Cette grille est une <strong>taxonomie systémique argumentée, ouverte et révisable</strong>. Elle s’appuie sur des connaissances scientifiques existantes, mais elle ne doit pas être présentée comme une nouvelle théorie scientifique validée ni comme une reproduction des limites planétaires.</p>
+  </section>
+<div style="height: 40px;"></div>
+  <section class="method-box" aria-labelledby="question-depart">
+    <h2 id="question-depart">La Question de Départ</h2>
+    <blockquote><p><strong>Quelles réalités une intelligence générale devrait-elle être incapable d’oublier lorsqu’elle raisonne sur le monde et agit sur lui ?</strong></p></blockquote>
+    <p>L’unité retenue n’est ni un problème isolé, ni un indicateur unique, ni un secteur administratif. C’est un <strong>domaine fonctionnel majeur</strong> dont l’altération peut affecter plusieurs conditions d’existence et plusieurs capacités d’action à la fois.</p>
+  </section>
+<div style="height: 40px;"></div>
+  <section aria-labelledby="criteres-selection">
+    <h2 id="criteres-selection">Six Critères de Sélection</h2>
+    <div class="criteria-grid">
+      <article class="criterion">
+        <h3><span class="method-number">01</span>Ancrage dans le Réel</h3>
+        <p>Le domaine correspond à une condition physique, biologique, informationnelle, technique ou humaine effectivement nécessaire au fonctionnement des systèmes étudiés. Il ne disparaît pas lorsque nos modèles économiques ou politiques l’ignorent.</p>
+      </article>
+      <article class="criterion">
+        <h3><span class="method-number">02</span>Portée Systémique</h3>
+        <p>Une perturbation dans ce domaine peut se propager vers plusieurs autres. L’énergie agit sur l’eau, les infrastructures et le numérique ; les sols agissent sur l’alimentation, l’eau, le climat et la biodiversité.</p>
+      </article>
+      <article class="criterion">
+        <h3><span class="method-number">03</span>Substituabilité Limitée</h3>
+        <p>Le domaine comprend des ressources, fonctions ou équilibres qui ne peuvent pas être remplacés rapidement et sans coût majeur. Une espèce disparue ou un sol profondément dégradé ne sont pas de simples composants interchangeables.</p>
+      </article>
+      <article class="criterion">
+        <h3><span class="method-number">04</span>Identité Opérationnelle</h3>
+        <p>Le domaine doit être suffisamment distinct pour être décrit, documenté et relié à des variables observables, sans prétendre être indépendant des autres domaines.</p>
+      </article>
+      <article class="criterion">
+        <h3><span class="method-number">05</span>Décomposabilité</h3>
+        <p>Chaque méga-contrainte doit pouvoir être déclinée en contraintes plus précises : stocks, flux, seuils, rendements, délais de régénération, vulnérabilités, dépendances et risques de rupture.</p>
+      </article>
+      <article class="criterion">
+        <h3><span class="method-number">06</span>Pertinence pour l’Intelligence</h3>
+        <p>Le domaine doit modifier la capacité d’une intelligence humaine ou artificielle à percevoir, calculer, décider, agir, maintenir ses infrastructures ou préserver les conditions de sa propre continuité.</p>
+      </article>
+    </div>
+  </section>
+<div style="height: 40px;"></div>
+  <section class="method-box" aria-labelledby="etapes-methode">
+    <h2 id="etapes-methode">Comment la Grille Est-elle Construite ?</h2>
+    <ol class="method-sequence">
+      <li><strong>Inventorier les dépendances fondamentales.</strong> Recenser les conditions matérielles, biologiques, informationnelles, techniques et humaines nécessaires au fonctionnement durable d’une civilisation et de ses intelligences.</li>
+      <li><strong>Regrouper sans effacer.</strong> Rassembler les contraintes proches dans des familles cohérentes, tout en conservant les différences qui changent réellement l’analyse ou la décision.</li>
+      <li><strong>Tester les frontières.</strong> Vérifier qu’un domaine possède une fonction identifiable, qu’il ne constitue pas seulement un doublon et que sa fusion avec un autre ne masquerait pas une dépendance importante.</li>
+      <li><strong>Cartographier les relations.</strong> Documenter les effets directs entre domaines. La matrice actuelle comporte <strong>52 interdépendances directes explicitées</strong> ; elle représente un état documenté du corpus, pas la totalité des relations possibles.</li>
+      <li><strong>Passer du global à l’observable.</strong> Décomposer chaque domaine en dix contraintes plus précises. Les dix méga-contraintes organisent ainsi les <strong>100 contraintes du Réel</strong> actuellement présentées par le corpus.</li>
+      <li><strong>Réviser à partir des connaissances.</strong> Corriger les catégories, les relations et les formulations lorsque de nouvelles données, une meilleure définition ou une contradiction étayée le justifient.</li>
+    </ol>
+  </section>
+<div style="height: 40px;"></div>
+  <section aria-labelledby="dix-domaines">
+    <h2 id="dix-domaines">Les Dix Domaines Retenus</h2>
+    <div class="method-table-wrap">
+      <table class="method-table">
+        <thead><tr><th scope="col">Domaine</th><th scope="col">Fonction couverte dans la grille</th></tr></thead>
+        <tbody>
+          <tr><td><a href="energie.html">Énergie</a></td><td>Disponibilité, conversion, puissance, rendement et dissipation nécessaires à toute transformation.</td></tr>
+          <tr><td><a href="eau-douce.html">Eau douce</a></td><td>Accès, cycles, qualité et concurrence entre besoins biologiques, sociaux, agricoles et techniques.</td></tr>
+          <tr><td><a href="sols-vivants.html">Sols vivants</a></td><td>Fertilité, structure, microbiologie, stockage de l’eau et capacité de régénération.</td></tr>
+          <tr><td><a href="biodiversite.html">Biodiversité</a></td><td>Diversité du vivant, réseaux écologiques, fonctions écosystémiques et résilience.</td></tr>
+          <tr><td><a href="climat.html">Climat</a></td><td>Stabilité du système climatique, inerties, rétroactions, extrêmes et risques de bascule.</td></tr>
+          <tr><td><a href="ocean.html">Océan</a></td><td>Régulation thermique, circulation, chimie, oxygénation et continuités du vivant marin.</td></tr>
+          <tr><td><a href="matiere.html">Matière</a></td><td>Stocks, qualité des minerais, extraction, transformation, dispersion, recyclage et déchets.</td></tr>
+          <tr><td><a href="information.html">Information</a></td><td>Qualité des signaux, mesure, transmission, mémoire, bruit, calcul et fiabilité des connaissances.</td></tr>
+          <tr><td><a href="infrastructures.html">Infrastructures</a></td><td>Réseaux physiques et numériques, maintenance, continuité de service, vulnérabilités et dépendances.</td></tr>
+          <tr><td><a href="vivant.html">Systèmes humains</a></td><td>Coordination, gouvernance, santé, compétences, institutions et capacité collective de réponse.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+<div style="height: 40px;"></div>
+  <section class="method-box" aria-labelledby="pourquoi-dix">
+    <h2 id="pourquoi-dix">Pourquoi Exactement Dix ?</h2>
+    <p>[L]e nombre dix n’est pas présenté comme une constante naturelle. Il résulte d’un <strong>compromis de représentation</strong>.</p>
+    <div class="method-grid">
+      <article class="method-card"><h3>Assez Peu pour Rester Utilisable</h3><p>Une liste trop longue rend difficile la mémorisation, la comparaison et l’usage dans un modèle de raisonnement.</p></article>
+      <article class="method-card"><h3>Assez Nombreux pour Éviter l’Angle Mort</h3><p>Une grille limitée au climat, à la biodiversité ou aux ressources naturelles laisserait de côté l’information, les infrastructures et les systèmes humains dont dépend l’action.</p></article>
+      <article class="method-card"><h3>Un Niveau, Pas une Frontière</h3><p>Les dix domaines organisent la lecture. Ils ne signifient pas que le Réel ne comporte que dix contraintes ni que chaque phénomène appartient à une seule case.</p></article>
+      <article class="method-card"><h3>Une Architecture Révisable</h3><p>Un domaine pourra être affiné, rapproché d’un autre, divisé ou complété si les connaissances et l’usage du corpus l’exigent.</p></article>
+    </div>
+  </section>
+<div style="height: 40px;"></div>
+  <section aria-labelledby="cadres-scientifiques">
+    <h2 id="cadres-scientifiques">Relation avec les Cadres Scientifiques Existants</h2>
+    <p>AGIBIOSPHERIC s’inspire notamment des sciences du système Terre, de l’écologie, de la biogéochimie, de l’étude des ressources, des infrastructures et des systèmes complexes. Les travaux sur les <strong>limites planétaires</strong> et les <strong>Earth System Boundaries</strong> montrent l’utilité d’identifier des processus critiques et leurs interactions.</p>
+    <p>La grille AGIBIOSPHERIC poursuit cependant un objectif différent : relier ces réalités aux conditions matérielles d’existence et d’action d’une intelligence humaine ou artificielle. C’est pourquoi elle inclut explicitement <strong>Information</strong>, <strong>Infrastructures</strong> et <strong>Systèmes humains</strong>.</p>
+    <div class="method-callout">
+      <p><strong>Point de méthode :</strong> la grille ne remplace ni les limites planétaires, ni les évaluations du GIEC ou de l’IPBES. Elle les mobilise comme repères scientifiques parmi d’autres pour construire une représentation orientée vers les dépendances, l’action et la continuité des systèmes.</p>
+    </div>
+  </section>
+<div style="height: 40px;"></div>
+  <section class="method-box" aria-labelledby="limites-grille">
+    <h2 id="limites-grille">Ce que Cette Grille n’Est Pas</h2>
+    <ul>
+      <li>Elle n’est pas une preuve que le Réel comporte exactement dix contraintes.</li>
+      <li>Elle n’est pas un classement d’importance : aucun domaine ne peut être interprété isolément.</li>
+      <li>Elle n’est pas une liste exhaustive de variables, de seuils ou de risques.</li>
+      <li>Elle n’établit pas, à elle seule, une causalité scientifique entre toutes les relations représentées.</li>
+      <li>Elle n’est pas figée : sa valeur dépend de sa capacité à être confrontée aux données et corrigée.</li>
+    </ul>
+  </section>
+<div style="height: 40px;"></div>
+  <section aria-labelledby="revision-corpus">
+    <h2 id="revision-corpus">Principe de Révision</h2>
+    <p>[U]ne modification de la taxonomie doit être justifiée par au moins l’un des motifs suivants : nouvelles connaissances robustes ; redondance démontrée ; domaine trop large ou trop étroit ; interdépendance importante devenue invisible ; impossibilité de relier la catégorie à des contraintes observables ; amélioration nette de l’usage pour l’analyse et la décision.</p>
+    <p>Toute révision devrait préserver la traçabilité : motif du changement, version concernée, conséquences sur les contraintes détaillées et mise à jour de la matrice d’interdépendances.</p>
+  </section>
+<div style="height: 40px;"></div>
+  <section class="method-callout" aria-labelledby="importance-agi">
+    <h2 id="importance-agi">Pourquoi Cette Méthodologie Est Importante pour une AGI</h2>
+    <p>Une intelligence générale peut produire des raisonnements cohérents dans un modèle incomplet. Le danger n’est donc pas seulement l’erreur de calcul : c’est l’oubli d’une dépendance réelle. Une grille explicite oblige à demander, avant toute recommandation : <strong>de quelle énergie, de quelle eau, de quelle matière, de quelles infrastructures, de quelles informations, de quels écosystèmes et de quelles capacités humaines cette action dépend-elle ?</strong></p>
+    <p>La méthodologie transforme ainsi la Biosphère d’un contexte vague en un ensemble de conditions à vérifier.</p>
+  </section>
+<div style="height: 40px;"></div>
+  <nav class="method-nav" aria-label="Pour poursuivre">
+    <a href="corpus.html">Découvrir le Corpus</a>
+    <a href="les-100-contraintes.html">Explorer les 100 Contraintes</a>
+    <a href="https://www.agibiospheric.net/explorer-le-reseau/">Voir les interdépendances</a>
+    <a href="faq/index.html">Consulter la FAQ</a>
+    <a href="methodologie-selection-10-mega-contraintes.html#top">Refaire Surface</a>
+  </nav>
+
+  <footer class="references">
+    <div class="separator"></div>
+    <h2>Repères Scientifiques et Données du Corpus</h2>
+    <ul>
+      <li>Richardson et al. (2023), <a href="https://www.science.org/doi/10.1126/sciadv.adh2458" target="_blank" rel="noopener noreferrer"><em>Earth beyond six of nine planetary boundaries</em></a>, <em>Science Advances</em>.</li>
+      <li>Rockström et al. (2023), <a href="https://www.nature.com/articles/s41586-023-06083-8" target="_blank" rel="noopener noreferrer"><em>Safe and just Earth system boundaries</em></a>, <em>Nature</em>.</li>
+      <li>GIEC (2023), <a href="https://www.ipcc.ch/report/ar6/syr/" target="_blank" rel="noopener noreferrer"><em>AR6 Synthesis Report: Climate Change 2023</em></a>.</li>
+      <li>IPBES (2019), <a href="https://www.ipbes.net/global-assessment" target="_blank" rel="noopener noreferrer"><em>Global Assessment Report on Biodiversity and Ecosystem Services</em></a>.</li>
+      <li>Données AGI Biospheric : <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank" rel="noopener noreferrer">10 contraintes et matrice d’interdépendances</a>.</li>
+    </ul>
+    <p><small>Dernière mise à jour méthodologique : 18 septembre 2026.</small></p>
+  </footer>
+</main>
+
+<div id="footer" style="min-height:120px"></div>
+<script>
+fetch("/footer.html")
+  .then(response => {
+    if (!response.ok) throw new Error("Impossible de charger le footer");
+    return response.text();
+  })
+  .then(data => { document.getElementById("footer").innerHTML = data; })
+  .catch(error => { console.error(error); });
+</script>
+
+<script src="js/script.js"></script>
+<script src="js/global-search.js"></script>
+<script defer src="js/reading-aids.js"></script>
+</body>
+</html>

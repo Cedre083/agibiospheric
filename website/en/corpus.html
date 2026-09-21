@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Recent publications" href="rss.xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AGI Biospheric Corpus: A structured architecture of biospheric mega-constraints and their relational matrix, archived at the BNF and Zenodo.">
+    <title>Corpus Architecture | AGI Biospheric</title>
+
+    <link rel="canonical" href="corpus.html">
+    <link rel="alternate" hreflang="en" href="corpus.html" />
+    <link rel="alternate" hreflang="fr" href="../corpus.html" />
+    <link rel="alternate" hreflang="x-default" href="../index.html" />
+
+    <link rel="icon" href="https://www.agibiospheric.net/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.agibiospheric.net/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://www.agibiospheric.net/favicon-512.png">
+    <link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="../css/citation-heart.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        /* Technical Layout: 40px spacing */
+        h1, h2, h3 { margin-bottom: 40px !important; }
+        p, .corpus-box, .corpus-hero-image, .corpus-grid, .bio-nav-container, .separator, .references { margin-bottom: 40px !important; }
+
+        .corpus-hero-image { text-align: center; }
+        .corpus-hero-image img { width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+        
+        .corpus-box { padding: 1.4rem 1.4rem 1.2rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; background: rgba(255,255,255,0.03); backdrop-filter: blur(4px); }
+        .corpus-box h2 { margin-top: 0; font-size: 1.35rem; line-height: 1.3; color: #00ff88; }
+        .corpus-box h3 { margin-top: 1.6rem; font-size: 1.08rem; line-height: 1.35; }
+        
+        .corpus-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+        .corpus-card { padding: 1rem 1rem 0.95rem; border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; background: rgba(255,255,255,0.025); margin-bottom: 0 !important; }
+        .corpus-card strong { display: block; margin-bottom: 0.35rem; font-size: 1rem; color: #00d4ff; }
+        .corpus-card p { margin-bottom: 0 !important; font-size: 0.9rem; }
+        
+        .corpus-constraints { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; }
+        .corpus-constraints li { margin: 0; }
+        .corpus-constraints a { display: block; padding: 0.95rem 1rem; border-radius: 14px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.025); text-decoration: none; transition: all 0.2s ease; }
+        .corpus-constraints a:hover { transform: translateY(-2px); background: rgba(0, 255, 136, 0.05); border-color: rgba(0, 255, 136, 0.3); }
+        .corpus-constraints span { display: block; }
+        .constraint-title { font-weight: 700; margin-bottom: 0.2rem; color: #fff; }
+        .constraint-sub { font-size: 0.85rem; opacity: 0.7; }
+        
+        .bio-nav-container { max-width: 800px; margin: 60px auto !important; padding: 0 20px; }
+        .bio-nav-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
+        .bio-btn { display: flex; align-items: center; justify-content: center; height: 60px; background: linear-gradient(180deg, rgba(0, 50, 0, 0.4) 0%, rgba(0, 20, 0, 0.6) 100%); border: 1px solid rgba(0, 255, 0, 0.25); border-radius: 30px; color: #ffffff; text-decoration: none; text-transform: uppercase; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.8px; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); text-align: center; padding: 0 15px; }
+        .bio-btn:hover { border-color: rgba(0, 255, 0, 0.6); box-shadow: 0 0 20px rgba(0, 255, 0, 0.25); transform: translateY(-3px); }
+        .bio-btn.special { border-color: rgba(0, 150, 255, 0.4); background: linear-gradient(180deg, rgba(0, 30, 50, 0.4) 0%, rgba(0, 10, 20, 0.6) 100%); }
+        .bio-btn.special:hover { border-color: rgba(0, 150, 255, 0.7); box-shadow: 0 0 20px rgba(0, 150, 255, 0.3); }
+        .bio-btn .dot { width: 7px; height: 7px; background-color: #00d4ff; border-radius: 50%; margin-right: 12px; box-shadow: 0 0 10px #00d4ff; display: inline-block; }
+
+        @media (max-width: 650px) { .bio-nav-grid, .corpus-grid, .corpus-constraints { grid-template-columns: 1fr; } }
+    </style>
+    <link rel="stylesheet" href="../css/global-search.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareSourceCode",
+      "name": "AGI Biospheric Corpus Architecture",
+      "description": "Relational matrix and structured dataset of biospheric constraints for AI alignment.",
+      "codeRepository": "https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "programmingLanguage": "JSON-LD"
+    }
+    </script>
+  <link rel="stylesheet" href="../css/reading-aids.css">
+</head>
+
+<body id="top">
+
+<div id="header-en"></div>
+<script>
+fetch("/en/header-en.html?v=2")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-en").innerHTML = data;
+  })
+  .catch(error => console.error("Error loading EN header:", error));
+</script>
+<div class="header-spacer"></div>
+
+<main class="container">
+    <p class="subtitle">SYSTEM ARCHITECTURE</p>
+    <h1>AGI Biospheric Corpus</h1>
+
+    <div class="corpus-hero-image">
+        <img src="https://www.agibiospheric.net/images/Gemini_AGI-television-famille-etonnee-the-seed-futur-1150.webp" alt="AGI Biospheric Core Visualization">
+    </div>
+
+    <p class="credit">Technical Documentation | Published by Cédric Mercier, July 28, 2026</p>
+
+    <div class="corpus-box">
+        <h2>1. Architecture Overview</h2>
+        <p>
+            The <strong>AGI Biospheric Corpus</strong> is a high-level relational architecture mapping the material, biological, and thermodynamic constraints essential to technical civilizations. It serves as a foundational world model for Artificial General Intelligence (AGI) systems, ensuring they operate within the physical boundaries of the Earth system.
+        </p>
+        <p>
+            To ensure data integrity and long-term availability, the project is <strong>legally deposited at the Bibliothèque Nationale de France (BNF)</strong>. All datasets are archived with unique DOIs on <strong>Zenodo</strong> and versioned on <strong>Hugging Face</strong> for seamless integration into research pipelines.
+        </p>
+    </div>
+
+    <div class="corpus-box">
+        <h2>2. The 100 Constraints Ontology</h2>
+        <p>
+            The project scales toward a comprehensive **100 Constraints Ontology**. These represent non-negotiable physical variables. The current deployment focuses on a **10-Domain Core**, formalized as machine-readable open data (JSON-LD) to facilitate direct ingestion by neural networks and symbolic AI models.
+        </p>
+        <p>
+            <strong>Core Hypothesis:</strong> Intelligence is a subsystem of the biosphere. Any intelligence model that treats material dependencies as "externalities" is fundamentally flawed and lacks long-term alignment with reality.
+        </p>
+    </div>
+
+    <div class="corpus-box">
+        <h2>3. Relational Matrix (The 10-Domain Core)</h2>
+        <p>
+            The current public core is structured into ten primary nodes, each containing specific sub-constraints:
+        </p>
+        <ul class="corpus-constraints">
+            <li><a href="energy.html"><span class="constraint-title">01. Energy</span><span class="constraint-sub">Flux, entropy, power density (✅ Active)</span></a></li>
+            <li><a href="fresh-water.html"><span class="constraint-title">02. Fresh Water</span><span class="constraint-sub">Hydrological cycles, thresholds (✅ Active)</span></a></li>
+            <li><a href="living-soils.html"><span class="constraint-title">03. Living Soils</span><span class="constraint-sub">Microbial fertility, carbon sinks (✅ Active)</span></a></li>
+            <li><a href="biodiversity.html"><span class="constraint-title">04. Biodiversity</span><span class="constraint-sub">Trophic networks, stability (✅ Active)</span></a></li>
+            <li><a href="climate.html"><span class="constraint-title">05. Climate</span><span class="constraint-sub">Inertia, radiative forcing (✅ Active)</span></a></li>
+            <li><a href="ocean.html"><span class="constraint-title">06. Ocean</span><span class="constraint-sub">Thermal pump, acidification (✅ Active)</span></a></li>
+            <li><a href="matter.html"><span class="constraint-title">07. Matter</span><span class="constraint-sub">Resource scarcity, extraction limits (✅ Active)</span></a></li>
+            <li><a href="information.html"><span class="constraint-title">08. Information</span><span class="constraint-sub">Signal/Noise, compute entropy (✅ Active)</span></a></li>
+            <li><a href="infrastructure.html"><span class="constraint-title">09. Infrastructure</span><span class="constraint-sub">Systemic dependencies, fragility (✅ Active)</span></a></li>
+            <li><a href="life.html"><span class="constraint-title">10. Human Systems</span><span class="constraint-sub">Relational response, real-world feedback (✅ Active)</span></a></li>
+        </ul>
+    </div>
+
+    <div class="corpus-box">
+        <h2>4. Dependency Graph & Relational Logic</h2>
+        <p>
+            In this architecture, no constraint is an isolated variable. The **Relational Matrix** currently formalizes **52 direct interdependencies** between the core nodes. For instance, the Climate node is a function of Energy flux, Ocean heat absorption, and Biodiversity feedback loops.
+        </p>
+        <p>
+            For developers and system designers, this means modeling AGI requires a **multi-layered graph approach**. Degrading a single node (e.g., Living Soils) triggers cascading failures across the entire biospheric infrastructure, directly impacting the material possibility of computation itself.
+        </p>
+    </div>
+
+    <div class="corpus-box">
+        <h2>5. Data Interoperability & Repositories</h2>
+        <div class="corpus-grid">
+            <div class="corpus-card">
+                <strong>Hugging Face (Datasets)</strong>
+                <p>Machine-readable JSON FR/EN layer including the interdependency matrix and graph nodes.</p>
+                <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank" style="color: #00ff88;">View Dataset</a>
+            </div>
+            <div class="corpus-card">
+                <strong>Zenodo (Scientific Archive)</strong>
+                <p>Immutable research records with DOI for academic citation and reproducibility.</p>
+            </div>
+            <div class="corpus-card">
+                <strong>BNF (Legal Deposit)</strong>
+                <p>Digital heritage preservation ensuring the project's permanence in national archives.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="corpus-box">
+        <h2>6. Roadmap & Scaling</h2>
+        <p>
+            The corpus is a living schema. Future updates include expanding the relational documentation, integrating high-resolution maps, and scaling the current core toward the full **100-constraint ontology**. The architecture is designed to remain backward-compatible as new biospheric variables are integrated into the graph.
+        </p>
+    </div>
+
+    <div class="bio-nav-container">
+        <nav class="bio-nav-grid" aria-label="Secondary navigation">
+            <a class="bio-btn" href="the-100-constraints.html">100 Constraints</a>
+            <a class="bio-btn" href="emergence-of-consciousness-in-the-universe-agi-biospheric.html">Consciousness Core</a>
+            <a class="bio-btn special" href="https://www.agibiospheric.net/en/global-sentinels-network.html"><span class="dot"></span> Sentinels Network</a>
+            <a class="bio-btn" href="about.html">About Project</a>
+            <a class="bio-btn" href="faq/index.html">FAQ</a>
+            <a class="bio-btn" href="corpus.html#top">Back to Top</a>
+        </nav>
+    </div>
+
+    <footer class="references">
+        <div class="separator"></div>
+        <strong>Technical References:</strong>
+        <ul>
+            <li>Hugging Face: <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank">Cedre83/agi-biospheric-10-constraints</a></li>
+            <li>Library Access: <a href="the-100-constraints.html">The 100 Constraints Summary</a></li>
+            <li>Official URL: <a href="index.html">https://www.agibiospheric.net/en/</a></li>
+        </ul>
+        <p class="corpus-note">Schema version 1.0 | Last updated July 28, 2026</p>
+    </footer>
+</main>
+
+<div id="footer" style="min-height:120px"></div>
+<script>
+fetch('/en/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+
+<script src="js/script.js"></script>
+<script src="https://www.agibiospheric.net/en/js/lettrines.js"></script>
+<script src="../js/global-search.js"></script>
+
+  <script defer src="../js/reading-aids.js"></script>
+</body>
+</html>

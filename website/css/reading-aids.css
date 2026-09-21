@@ -1,0 +1,307 @@
+/* =========================================================
+   AIDES À LA LECTURE — SOMMAIRES ET DÉFINITIONS
+   Composant commun FR / EN — AGIBIOSPHERIC.NET
+   ========================================================= */
+
+.agi-reading-toc {
+  width: 100%;
+  max-width: 40rem;
+  margin: 1.25rem auto 2rem;
+  border: 1px solid rgba(230, 194, 0, 0.4);
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(145deg, rgba(10, 27, 43, 0.96), rgba(3, 13, 23, 0.98));
+  box-shadow: 0 0.65rem 1.8rem rgba(0, 0, 0, 0.26);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.agi-reading-toc summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.66rem 1rem;
+  cursor: pointer;
+  color: #f8e889;
+  font-size: clamp(1rem, 1.8vw, 1.12rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  list-style: none;
+  user-select: none;
+}
+
+.agi-reading-toc summary::-webkit-details-marker {
+  display: none;
+}
+
+.agi-reading-toc summary:focus-visible {
+  outline: 3px solid #8fb8ff;
+  outline-offset: -3px;
+}
+
+.agi-reading-toc__chevron {
+  flex: 0 0 auto;
+  color: #8fb8ff;
+  font-size: 1.15em;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.agi-reading-toc[open] .agi-reading-toc__chevron {
+  transform: rotate(180deg);
+}
+
+.agi-reading-toc__body {
+  max-height: min(58vh, 30rem);
+  padding: 0 1rem 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+}
+
+.agi-reading-toc ol {
+  margin: 0.7rem 0 0;
+  padding-left: 1.35rem;
+}
+
+.agi-reading-toc li {
+  margin: 0.28rem 0;
+  color: #b9c6d4;
+  font-size: 0.92em;
+  line-height: 1.35;
+}
+
+.agi-reading-toc li::marker {
+  color: #e6c200;
+}
+
+.agi-reading-toc ol ol {
+  margin-top: 0.2rem;
+  padding-left: 1.15rem;
+  font-size: 0.92em;
+}
+
+.agi-reading-toc a {
+  color: #d9e6f2;
+  text-decoration: none;
+  text-underline-offset: 0.18em;
+  overflow-wrap: anywhere;
+}
+
+.agi-reading-toc a:hover,
+.agi-reading-toc a:focus-visible {
+  color: #fff4a8;
+  text-decoration: underline;
+}
+
+.agi-back-to-toc {
+  display: table;
+  margin: 0.35rem 0 1.2rem auto;
+  color: #8fb8ff !important;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  line-height: 1.25;
+  text-decoration: none !important;
+}
+
+.agi-back-to-toc:hover,
+.agi-back-to-toc:focus-visible {
+  color: #f8e889 !important;
+  text-decoration: underline !important;
+}
+
+.agi-definition-term {
+  display: inline;
+  margin: 0;
+  padding: 0.05em 0.28em 0.1em;
+  border: 1px solid rgba(143, 184, 255, 0.58);
+  border-radius: 0.38em;
+  background: rgba(31, 73, 116, 0.3);
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  cursor: help;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.agi-definition-term:hover,
+.agi-definition-term:focus-visible {
+  border-color: #f8e889;
+  background: rgba(230, 194, 0, 0.16);
+  color: #fff4a8;
+  outline: none;
+}
+
+.agi-definition-dialog {
+  width: min(42rem, calc(100vw - 2rem));
+  max-height: min(80vh, 42rem);
+  margin: 7vh auto auto;
+  padding: 0;
+  border: 1px solid rgba(230, 194, 0, 0.58);
+  border-radius: 1.1rem;
+  background:
+    linear-gradient(150deg, #0c2338 0%, #071522 62%, #030b12 100%);
+  color: #f7f9fb;
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.72);
+  overflow: auto;
+}
+
+.agi-definition-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.76);
+  backdrop-filter: blur(3px);
+}
+
+.agi-definition-dialog[open] {
+  animation: agi-definition-in 170ms ease-out;
+}
+
+.agi-definition-dialog__inner {
+  position: relative;
+  padding: clamp(1.4rem, 5vw, 2.2rem);
+}
+
+.agi-definition-dialog__eyebrow {
+  margin: 0 3rem 0.45rem 0;
+  color: #8fb8ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.agi-definition-dialog__title {
+  margin: 0 3rem 1rem 0;
+  color: #f8e889;
+  font-size: clamp(1.35rem, 4vw, 1.85rem);
+  line-height: 1.2;
+}
+
+.agi-definition-dialog__text {
+  margin: 0;
+  color: #eef4f8;
+  font-size: clamp(1rem, 2.5vw, 1.18rem);
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+.agi-definition-dialog__source {
+  margin: 1.15rem 0 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: clamp(0.92rem, 2vw, 1.02rem);
+}
+
+.agi-definition-dialog__source a {
+  color: #8fb8ff;
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+
+.agi-definition-dialog__source a:hover,
+.agi-definition-dialog__source a:focus-visible {
+  color: #f8e889;
+  text-decoration: underline;
+}
+
+.agi-definition-dialog__close {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  display: grid;
+  place-items: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  color: #ff746c;
+  font: 700 1.45rem/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.agi-definition-dialog__close:hover,
+.agi-definition-dialog__close:focus-visible {
+  border-color: #ff746c;
+  background: rgba(125, 20, 20, 0.28);
+  outline: none;
+}
+
+@keyframes agi-definition-in {
+  from { opacity: 0; transform: translateY(0.8rem) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Garde les titres visibles sous l'en-tête après une navigation par ancre. */
+main [id],
+article [id],
+.container [id] {
+  scroll-margin-top: 6.875rem;
+}
+
+/* Le sommaire utilise déjà le décalage du bandeau fixe défini par le site. */
+#sommaire,
+#table-of-contents {
+  scroll-margin-top: 0.625rem;
+}
+
+@media (max-width: 40rem) {
+  main [id],
+  article [id],
+  .container [id] {
+    scroll-margin-top: 5.5rem;
+  }
+
+  .agi-reading-toc {
+    width: calc(100% - 0.75rem);
+    margin: 0.9rem auto 1.5rem;
+    border-radius: 0.65rem;
+  }
+
+  .agi-reading-toc summary {
+    padding: 0.58rem 0.8rem;
+  }
+
+  .agi-reading-toc__body {
+    max-height: 54vh;
+    padding: 0 0.75rem 0.75rem;
+  }
+
+  .agi-reading-toc ol {
+    padding-left: 1.25rem;
+  }
+
+  .agi-definition-dialog {
+    width: calc(100vw - 1rem);
+    max-height: 80vh;
+    margin: 5vh auto auto;
+    border-radius: 0.9rem;
+  }
+
+  .agi-definition-dialog__inner {
+    padding: 1.35rem 1.15rem 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .agi-reading-toc__chevron,
+  .agi-definition-dialog[open] {
+    transition: none;
+    animation: none;
+  }
+}
+
+@media print {
+  .agi-reading-toc,
+  .agi-back-to-toc,
+  .agi-definition-dialog {
+    display: none !important;
+  }
+
+  .agi-definition-term {
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+}

@@ -1,0 +1,137 @@
+/* ==========================================
+   CITATION OR VIVANT + FLASH BLEU ÉLECTRIQUE
+   ========================================== */
+
+.quote-heart-box {
+    position: relative;
+    max-width: 48rem;
+    margin: 2.5rem auto;
+    padding: 1.6rem 1.4rem;
+    overflow: hidden;
+
+    border-radius: 1.125rem;
+
+    background:
+        linear-gradient(#050505, #050505) padding-box,
+        linear-gradient(
+            135deg,
+            #fff4b0,
+            #d4a017,
+            #ffd84d,
+            #fff0a0
+        ) border-box;
+
+    border: 0.075rem solid transparent;
+
+    box-shadow:
+        0 0 1.25rem rgba(255, 210, 80, 0.30),
+        inset 0 0 1rem rgba(255, 220, 120, 0.08);
+
+    animation: heartRest 3.6s ease-in-out infinite;
+}
+
+.quote-heart-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+
+    background: linear-gradient(
+        115deg,
+        transparent 0%,
+        transparent 44%,
+        rgba(94, 222, 255, 0.95) 50%,
+        transparent 56%,
+        transparent 100%
+    );
+
+    transform: translateX(-120%);
+    mix-blend-mode: screen;
+
+    animation: blueFlash 7.2s ease-in-out infinite;
+}
+
+.quote-heart-box blockquote {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-family:
+        Inter,
+        "IBM Plex Sans",
+        "Segoe UI",
+        system-ui,
+        sans-serif;
+
+    font-size: clamp(1.15rem, 2.8vw, 1.45rem);
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+}
+
+.quote-heart-box cite {
+    display: block;
+    margin-top: 1rem;
+
+    color: #ffe89a;
+
+    font-family:
+        Inter,
+        "IBM Plex Sans",
+        "Segoe UI",
+        system-ui,
+        sans-serif;
+
+    font-size: 0.95rem;
+    font-style: normal;
+    text-align: right;
+}
+
+@keyframes heartRest {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    14% {
+        transform: scale(1.012);
+    }
+
+    22% {
+        transform: scale(1);
+    }
+
+    34% {
+        transform: scale(1.007);
+    }
+
+    44% {
+        transform: scale(1);
+    }
+}
+
+@keyframes blueFlash {
+
+    0%, 68%, 100% {
+        transform: translateX(-120%);
+        opacity: 0;
+    }
+
+    74% {
+        opacity: 1;
+    }
+
+    84% {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .quote-heart-box,
+    .quote-heart-box::before {
+        animation: none;
+    }
+}

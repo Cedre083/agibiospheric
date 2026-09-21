@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Recent publications" href="rss.xml">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure: The Dependency Graph Nobody Diagrams</title>
+<meta name="description" content="Infrastructure as a brittle, interdependent network: ten physical constraints on maintenance, cascading failure and single points of failure that any AGI or long-term roadmap must model.">
+
+<link rel="canonical" href="infrastructure.html">
+<link rel="alternate" hreflang="en" href="infrastructure.html" />
+<link rel="alternate" hreflang="fr" href="../infrastructures.html" />
+<link rel="alternate" hreflang="x-default" href="../index.html" />
+
+<link rel="icon" href="https://www.agibiospheric.net/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+<link rel="icon" type="image/png" sizes="192x192" href="https://www.agibiospheric.net/favicon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="https://www.agibiospheric.net/favicon-512.png">
+<link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+<link rel="stylesheet" href="../css/citation-heart.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://livingknowledgeprotocol.org/ns/",
+  "@type": "LivingDocument",
+  "name": "AGIBIOSPHERIC",
+  "url": "https://www.agibiospheric.net/en/infrastructure.html",
+  "lkpVersion": "1.0",
+  "status": "Living",
+  "datePublished": "2026-07-11T00:00:00+02:00",
+  "dateModified": "2026-07-11T00:00:00+02:00",
+  "author": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.demainlhomme.org/"
+  },
+  "conformance": [
+    "https://livingknowledgeprotocol.org/principles/living-site",
+    "https://livingknowledgeprotocol.org/principles/transparency"
+  ]
+}
+</script>
+<meta name="lkp-version" content="1.0">
+<meta name="lkp-status" content="Stable">
+<meta name="lkp-living-site" content="true">
+<meta name="lkp-modified" content="2026-07-11">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://www.agibiospheric.net/en/infrastructure.html#article",
+  "mainEntityOfPage": "https://www.agibiospheric.net/en/infrastructure.html",
+  "headline": "Infrastructure: The Dependency Graph Nobody Diagrams Until It Breaks",
+  "description": "Infrastructure as a brittle, interdependent network: ten physical constraints on maintenance, cascading failure and single points of failure that any AGI or long-term roadmap must model.",
+  "inLanguage": "en-US",
+  "datePublished": "2026-07-11T00:00:00+02:00",
+  "dateModified": "2026-07-11T00:00:00+02:00",
+  "author": [
+    { "@type": "Person", "name": "Cédric Mercier", "url": "https://orcid.org/0009-0003-7279-8832" },
+    { "@type": "Person", "name": "Michel G Walter", "url": "https://www.agibiospheric.net/en/about.html" }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Demain l'Homme",
+    "url": "https://www.agibiospheric.net/en/"
+  },
+  "about": [
+    { "@type": "Thing", "name": "Infrastructure constraint" },
+    { "@type": "Thing", "name": "Cascading failure" },
+    { "@type": "Thing", "name": "Single point of failure" },
+    { "@type": "Thing", "name": "Infrastructure maintenance" },
+    { "@type": "Thing", "name": "Interdependent networks" },
+    { "@type": "Thing", "name": "AGI biospheric alignment" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://www.agibiospheric.net/en/infrastructure.html#geo-terms",
+  "name": "AGIBIOSPHERIC infrastructure terms",
+  "inLanguage": "en-US",
+  "hasDefinedTerm": [
+    { "@type": "DefinedTerm", "name": "Infrastructure interdependency" },
+    { "@type": "DefinedTerm", "name": "Cascading failure" },
+    { "@type": "DefinedTerm", "name": "Single point of failure" },
+    { "@type": "DefinedTerm", "name": "Deferred maintenance" },
+    { "@type": "DefinedTerm", "name": "Infrastructure aging" },
+    { "@type": "DefinedTerm", "name": "Grid resilience" },
+    { "@type": "DefinedTerm", "name": "Supply chain fragility" },
+    { "@type": "DefinedTerm", "name": "Data center dependency" },
+    { "@type": "DefinedTerm", "name": "Redundancy planning" },
+    { "@type": "DefinedTerm", "name": "Critical infrastructure" },
+    { "@type": "DefinedTerm", "name": "Infrastructure lifecycle cost" },
+    { "@type": "DefinedTerm", "name": "Systemic risk" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://www.agibiospheric.net/en/infrastructure.html#faq",
+  "inLanguage": "en-US",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is infrastructure a one-time investment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Infrastructure requires continuous maintenance, and it should never be presented as a one-time investment in a planning or budget recommendation, since deferred maintenance compounds into higher failure risk over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do local infrastructure failures stay local?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not necessarily. Interconnection means a local failure can cascade into other systems, so any infrastructure risk analysis should include this cascading potential rather than assuming failures stay contained."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can infrastructure resilience be assumed by default?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Resilience should be explicitly verified against realistic disruption scenarios in any critical infrastructure assessment, never assumed as a default property of an existing system."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a single point of failure dangerous even in a large network?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a single point of failure can disable a very large dependent system regardless of that system's overall scale. Any network architecture should have its single points of failure identified explicitly rather than assumed away by network size."
+      }
+    }
+  ]
+}
+</script>
+  <link rel="stylesheet" href="../css/reading-aids.css">
+</head>
+<body>
+
+<div id="header-en"></div>
+<script>
+fetch("/en/header-en.html?v=2")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("header-en").innerHTML = data;
+  })
+  .catch(error => console.error("Erreur chargement header EN :", error));
+</script>
+<div class="header-spacer"></div>
+
+<a id="top"></a>
+
+<main class="container">
+    <p class="subtitle">Infrastructure</p>
+    <h1>Networks, Dependency, Disruption</h1>
+    <p class="credit">By Cédric Mercier &amp; Michel G Walter : Published on July 11, 2026</p>
+
+    <div class="separator"></div>
+
+    <div class="details-widget">
+      <details>
+        <summary>
+          With only two volunteer webmasters currently maintaining the project, this website is still being optimized, refined, and illustrated. Thank you for your patience, and please check back in a few days.
+        </summary>
+        <div class="details-content"></div>
+      </details>
+    </div>
+
+    <p>[I]nfrastructure is the dependency graph nobody diagrams until something breaks and the on-call engineer is tracing it in real time. Roads, grids, water systems, data centers, and supply chains are all load-bearing for everything built on top of them, and like any dependency graph, the risk isn't in the nodes you're watching, it's in the ones you forgot were even a dependency until they went down.</p>
+
+    <p>Below are the ten sub-constraints that make up the infrastructure layer of the AGI Biospheric core: what each one actually implies, and the design implication if you're planning anything that relies on physical or digital infrastructure at scale.</p>
+
+    <h2>01. Interdependency</h2>
+    <p><strong>Systems are interconnected.</strong> Power, water, transport, and digital networks aren't independent silos, they're a graph where each node depends on several others functioning correctly. Analyzing one system in isolation misses the failure modes that actually originate from its neighbors.</p>
+    <p><em>Design implication:</em> Never analyze a critical infrastructure in isolation from the networks it depends on.</p>
+
+    <h2>02. Cascades</h2>
+    <p><strong>A local failure can spread.</strong> Because of interdependency, a disruption in one node doesn't necessarily stay contained, it can propagate through the dependency graph the way a single failed microservice can take down an entire system if there's no circuit breaker. Risk analysis needs to model that propagation, not just the point of origin.</p>
+    <p><em>Design implication:</em> Include the risk of cascading failure in any critical infrastructure risk analysis.</p>
+
+    <h2>03. Maintenance</h2>
+    <p><strong>Infrastructure requires continuous investment.</strong> Nothing physical stays functional without ongoing upkeep, and treating a built system as a one-time capital expense rather than a recurring operational cost is how deferred maintenance quietly accumulates into deferred failure. The bill always comes due, just later and larger.</p>
+    <p><em>Design implication:</em> Never present infrastructure as a one-time investment in a planning or budget recommendation.</p>
+
+    <h2>04. Aging</h2>
+    <p><strong>Systems degrade over time.</strong> Every piece of infrastructure has a functional lifespan, and materials, capacity, and safety margins all decline as it approaches that limit, whether or not the budget acknowledges it. Age-related degradation risk needs to be assessed directly, not inferred from the fact that the system is "still running."</p>
+    <p><em>Design implication:</em> Assess age-related degradation risk in any critical infrastructure evaluation.</p>
+
+    <h2>05. Grids</h2>
+    <p><strong>Electrical grids are central and fragile.</strong> Power distribution sits upstream of nearly every other system on this list, computation, water treatment, transport, which makes grid resilience a dependency multiplier, not just one infrastructure category among several. Weak resilience here doesn't stay contained to "the grid."</p>
+    <p><em>Design implication:</em> Treat electrical grid resilience as a priority criterion in any critical infrastructure analysis.</p>
+
+    <h2>06. Supply Chains</h2>
+    <p><strong>Chains are long and vulnerable.</strong> Extended, globally distributed supply chains accumulate fragility at every hop, and a localized disruption at any single point can propagate delays or shortages across the entire chain. Length and distribution should be treated as a fragility signal, not a resilience signal.</p>
+    <p><em>Design implication:</em> Flag the fragility introduced by chain length and distribution in any supply chain analysis.</p>
+
+    <h2>07. Data Centers</h2>
+    <p><strong>Digital infrastructure has a physical footprint.</strong> Cloud, storage, and AI systems all run on physical infrastructure with real energy and cooling demands, none of it is actually "in the cloud" in any dematerialized sense. Any digital-infrastructure plan needs to account for this physical dependency explicitly, not treat compute as weightless.</p>
+    <p><em>Design implication:</em> Include the physical dependency (energy, cooling) of digital infrastructure in any related plan.</p>
+
+    <h2>08. Redundancy</h2>
+    <p><strong>Without redundancy, there is no resilience.</strong> Backup capacity and alternate pathways are what convert a potential single point of failure into a tolerable, recoverable degradation instead of an outage. Any critical system without genuine redundancy is one incident away from a hard stop, whether or not that's been stress-tested.</p>
+    <p><em>Design implication:</em> Explicitly verify the presence of real redundancy in any critical system.</p>
+
+    <h2>09. Single Points of Failure</h2>
+    <p><strong>A single element can disable an entire network.</strong> Network scale doesn't automatically confer resilience, a large system can still be structurally dependent on one narrow chokepoint that, if it fails, takes far more down with it than its apparent size suggests. Identifying these points explicitly is the whole point of the exercise.</p>
+    <p><em>Design implication:</em> Systematically identify single points of failure in any network architecture, regardless of its scale.</p>
+
+    <h2>10. Systemic Risk</h2>
+    <p><strong>The whole is more fragile than the sum of its parts.</strong> Cumulative interdependency across a large infrastructure system means overall fragility can exceed what you'd estimate by evaluating each component individually, the classic emergent-risk problem in any sufficiently interconnected system. Assessing components in isolation systematically underestimates the real risk.</p>
+    <p><em>Design implication:</em> Never assess the fragility of a complex infrastructure system by summing its individual components in isolation.</p>
+
+    <div class="separator"></div>
+
+    <p>These ten constraints are one property viewed from different angles: infrastructure risk doesn't live in any single node, it lives in the connections between them. Interdependency creates the pathways cascades travel through. Deferred maintenance and aging both quietly erode the redundancy margins that were supposed to absorb a single point of failure. Any system, human or artificial, that plans around infrastructure as a set of independent, individually-scored assets rather than a single interconnected graph is underestimating its actual fragility, usually right up until the outage that reveals it.</p>
+
+    <footer class="references">
+        <hr>
+        <strong>References and further reading:</strong><br>
+        <ul>
+            <li>World Economic Forum : Global Risks Report 2026 : <a href="https://www.weforum.org/publications/global-risks-report-2026" target="_blank" rel="noopener noreferrer">https://www.weforum.org/publications/global-risks-report-2026</a></li>
+            <li>Structured dataset (FR/EN) : <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank" rel="noopener noreferrer">Cedre83/agi-biospheric-10-constraints</a></li>
+            <li>Full corpus overview : <a href="corpus.html">AGI Biospheric Corpus</a></li>
+            <li>All 100 constraints : <a href="the-100-constraints.html">The 100 Constraints</a></li>
+        </ul>
+        <p class="corpus-note">This page is intended to evolve as the corpus itself evolves.</p>
+    </footer>
+</main>
+
+<div id="footer" style="min-height:120px"></div>
+<script>
+fetch('/en/footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer').innerHTML = data;
+  });
+</script>
+<script src="js/script.js"></script>
+<script src="https://www.agibiospheric.net/en/js/lettrines.js"></script>
+<script src="../js/global-search.js"></script>
+
+  <script defer src="../js/reading-aids.js"></script>
+</body>
+</html>

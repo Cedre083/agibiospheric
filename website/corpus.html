@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="alternate" type="application/rss+xml" title="AGI Biospheric &mdash; Publications r&eacute;centes" href="rss.xml">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Le Corpus AGI Biospheric rassemble les méga-contraintes et interdépendances essentielles pour un futur épanouissant, archivé à la BNF et sur Zenodo.">
+    <title>Corpus | AGI Biospheric</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="corpus.html" />
+    <link rel="alternate" hreflang="fr" href="corpus.html">
+    <link rel="alternate" hreflang="en" href="en/corpus.html">
+    <link rel="alternate" hreflang="x-default" href="index.html">
+
+    <link rel="icon" href="https://www.agibiospheric.net/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.agibiospheric.net/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.agibiospheric.net/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://www.agibiospheric.net/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://www.agibiospheric.net/favicon-512.png">
+    <link rel="apple-touch-icon" href="https://www.agibiospheric.net/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="preload" as="image" href="https://www.agibiospheric.net/logo-1024.png">
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        /* Mise en page aérée : 40px d'espacement */
+        h1, h2, h3 { margin-bottom: 40px !important; }
+        p, .corpus-box, .corpus-hero-image, .corpus-grid, .details-widget, .separator, .references { margin-bottom: 40px !important; }
+
+        .corpus-hero-image { text-align: center; }
+        .corpus-hero-image img { width: 100%; max-width: 1200px; height: auto; display: block; margin: 0 auto; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+        
+        .corpus-box { padding: 1.4rem 1.4rem 1.2rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; background: rgba(255,255,255,0.03); backdrop-filter: blur(4px); }
+        .corpus-box h2 { margin-top: 0; font-size: 1.35rem; line-height: 1.3; }
+        .corpus-box h3 { margin-top: 1.6rem; font-size: 1.08rem; line-height: 1.35; }
+        
+        .corpus-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+        .corpus-card { padding: 1rem 1rem 0.95rem; border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; background: rgba(255,255,255,0.025); margin-bottom: 0 !important; }
+        .corpus-card strong { display: block; margin-bottom: 0.35rem; font-size: 1rem; }
+        .corpus-card p { margin-bottom: 0 !important; }
+        
+        .corpus-constraints { list-style: none; padding: 0; margin: 1.4rem 0 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.9rem; }
+        .corpus-constraints li { margin: 0; }
+        .corpus-constraints a { display: block; padding: 0.95rem 1rem; border-radius: 14px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.025); text-decoration: none; transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease; }
+        .corpus-constraints a:hover, .corpus-constraints a:focus { transform: translateY(-2px); background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.18); }
+        .corpus-constraints span { display: block; }
+        .corpus-constraints .constraint-title { font-weight: 700; margin-bottom: 0.2rem; }
+        .corpus-constraints .constraint-sub { font-size: 0.95rem; opacity: 0.85; }
+        
+        .corpus-link-box { margin: 1.2rem 0; padding: 1rem 1.1rem; border-left: 3px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.03); overflow-wrap: anywhere; }
+        .corpus-link-box a { font-weight: 600; }
+        
+        .corpus-note { font-size: 0.95rem; opacity: 0.9; }
+        .corpus-divider { margin: 40px 0 !important; border: 0; height: 1px; background: rgba(255,255,255,0.12); }
+
+        /* Nouvelle Navigation Harmonisée et Esthétique */
+        .bio-nav-container {
+            max-width: 800px;
+            margin: 60px auto !important;
+            padding: 0 20px;
+        }
+
+        .bio-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .bio-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            background: linear-gradient(180deg, rgba(0, 50, 0, 0.4) 0%, rgba(0, 20, 0, 0.6) 100%);
+            border: 1px solid rgba(0, 255, 0, 0.25);
+            border-radius: 30px;
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .bio-btn:hover {
+            border-color: rgba(0, 255, 0, 0.6);
+            background: linear-gradient(180deg, rgba(0, 70, 0, 0.5) 0%, rgba(0, 30, 0, 0.7) 100%);
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.25);
+            transform: translateY(-3px);
+        }
+
+        .bio-btn.special {
+            border-color: rgba(0, 150, 255, 0.4);
+            background: linear-gradient(180deg, rgba(0, 30, 50, 0.4) 0%, rgba(0, 10, 20, 0.6) 100%);
+        }
+
+        .bio-btn.special:hover {
+            border-color: rgba(0, 150, 255, 0.7);
+            box-shadow: 0 0 20px rgba(0, 150, 255, 0.3);
+        }
+
+        .bio-btn .dot {
+            width: 7px;
+            height: 7px;
+            background-color: #00d4ff;
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 0 0 10px #00d4ff;
+            display: inline-block;
+        }
+
+        @media (max-width: 650px) { 
+            .bio-nav-grid { grid-template-columns: 1fr; }
+            .corpus-grid, .corpus-constraints { grid-template-columns: 1fr; } 
+            .corpus-box { padding: 1.15rem 1rem 1rem; } 
+        }
+    </style>
+    <link rel="stylesheet" href="css/global-search.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": "https://www.agibiospheric.net/corpus.html#article",
+      "mainEntityOfPage": "https://www.agibiospheric.net/corpus.html",
+      "headline": "Corpus AGI Biospheric : architecture des contraintes du Réel",
+      "description": "Le Corpus AGI Biospheric structure les méga-contraintes biosphériques et leurs interdépendances, archivé à la BNF et sur Zenodo.",
+      "inLanguage": "fr-FR",
+      "datePublished": "2026-07-28T00:00:00+02:00",
+      "dateModified": "2026-07-28T00:00:00+02:00",
+      "author": [
+        { "@type": "Person", "name": "Cédric Mercier", "url": "https://orcid.org/0009-0003-7279-8832" }
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Association Terre sacrée",
+        "url": "https://www.agibiospheric.net/"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="css/reading-aids.css">
+</head>
+
+<body id="top">
+
+<div id="header-placeholder"></div>
+
+<script>
+fetch("./header.html")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Impossible de charger le header");
+        }
+        return response.text();
+    })
+    .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+    })
+    .catch(error => {
+        console.error(error);
+    });
+</script>
+
+<main class="container">
+    <p class="subtitle">Corpus</p>
+    <h1>Corpus AGI Biospheric</h1>
+
+    <div class="corpus-hero-image">
+        <img src="https://www.agibiospheric.net/images/Gemini_AGI-television-famille-etonnee-the-seed-futur-1150.webp" alt="Corpus - Famille découvrant l'AGI à la télévision">
+    </div>
+
+    <p class="credit">Rédigé le 28 juillet 2026, par Cédric Mercier, <em>Président fondateur de l'Association</em></p>
+
+    <div class="corpus-box">
+        <h2>Introduction au Corpus AGI Biospheric</h2>
+        <p>
+            Le <strong>Corpus AGI Biospheric</strong> est une architecture structurée qui relie les méga-contraintes biosphériques du projet, leurs interdépendances, et leurs prolongements conceptuels. Il constitue le noyau d'une réflexion approfondie sur les conditions matérielles, biologiques et systémiques essentielles à toute civilisation technique et à toute intelligence cherchant à penser le long terme de manière lucide.
+        </p>
+        <p>
+            Afin de garantir la pérennité et l'accessibilité de ces travaux, le site a fait l'objet d'un <strong>dépôt légal à la Bibliothèque Nationale de France (BNF)</strong>. De plus, les données structurées du projet sont archivées et citables via des dépôts sur <strong>Zenodo</strong> et <strong>Hugging Face</strong>, assurant ainsi leur traçabilité dans l'écosystème de la recherche scientifique et technique.
+        </p>
+    </div>
+
+    <div class="corpus-box">
+        <h2>Les 100 Contraintes du Réel</h2>
+        <p>
+            Au-delà du noyau initial, le projet s'étend vers un ensemble de <strong>100 contraintes du Réel</strong>. Ces contraintes ne sont pas des options, mais des réalités physiques et biologiques incontournables. Elles sont progressivement structurées et publiées en données ouvertes (JSON bilingue FR/EN) pour permettre aux chercheurs et aux systèmes d'IA de les intégrer dans leurs modèles de compréhension du monde.
+        </p>
+        <p>
+            Le corpus repose sur une hypothèse simple mais décisive : aucune intelligence, qu'elle soit humaine ou artificielle, ne peut maintenir sa lucidité si elle ignore les conditions matérielles et biosphériques qui rendent sa propre existence possible.
+        </p>
+    </div>
+
+    <div class="corpus-box">
+        <h2>Le Noyau des Dix Méga-Contraintes</h2>
+        <p>
+            Le projet s'articule actuellement autour de dix domaines fondamentaux, chacun regroupant des contraintes spécifiques :
+        </p>
+        <ul class="corpus-constraints">
+            <li><a href="energie.html"><span class="constraint-title">01. Énergie</span><span class="constraint-sub">Flux, chaleur, puissance (✅ Publié)</span></a></li>
+            <li><a href="eau-douce.html"><span class="constraint-title">02. Eau douce</span><span class="constraint-sub">Cycles, réserves, seuils (✅ Publié)</span></a></li>
+            <li><a href="sols-vivants.html"><span class="constraint-title">03. Sols vivants</span><span class="constraint-sub">Fertilité, microbes, racines (✅ Publié)</span></a></li>
+            <li><a href="biodiversite.html"><span class="constraint-title">04. Biodiversité</span><span class="constraint-sub">Espèces, réseaux, stabilité (✅ Publié)</span></a></li>
+            <li><a href="climat.html"><span class="constraint-title">05. Climat</span><span class="constraint-sub">Atmosphère, inertie, bascule (✅ Publié)</span></a></li>
+            <li><a href="ocean.html"><span class="constraint-title">06. Océan</span><span class="constraint-sub">Pompe, chaleur, acidité (✅ Publié)</span></a></li>
+            <li><a href="matiere.html"><span class="constraint-title">07. Matière</span><span class="constraint-sub">Métaux, extraction, limites (✅ Publié)</span></a></li>
+            <li><a href="information.html"><span class="constraint-title">08. Information</span><span class="constraint-sub">Signal, bruit, calcul (✅ Publié)</span></a></li>
+            <li><a href="infrastructures.html"><span class="constraint-title">09. Infrastructures</span><span class="constraint-sub">Réseaux, dépendance, rupture (✅ Publié)</span></a></li>
+            <li><a href="vivant.html"><span class="constraint-title">10. Systèmes humains</span><span class="constraint-sub">Interdépendance, réponse, réel (✅ Publié)</span></a></li>
+        </ul>
+        <p style="margin-top:1.4rem; margin-bottom: 40px !important;">
+            Ces domaines forment un premier socle de lecture, une cartographie des conditions sans lesquelles aucune civilisation technique durable ne peut se maintenir.
+        </p>
+        <div class="corpus-link-box">
+            <strong>Pourquoi ces dix domaines ?</strong><br>
+            Découvrez les critères de sélection, les étapes de regroupement, le rôle des interdépendances et le caractère révisable de la grille dans la page <a href="methodologie-selection-10-mega-contraintes.html">Méthodologie de Sélection des 10 Méga-Contraintes</a>.
+        </div>
+    </div>
+
+    <div class="corpus-box">
+        <h2>Interdépendances : Penser un Système</h2>
+        <p>
+            Une idée centrale d'AGI Biospheric est qu'une contrainte biosphérique n'existe jamais isolément. Le climat est lié à l'énergie, à l'océan, au Vivant, à l'eau et aux sols. L'information dépend de l'énergie, de la matière, des infrastructures et de la stabilité du monde vivant.
+        </p>
+        <p>
+            Le corpus est conçu comme une <strong>architecture d'interdépendances</strong>. La formalisation actuelle identifie <strong>52 interdépendances directes</strong> entre les contraintes du noyau. Cette approche systémique oblige à comprendre comment la dégradation d'une seule contrainte peut déstabiliser l'ensemble de la biosphère et, par extension, les infrastructures nécessaires à l'intelligence.
+        </p>
+    </div>
+
+    <div class="corpus-box">
+        <h2>Accès aux Données et Archivage</h2>
+        <div class="corpus-grid">
+            <div class="corpus-card">
+                <strong>Hugging Face</strong>
+                <p>Couche de données structurée (JSON FR/EN) incluant les contraintes et la matrice d'interdépendances.</p>
+                <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank" style="font-size: 0.85rem; color: #aaa;">Dataset AGI Biospheric</a>
+            </div>
+            <div class="corpus-card">
+                <strong>Zenodo</strong>
+                <p>Archivage scientifique des jeux de données avec DOI pour une citation académique rigoureuse.</p>
+            </div>
+            <div class="corpus-card">
+                <strong>BNF</strong>
+                <p>Préservation patrimoniale du site et de ses contenus au titre du dépôt légal numérique.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="corpus-box">
+        <h2>Pourquoi ce Corpus est-il Vital ?</h2>
+        <p>
+            AGI Biospheric pose une question radicale : que devient l'intelligence lorsqu'elle oublie les conditions physiques qui la rendent possible ? Une intelligence qui se focalise uniquement sur la performance ou les flux d'information risque de manquer l'essentiel : les milieux, les cycles et les écosystèmes qui rendent le calcul lui-même possible.
+        </p>
+        <p>
+            Le corpus vise à maintenir cette <strong>mémoire du Réel</strong>, non comme un décor moral, mais comme la condition sine qua non de toute existence technique ou biologique.
+        </p>
+    </div>
+
+    <div class="corpus-box">
+        <h2>État Actuel et Devenir</h2>
+        <p>
+            Le corpus est un chantier en cours. Son évolution prévoit l'enrichissement des pages existantes, l'ajout de nouvelles contraintes parmi les 100 identifiées, et le développement de nouvelles passerelles entre la réflexion éditoriale et la couche de données structurées.
+        </p>
+    </div>
+
+    <!-- Navigation secondaire harmonisée -->
+    <div class="bio-nav-container">
+        <nav class="bio-nav-grid" aria-label="Navigation secondaire">
+            <a class="bio-btn" href="les-100-contraintes.html">Les 100 Contraintes</a>
+            <a class="bio-btn" href="emergence-de-la-conscience-dans-lunivers-agi-biospheric.html">Conscience émerge</a>
+            <a class="bio-btn special" href="reseau-sentinelles-mondiales.html"><span class="dot"></span> Les Sentinelles</a>
+            <a class="bio-btn" href="a-propos.html">À Propos</a>
+            <a class="bio-btn" href="faq/index.html">FAQ</a>
+            <a class="bio-btn" href="corpus.html#top">Refaire Surface</a>
+        </nav>
+    </div>
+
+    <footer class="references">
+        <div class="separator"></div>
+        <strong>Repères et prolongements :</strong>
+        <ul>
+            <li>Dataset Hugging Face : <a href="https://huggingface.co/datasets/Cedre83/agi-biospheric-10-constraints" target="_blank">Cedre83/agi-biospheric-10-constraints</a></li>
+            <li>Sommaire des 100 Contraintes : <a href="les-100-contraintes.html">Accéder à la bibliothèque</a></li>
+            <li>Site WEB AGI Biospheric : <a href="index.html">https://www.agibiospheric.net/</a></li>
+        </ul>
+        <p class="corpus-note">La vocation de cette page est d'évoluer avec le corpus lui-même.</p>
+    </footer>
+</main>
+
+<div id="footer" style="min-height:120px"></div>
+<script>
+fetch("./footer.html")
+  .then(response => response.text())
+  .then(data => { document.getElementById("footer").innerHTML = data; });
+</script>
+
+<script src="js/script.js"></script>
+<script src="https://www.agibiospheric.net/js/style.js"></script>
+<script src="js/global-search.js"></script>
+
+  <script defer src="js/reading-aids.js"></script>
+</body>
+</html>
